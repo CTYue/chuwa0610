@@ -1,4 +1,4 @@
-[# Answer](#Answer)
+# [Answers](#Answer)
 2. practice git using the platform. list the git commands you learned
     ```
    - git checkout -b new_branch
@@ -81,3 +81,6 @@
        
 13.  In Repo/MavenProject directory, create a maven Module using Intellij, named it as belows:
     ![Q13.png](Q13.png)
+14. Do Code Review: Go over the PRs in your repo, tried to leave some useful or useful comments in other
+        students' PR, please don't merge it.
+        commented [PR#3](https://github.com/Liam-Zhou/chuwa0610/pull/3)
