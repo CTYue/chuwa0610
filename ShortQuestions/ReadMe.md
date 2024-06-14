@@ -32,10 +32,10 @@ Hello world\
 ```
 ### Links
 This is [GitHub](https://pages.github.com/).
-###Section Link
-This is [HW1](hw1.md)
+### Section Link
+This is [HW1](HW1.md)
 ### Images
-[a ramen brand](https://en.wikipedia.org/wiki/Ichiran#/media/File:Ichiran_logo.png).
+![a ramen brand](https://en.wikipedia.org/wiki/Ichiran#/media/File:Ichiran_logo.png).
 
 
 
