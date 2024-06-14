@@ -52,10 +52,10 @@ git stash pop
 * checkout branch_learn_stash | Git | Uncommitted Changes | Unstash Changes | choose and apply stash.
 
 ## 8.  How do you understand PR is based on Branch?
-> pr serves as a proposal to merge changes made in one branch of a repository into another
+* pr serves as a proposal to merge changes made in one branch of a repository into another
 
 ## 9.  What is maven role ? what it be used to do ?
-> Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.
+* Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.
 
 ## 10.  What is the lifecycle of maven? could you tell me the details ?
 ### 1) Clean
