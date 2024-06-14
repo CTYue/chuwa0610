@@ -7,13 +7,13 @@ _This text is italicized_
 ### A third-level heading
 ~~This was mistaken text~~
 ### A third-level heading
-	**This text is _extremely_ important**
+**This text is _extremely_ important**
 ### A third-level heading
-    ***All this text is important***
+***All this text is important***
 ### A third-level heading
-    This is a <sub>subscript</sub> text
+This is a <sub>subscript</sub> text
 ### A third-level heading
-    This is a <sup>superscript</sup> text
+This is a <sup>superscript</sup> text
 ### A third-level heading
 > Text that is a quote
 ### A third-level heading
