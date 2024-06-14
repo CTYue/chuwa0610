@@ -23,4 +23,4 @@ Maven lifecycle: Validate, compile, test, package, verify, install, deploy.
 
 Difference between package and install: package creates the JAR/WAR, install installs the package into the local repository.
 
-Maven plugins: Examples include Surefire (for testing), Compiler (for compiling), and Shade (for creating uber-JARs).
+Maven plugins: Examples include Surefire (for testing), Compiler (for compiling), and Shade (for creating uber-JARs)...
