@@ -31,7 +31,7 @@ Hello world\
     }
 ```
 ### Links
-This is [GitHub](https://pages.github.com/)
+This is [GitHub](https://pages.github.com/)\
 ###Section Link
 [HW1](hw1.md)
 
