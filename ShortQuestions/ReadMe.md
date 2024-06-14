@@ -30,8 +30,10 @@ Hello world\
         return null;
     }
 ```
-### Color models
-The background color is `#ffffff` for light mode and `#000000` for dark mode.
+### Links
+This is [GitHub](https://pages.github.com/)
+###Section Link
+[HW1](hw1.md)
 
 
 
