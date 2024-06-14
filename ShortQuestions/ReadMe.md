@@ -36,6 +36,47 @@ This is [GitHub](https://pages.github.com/).
 This is [HW1](HW1.md)
 ### Images
 ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
+### Lists
+- a list
+* a list 
++ a list 
+1. list1
+2. list2
+3. list3
+4. nest
+	- 1 level
+		-2 level
+### Task Lists
+- [ ] not done
+- [x] done
+### Mentioning
+@github/support What do you think about these updates?
+### Susing emojis
+:smiley::blush::metal:
 
+:smiley::blush::metal:
+### Footnotes
+1+1=?[^1]
+2+2=?[^2]
+[^1]: 2
+[^1]: 4
+### Alerts
+> [!NOTE]
+> Hello world
 
+> [!TIP]
+> Hello world
 
+> [!IMPORTANT]
+> Hello world
+
+> [!WARNING]
+> Hello world
+
+> [!CAUTION]
+> Hello world
+
+### Hidden content
+<!-- This content will not appear in the rendered Markdown -->
+### Ignore format
+What is \*a-b-b-a\*  
