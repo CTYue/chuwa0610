@@ -1,6 +1,6 @@
 write your answer to this folder.
 ### 1.  Learn MarkDown and show all of basic usage in the ShortQuestions/README.md
-    [ShortQuestions/README.md](README.md).
+[ShortQuestions/README.md](README.md).
 
 2.  practice git using the platform. list the git commands you learned
 1.  https://learngitbranching.js.org/
