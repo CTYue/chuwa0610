@@ -106,5 +106,19 @@ public class Main {
 * Variables: An abstract class can have member variables, while an interface cannot.
 
 ## 15.  design a parking lot (put the code to codingQuestions/coding1 folder, )
-
+[ParkingLot.java](../codingQuestions/coding1).
 ## 16.  What are Queue interface implementations and what are the differences and when to use what?
+* The Queue interface is present in java.util package and extends the Collection interface is used to hold the elements about to be processed in FIFO(First In First Out) order.
+
+|Class|Base data structure|Thread-safe?|Blocking/non-blocking|Fairness|policy|Bounded/unbounded|Iterator type|
+
+|---|---|---|---|---|---|---|---|
+
+|ConcurrentLinkedQueue|Linked list|Yes (optimistic locking through compare-and-set)|Non-blocking|-|Unbounded|Weakly consistent|
+|PriorityQueue|Min-heap(stored in an array)|No|Non-blocking|-|Unbounded|Fail-fast|
+|LinkedBlockingQueue|Linked list|Yes(pessimistic locking with two locks)|Blocking|Not available|Bounded	Weakly consistent|
+|ArrayBlockingQueue|Array|Yes(pessimistic locking with one lock)|Blocking|Optional|Bounded|Weakly consistent|
+|PriorityBlockingQueue|Min-heap(stored in an array)|Yes(pessimistic locking with one lock)|Blocking(nur dequeue)|Not available|Unbounded|Weakly consistent|
+|DelayQueue|Priority queue|Yes(pessimistic locking with one lock)|Blocking(nur dequeue)|Not available|Unbounded|Weakly consistent|
+|SynchronousQueue|Stack(implemented with a linked list)|Yes(optimistic locking through compare-and-set)|Blocking|Optional|Unbounded|The iterator is always empty.|
+|LinkedTransferQueue|Linked list|Yes(optimistic locking through compare-and-set)|Blocking|(only transfer and dequeue)|Not available|Unbounded|Weakly consistent|
