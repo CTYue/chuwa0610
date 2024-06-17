@@ -1,9 +1,8 @@
 # **Short Questions Homework2 - MingHao Lee**
 
 ## 1. Writeup Example code to demonstrate the three fundamental concepts of OOP (reference CodeDemo repo as example)
-1. **Encapsulation**
-2. **Polymorphism**
-3. **Inheritance**
+Refer to the link: https://github.com/Liam-Zhou/chuwa0610/tree/MingHao_Lee/hw2/Coding/java-core/src/main/java/com/chuwa/learn/hw1_OOP_example
+For the example 
 
 ## 2. **What is a wrapper class in Java and why do we need a wrapper class**?
    - In Java, a wrapper class is a class that encapsulates a primitive type.
@@ -100,7 +99,7 @@
      - Interfaces are used to define a contract, while abstract classes are used to provide a common base with shared code.
 
 ## 21. **Design a parking lot (put the code in the codingQuestions/coding1 folder)**
-    1. If you have no ability to design it, please find the solution on the internet, then understand it, and re-type it (Do NOT just copy and paste).
+   Refer to the link: https://github.com/Liam-Zhou/chuwa0610/tree/MingHao_Lee/hw2/Coding/java-core/src/main/java/com/chuwa/learn/ParkingLot 
 
 ## 22. **What are Queue interface implementations and what are the differences and when to use what?**
    - The Queue interface in Java is implemented by various classes such as LinkedList, PriorityQueue, and ArrayBlockingQueue.
