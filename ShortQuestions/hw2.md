@@ -52,6 +52,7 @@ public class Main {
 
 ## 3.  What is the difference between HashMap and HashTable?
 |Hashmap|Hashtable|
+|  ----  | ----  |
 |No method is synchronized.|Every method is synchronized.|
 |Multiple threads can operate simultaneously and hence hashmap’s object is not thread-safe.|At a time only one thread is allowed to operate the Hashtable’s object. Hence it is thread-safe.|
 |Threads are not required to wait and hence relatively performance is high.|It increases the waiting time of the thread and hence performance is low.|
