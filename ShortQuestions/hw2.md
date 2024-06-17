@@ -1,7 +1,7 @@
 write your answer to this folder.
 
 ## 1.  Write up Example code to demonstrate the three foundmental concepts of OOP. (reference Code Demo  repo as example) Encapsulation; Polymorphism; Inheritance; 
-```
+```java
 class Animal {
     private int weight;
 
