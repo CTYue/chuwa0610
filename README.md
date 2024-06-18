@@ -43,4 +43,4 @@ then open your github, **Compare and Pull** or **New pull request**
 ```text
 to **firstName_lastName/master** from **firstName_lastName/hw1**
 ```
-You should always raise your PRs to your own firstName_lastName/master branch, **Please don't raise your PR to main branch**
+You should always raise your PRs to your own firstName_lastName/master branch, **Please don't raise your PR to Main branch**
