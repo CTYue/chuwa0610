@@ -5,35 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be80a07f-98d5-4ff8-af2d-72c96a8ddba3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Coding/collections/ear/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/collections/ejbs/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/collections/ejbs/src/main/resources/META-INF/ejb-jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/collections/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/collections/primary-source/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/collections/projects/logging/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/collections/projects/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/collections/servlets/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/collections/servlets/servlet/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/collections/servlets/servlet/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/collections/servlets/servlet/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw3/collections/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw3/collections/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/AdditionalMapExerciseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/AdditionalMapExerciseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/ArrayListExerciseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/ArrayListExerciseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/ArraysExerciseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/ArraysExerciseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/CollectionsExerciseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/CollectionsExerciseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/CopyOnWriteArrayListExerciseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/CopyOnWriteArrayListExerciseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/HashMapExerciseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/HashMapExerciseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/HashSetExerciseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/HashSetExerciseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/LinkedHashMapExerciseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/LinkedHashMapExerciseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/LinkedListExerciseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/LinkedListExerciseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/TreeMapExerciseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/TreeMapExerciseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/TreeSetExerciseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/test/java/com/chuwa/learn/TreeSetExerciseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Builder/Bike.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Builder/Builder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Builder/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Builder/Director.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Builder/MobileBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Builder/OfoBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Factory/AmericanCoffee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Factory/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Factory/Coffee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Factory/CoffeeStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Factory/LatteCoffee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Factory/SimpleCoffeeFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Observer/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Observer/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Observer/Subject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Observer/SubscriptionSubject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Observer/WeChatUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Singleton/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Singleton/Singleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShortQuestions/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ShortQuestions/ReadMe.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,6 +64,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Client.executor": "Run",
+    "Application.com.chuwa.learn.MavenProject.Builder.Client.executor": "Run",
+    "Application.com.chuwa.learn.MavenProject.Observer.Client.executor": "Run",
+    "Application.com.chuwa.learn.MavenProject.Singleton.Client.executor": "Run",
     "JUnit.AdditionalMapExerciseTest.learn_ConcurrentHashMap.executor": "Run",
     "JUnit.AdditionalMapExerciseTest.learn_EnumMap.executor": "Run",
     "JUnit.AdditionalMapExerciseTest.learn_IdentityHashMap.executor": "Run",
@@ -105,6 +113,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.chuwa.learn.MavenProject.Observer" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\15063\OneDrive\Documents\Chuwa\chuwa0610\Coding\hw3\collections\src\test\java\com\chuwa\learn" />
       <recent name="C:\Users\15063\OneDrive\Documents\Chuwa\chuwa0610\Coding\hw3\collections" />
@@ -113,65 +124,55 @@
       <recent name="C:\Users\15063\OneDrive\Documents\Chuwa\chuwa0610\Coding\coding1" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CollectionsExerciseTest.learn_thread_safe_ArrayList">
-    <configuration name="ArraysExerciseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.com.chuwa.learn.MavenProject.Observer.Client">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.MavenProject.Factory.Client" />
       <module name="collections" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.chuwa.learn.*" />
+          <option name="PATTERN" value="com.chuwa.learn.MavenProject.Factory.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.chuwa.learn" />
-      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.ArraysExerciseTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArraysExerciseTest.learn_common_operations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.chuwa.learn.MavenProject.Builder.Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.MavenProject.Builder.Client" />
       <module name="collections" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.chuwa.learn.*" />
+          <option name="PATTERN" value="com.chuwa.learn.MavenProject.Builder.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.chuwa.learn" />
-      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.ArraysExerciseTest" />
-      <option name="METHOD_NAME" value="learn_common_operations" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CollectionsExerciseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.chuwa.learn.MavenProject.Observer.Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.MavenProject.Observer.Client" />
       <module name="collections" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.chuwa.learn.*" />
+          <option name="PATTERN" value="com.chuwa.learn.MavenProject.Observer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.chuwa.learn" />
-      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.CollectionsExerciseTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CollectionsExerciseTest.learn_common_collections_operations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="com.chuwa.learn.MavenProject.Singleton.Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.MavenProject.Singleton.Client" />
       <module name="collections" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.chuwa.learn.*" />
+          <option name="PATTERN" value="com.chuwa.learn.MavenProject.Singleton.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.chuwa.learn" />
-      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.CollectionsExerciseTest" />
-      <option name="METHOD_NAME" value="learn_common_collections_operations" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -194,11 +195,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.com.chuwa.learn.MavenProject.Observer.Client" />
+        <item itemvalue="Application.com.chuwa.learn.MavenProject.Singleton.Client" />
+        <item itemvalue="Application.com.chuwa.learn.MavenProject.Builder.Client" />
+        <item itemvalue="Application.Client" />
         <item itemvalue="JUnit.CollectionsExerciseTest.learn_thread_safe_ArrayList" />
-        <item itemvalue="JUnit.CollectionsExerciseTest" />
-        <item itemvalue="JUnit.CollectionsExerciseTest.learn_common_collections_operations" />
-        <item itemvalue="JUnit.ArraysExerciseTest" />
-        <item itemvalue="JUnit.ArraysExerciseTest.learn_common_operations" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +227,7 @@
       <workItem from="1718768430777" duration="49000" />
       <workItem from="1718768499458" duration="1311000" />
       <workItem from="1718769833889" duration="141000" />
-      <workItem from="1718769990185" duration="13211000" />
+      <workItem from="1718769990185" duration="26591000" />
     </task>
     <servers />
   </component>
