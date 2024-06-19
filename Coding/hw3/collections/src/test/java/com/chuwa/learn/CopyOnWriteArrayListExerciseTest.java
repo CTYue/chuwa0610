@@ -1,10 +1,12 @@
-package com.chuwa.exercise.collection;
+package com.chuwa.learn;
 
 import org.junit.Test;
 
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author b1go
@@ -24,6 +26,18 @@ public class CopyOnWriteArrayListExerciseTest {
      */
     @Test
     public void learn_Inserting_And_Retrieving() {
+        CopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList<>();
+        List<Integer> list2 = new CopyOnWriteArrayList<>();
+
+        list.add(1);
+        list.add(2);
+        assertSame(2,list.get(1));
+        list2.add(1);
+        list2.add(2);
+        list.addAll(list2);
+        assertSame(2,list.get(3));
+        assertFalse(list.addIfAbsent(2));
+        assertSame(0,list.addAllAbsent(list2));
 
     }
 
@@ -43,5 +57,10 @@ public class CopyOnWriteArrayListExerciseTest {
 
         //Created an iterator
         Iterator<String> itr = list.iterator();
+        assertTrue(itr.hasNext());
+        assertEquals("Apple",itr.next());
+        //itr.remove();  Cannot use remove on CopyWriteArrayList use iterator
+        list.remove("Apple");
+        assertTrue(itr.next().equals("Banana"));
     }
 }
