@@ -1,5 +1,9 @@
 package com.chuwa.exercise.collection;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 import org.junit.Test;
 
 /**
@@ -16,7 +20,13 @@ public class ArrayListExerciseTest {
      */
     @Test
     public void learn_Inserting_And_Retrieving() {
-
+        List<Integer> lst = new ArrayList<>();
+        lst.add(1);
+        lst.add(2);
+        lst.add(3);
+        System.out.println(lst);
+        System.out.println(lst.indexOf(2));
+        System.out.println(lst.size());
     }
 
     /**
@@ -37,7 +47,16 @@ public class ArrayListExerciseTest {
      */
     @Test
     public void learn_Remove_Replacing_Updating() {
-
+        List<Integer> lst = new ArrayList<>();
+        lst.add(1);
+        lst.add(2);
+        lst.add(3);
+        lst.add(4);
+        lst.add(5);
+        lst.remove(3);
+        System.out.println(lst);
+        lst.removeAll(lst);
+        System.out.println(lst);
     }
 
     /**
@@ -50,7 +69,16 @@ public class ArrayListExerciseTest {
 
     @Test
     public void learn_Iterator() {
-
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        Iterator<Integer> iterator = list.iterator();
+        while(iterator.hasNext()){
+            int nxt = iterator.next();
+            System.out.println(nxt);
+        }
     }
 
     /**
@@ -61,6 +89,13 @@ public class ArrayListExerciseTest {
 
     @Test
     public void learn_Sorting() {
-
+        List<Integer> lst = new ArrayList<>();
+        lst.add(5);
+        lst.add(2);
+        lst.add(3);
+        lst.add(4);
+        lst.add(1);
+        Collections.sort(lst);
+        System.out.println(lst);
     }
 }

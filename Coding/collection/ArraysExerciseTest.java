@@ -1,5 +1,7 @@
 package com.chuwa.exercise.collection;
 
+import java.util.Arrays;
+
 import org.junit.Test;
 
 /**
@@ -18,7 +20,9 @@ public class ArraysExerciseTest {
 
     @Test
     public void learn_Inserting_And_Retrieving() {
-
+        int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        numbers[1] = 100;
+        System.out.println(numbers);
     }
 
     /**
@@ -35,7 +39,11 @@ public class ArraysExerciseTest {
      */
     @Test
     public void learn_search_and_sort() {
-
+        int[] numbers = {1, 2, 4, 5, 3};
+        Arrays.sort(numbers);
+        System.out.println(numbers);
+        int idx = Arrays.binarySearch(numbers, 3);
+        System.out.println(idx);
     }
 
     /**
@@ -49,7 +57,9 @@ public class ArraysExerciseTest {
      */
     @Test
     public void learn_copy_of_array() {
-
+        int[] numbers = {1, 2, 3, 4, 5, 7, 8, 9, 10};
+        int[] copy = Arrays.copyOf(numbers, 10);
+        System.out.println(Arrays.toString(copy));
     }
 
     /**
@@ -69,6 +79,10 @@ public class ArraysExerciseTest {
 
     @Test
     public void learn_common_operations() {
-
+        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        List<Integer> list = Arrays.asList(numbers);
+        System.out.println(list);
+        Arrays.fill(numbers, 11);
+        System.out.println(Arrays.toString(numbers));
     }
 }

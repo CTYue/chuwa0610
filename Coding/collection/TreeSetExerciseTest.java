@@ -1,5 +1,7 @@
 package com.chuwa.exercise.collection;
 
+import java.util.TreeSet;
+
 import org.junit.Test;
 
 /**
@@ -32,6 +34,17 @@ public class TreeSetExerciseTest {
 
     @Test
     public void learn_Inserting_And_Retrieving_Removing() {
-
+        TreeSet<Integer> set = new TreeSet<>();
+        set.add(1);
+        set.add(2);
+        set.add(3);
+        set.add(3);
+        set.add(4);
+        System.out.println(set);
+        System.out.println(set.contains(1));
+        System.out.println(set.contains(5));
+        System.out.println(set.isEmpty());
+        set.remove(3);
+        System.out.println(set);
     }
 }

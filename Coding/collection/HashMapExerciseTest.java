@@ -1,5 +1,8 @@
 package com.chuwa.exercise.collection;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.junit.Test;
 
 /**
@@ -29,7 +32,12 @@ public class HashMapExerciseTest {
 
     @Test
     public void learn_Inserting_And_Retrieving() {
-
+        Map<String, Integer> map = new HashMap<>();
+        map.put("apple", 1);
+        map.put("banana", 2);
+        map.putIfAbsent("peach", 3);
+        System.out.println(map.containsKey("banana"));
+        System.out.println(map.isEmpty());
     }
 
     /**
@@ -46,6 +54,10 @@ public class HashMapExerciseTest {
      */
     @Test
     public void learn_Remove_Replacing_Updating() {
-
+        Map<String, Integer> map = new HashMap<>();
+        map.put("apple", 1);
+        map.put("banana", 2);
+        map.remove("apple");
+        System.out.println(map);
     }
 }

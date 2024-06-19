@@ -1,5 +1,7 @@
 package com.chuwa.exercise.collection;
 
+import java.util.TreeMap;
+
 import org.junit.Test;
 
 /**
@@ -30,7 +32,14 @@ public class TreeMapExerciseTest {
 
     @Test
     public void learn_Inserting_And_Retrieving() {
-
+        TreeMap<String, Integer> map = new TreeMap<>();
+        map.put("one", 1);
+        map.put("two", 2);
+        map.put("three", 3);
+        System.out.println(map);
+        System.out.println(map.firstKey());
+        System.out.println(map.containsKey("one"));
+        System.out.println(map.isEmpty());
     }
 
     /**
@@ -41,6 +50,13 @@ public class TreeMapExerciseTest {
      */
     @Test
     public void learn_Remove_Replacing_Updating() {
-
+        TreeMap<String, Integer> map = new TreeMap<>();
+        map.put("one", 1);
+        map.put("two", 2);
+        map.put("three", 3);
+        map.replace("two", 2, 100);
+        System.out.println(map);
+        map.remove("three");
+        System.out.println(map);
     }
 }

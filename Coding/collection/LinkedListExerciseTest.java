@@ -1,5 +1,9 @@
 package com.chuwa.exercise.collection;
 
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+
 import org.junit.Test;
 
 /**
@@ -26,7 +30,17 @@ public class LinkedListExerciseTest {
      */
     @Test
     public void learn_Inserting_And_Retrieving() {
-
+        LinkedList<Integer> linkList = new LinkedList<>();
+        linkList.add(1);
+        linkList.add(2);
+        linkList.add(3);
+        linkList.addFirst(0);
+        linkList.addLast(4);
+        linkList.add(1, 10000);
+        System.out.println(linkList.getFirst());
+        System.out.println(linkList.getLast());
+        Collections.sort(linkList);
+        System.out.println(linkList);
     }
 
     /**
@@ -41,6 +55,13 @@ public class LinkedListExerciseTest {
 
     @Test
     public void learn_Remove_Sort() {
-
+        List<Integer> linkedlist = new LinkedList<>();
+        linkedlist.add(5);
+        linkedlist.add(1);
+        linkedlist.add(3);
+        linkedlist.remove(2);
+        System.out.println(linkedlist);
+        Collections.sort(linkedlist);
+        System.out.println(linkedlist);
     }
 }

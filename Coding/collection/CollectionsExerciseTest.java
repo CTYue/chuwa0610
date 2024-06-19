@@ -1,5 +1,9 @@
 package com.chuwa.exercise.collection;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import org.junit.Test;
 
 /**
@@ -20,7 +24,10 @@ public class CollectionsExerciseTest {
 
     @Test
     public void learn_common_collections_operations() {
-
+        List<Integer> list = new ArrayList<>();
+        Collections.addAll(list, 1, 2, 3, 4, 5);
+        System.out.println(Collections.min(list));
+        System.out.println(Collections.frequency(list, 1));
     }
 
     /**
@@ -29,6 +36,13 @@ public class CollectionsExerciseTest {
 
     @Test
     public void learn_thread_safe_ArrayList() {
-
+        List<Integer> list = new ArrayList<>();
+        Collections.addAll(list, 1, 2, 3, 4, 5);
+        List<Integer> synchronizedList = Collections.synchronizedList(list);
+        synchronized (synchronizedList) {
+            for (Integer num : synchronizedList) {
+                System.out.println(num);
+            }
+        }
     }
 }
