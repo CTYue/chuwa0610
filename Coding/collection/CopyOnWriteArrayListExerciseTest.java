@@ -24,6 +24,14 @@ public class CopyOnWriteArrayListExerciseTest {
      */
     @Test
     public void learn_Inserting_And_Retrieving() {
+        CopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList<>();
+        list.add(1);
+        list.add(8);
+        list.add(3);
+        list.add(1, 7);
+        list.addIfAbsent(10);
+        list.addAllAbsent(List.of(1,4, 8, 12, 7));
+        System.out.println(list);
 
     }
 
@@ -43,5 +51,11 @@ public class CopyOnWriteArrayListExerciseTest {
 
         //Created an iterator
         Iterator<String> itr = list.iterator();
+        while(itr.hasNext()){
+            String str = itr.next();
+            System.out.println(str);
+        }
+        list.remove("Orange");
+        System.out.println(list);
     }
 }

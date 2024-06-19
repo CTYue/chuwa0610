@@ -34,6 +34,22 @@ public class LinkedHashMapExerciseTest {
         HashMap<String, Integer> map = new LinkedHashMap<>();
         map.put("somethinTest", 1200);
         map.putIfAbsent("absent",1300);
+        System.out.println(map);
+        HashMap<String, Integer> newMap = new LinkedHashMap<>();
+        newMap.putAll(map);
+        System.out.println(newMap);
+
+        System.out.println(map.get("absent"));
+        System.out.println(map.getOrDefault("test", 20));
+
+        System.out.println(map.containsKey("test"));
+        System.out.println(map.containsValue(1200));
+
+        for(String key : map.keySet()){
+            System.out.println(key);
+        }
+        System.out.println(map.values());
+        System.out.println(map.isEmpty());
     }
 
     /**
@@ -50,6 +66,27 @@ public class LinkedHashMapExerciseTest {
      */
     @Test
     public void learn_Remove_Replacing_Updating() {
+        HashMap<String, Integer> map = new LinkedHashMap<>();
+        map.put("somethinTest", 1200);
+        map.putIfAbsent("absent",1300);
+        System.out.println(map);
+        map.replace("somethinTest", 1200, 1300);
+        map.replace("absent", 1000);
+        System.out.println(map);
+        map.replaceAll((key, val) -> val - 500);
+        System.out.println(map);
 
+        map.put("Hi", 100);
+        map.remove("absent");
+        map.remove("somethinTest", 800);
+        System.out.println(map);
+
+        map.put("Tom", 300);
+        map.compute("Hi", (key, val) -> val + 200);
+        System.out.println(map);
+        map.computeIfAbsent("Jack", k -> 500 * 500);
+        System.out.println(map);
+        map.computeIfPresent("Tom", (key, val) -> val - 100);
+        System.out.println(map);
     }
 }
