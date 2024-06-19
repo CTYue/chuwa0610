@@ -38,22 +38,22 @@ Since the finally block is used to execute important code such as closing resour
 If both the catch block and the finally block contain return statements, the return value from the finally block will override the return value from the catch block. This is because the finally block is guaranteed to execute after the try and catch blocks, regardless of whether an exception was thrown.
 
 # 4. What is Runtime/unchecked exception? what is Compile/Checked Exception?
-1. **Checked (Compile-Time) Exceptions**
+1. **Checked (Compile-Time) Exceptions**  
 They are exceptions that are checked by the compiler at compile time. The compiler requires that these exceptions are either caught and handled within the method where they occur or declared in the method signature using the throws keyword. It must be either handled using a try-catch block or declared using throws in the method signature.
 
-2. **Unchecked (Runtime) Exceptions**
+2. **Unchecked (Runtime) Exceptions**  
 Definition: Unchecked exceptions are exceptions that are not checked by the compiler at compile time. These exceptions include runtime exceptions and errors, which generally indicate programming errors or conditions that are not expected to be recovered from. They are not required to be caught or declared in the method signature and typically represent programming errors, such as logic errors or improper use of an API.
 
 # 5. What is the difference between throw and throws?
-1. **throw**
-The throw keyword is used to explicitly throw an exception from a method or any block of code.
+1. **throw**  
+The throw keyword is used to explicitly throw an exception from a method or any block of code.  
 Usage:
     - Used within a method to throw an instance of an exception.
     - Can be used to throw both checked and unchecked exceptions.
     - Only one exception instance can be thrown at a time.
 
-2. **throws**
-The throws keyword is used in a method signature to declare that the method might throw one or more exceptions. It indicates that the method does not handle these exceptions itself, but instead passes the responsibility to the caller of the method.
+2. **throws**  
+The throws keyword is used in a method signature to declare that the method might throw one or more exceptions. It indicates that the method does not handle these exceptions itself, but instead passes the responsibility to the caller of the method.  
 Usage:
     - Used in method signatures to declare checked exceptions that might be thrown by the method.
     - Can declare multiple exceptions separated by commas.
@@ -110,12 +110,12 @@ The SOLID principles are a set of five design principles intended to make softwa
 5. Dependency Inversion Principle (DIP): High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions.
 
 # 11. How can you achieve thread-safe singleton patterns in Java ?
-1. **Eager Initialization**
+1. **Eager Initialization**  
 In eager initialization, the instance of the singleton class is created at the time of class loading. This method is thread-safe because the instance is created when the class is loaded, and class loading is thread-safe in Java.
-2. **Synchronized Method**
+2. **Synchronized Method**  
 This method ensures that only one thread can access the getInstance() method at a time by using the synchronized keyword. This can lead to performance issues due to the overhead of synchronization.
 Optimization: Double-Checked Locking. It reduces the overhead of synchronized access by first checking the instance without synchronization. Only if the instance is null, it enters the synchronized block.
-3. **Bill Pugh Singleton Design**
+3. **Bill Pugh Singleton Design**  
 This method takes advantage of the Java class loader mechanism to ensure that the singleton instance is created in a thread-safe manner. The inner static helper class is not loaded into memory until it is referenced.
 
 # 12. What do you understand by the Open-Closed Principle (OCP)?
@@ -125,7 +125,7 @@ Software entities (classes, modules, functions, etc.) should be open for extensi
 *1. It mean that if the object of type A can do something, the object of type B could also be able to perform the same thing*
 *2. It means that all the objects of type A could execute all the methods present in its subtype B*
 *3. It means if a method is present in class A, it should also be present in class B so that the object of type B could substitute object of type A.*
-*4. It means that for the class B to inherit class A, objects of type B and objects of type A must be same.*
+*4. It means that for the class B to inherit class A, objects of type B and objects of type A must be same.*   
 **Answer**:  
 The correct answer is 1. It correctly captures the essence of LSP. If B is a subtype of A, then an instance of B should be able to perform any operation that an instance of A can perform. This ensures that B can be substituted for A without causing issues in the program.
 
