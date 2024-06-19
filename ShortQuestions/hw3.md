@@ -2,6 +2,7 @@
 # Chuwa Hw3 MingHao Lee
 
 ## 1. Practice collection
+- Refer to the coding folder in collection. 
 
 ## 2. What is the checked exception and unchecked exception in Java, could you give one example?
  ### Checked Exceptions
@@ -210,7 +211,9 @@ public class SimpleOptionalExample {
 
 
 ## 10. Practice collection problems here: 
+ - ## Refer to the coding folder in design. 
 https://github.com/TAIsRich/chuwa-eij-tutorial/tree/main/02-java-core/src/main/java/com/chuwa/exercise/collection
+
 
 ## 11. What are the types of design patterns in Java?
 ## Types of Design Patterns in Java
@@ -364,7 +367,7 @@ public class Singleton {
      - This option correctly captures the essence of LSP, which ensures that an object of a derived class (B) can replace an object of its base class (A) without 
        affecting the functionality expected from the base class.
 ## 16. Watch the design pattern video, and type the code, submit it to MavenProject folder:
-
+- ## Refer to the coding folder in design. 
   - Singleton: https://www.bilibili.com/video/BV1Np4y1z7BU?p=22
   - Factory: https://www.bilibili.com/video/BV1Np4y1z7BU?p=35&vd_source=310561eab1216a27f7accf859bf7f6d9
   - Builder: https://www.bilibili.com/video/BV1Np4y1z7BU?p=50&vd_source=310561eab1216a27f7accf859bf7f6d9
