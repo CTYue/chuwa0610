@@ -179,5 +179,5 @@ This means when I want to add new ability a the currently working class, I shoul
 - Builder: https://www.bilibili.com/video/BV1Np4y1z7BU?p=50&vd_source=310561eab1216a27f7accf859bf7f6d9
   - See /Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Builder
 - Publisher_Subscriber: https://www.bilibili.com/video/BV1Np4y1z7BU?p=114&vd_source=310561eab1216a27f7accf859bf7f6d9
-  - See /Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/
+  - See /Coding/hw3/collections/src/main/java/com/chuwa/learn/MavenProject/Observer
 
