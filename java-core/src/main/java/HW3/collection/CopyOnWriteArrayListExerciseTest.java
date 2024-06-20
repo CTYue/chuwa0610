@@ -24,28 +24,16 @@ public class CopyOnWriteArrayListExerciseTest {
      */
     @Test
     public void learn_Inserting_And_Retrieving() {
-        // 创建一个 CopyOnWriteArrayList
+        // create CopyOnWriteArrayList
         List<String> list = new CopyOnWriteArrayList<>();
 
-        // 添加元素
+        // add
         list.add("apple");
         list.add("banana");
 
 
         list.add(1, "cherry");
 
-        List<String> otherList = List.of("dates", "figs");
-        list.addAll(otherList);
-
-        // 添加元素（如果不存在）
-        list.addIfAbsent("apple");
-
-        // 添加所有不存在的元素
-        List<String> absentList = List.of("banana", "grapes");
-        list.addAllAbsent(absentList);
-
-        // 输出列表内容
-        System.out.println("CopyOnWriteArrayList: " + list);
     }
 
     /**
