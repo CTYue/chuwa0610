@@ -173,3 +173,19 @@
    >
 
 10. How are Collections different from Stream?
+
+    >Collections are used to store the data, usually computed before adding to the collections. Stream is used to take collections as input and do the computation based on it to get an expected results
+
+11. Leetcode
+
+    ```java
+    return Arrays.stream(nums)
+          .boxed()
+      		.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()))
+          .entrySet().stream()
+          .filter(e->e.getValue()==1)
+          .mapToInt(Map.Entry::getKey)
+          .sum();
+    ```
+
+    
