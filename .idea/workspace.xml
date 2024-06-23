@@ -4,11 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17a02662-d9b5-43c1-9390-b515dbe4e4db" name="Changes" comment="" />
+    <list default="true" id="17a02662-d9b5-43c1-9390-b515dbe4e4db" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/default_interface_method/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/default_interface_method/DIMImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/default_interface_method/DIML.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/lambda/Foo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/lambda/LambdaLearn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/method_reference/MethodReferenceExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/optional/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/optional/EmployeeData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/optional/OptionalDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/optional/OptionalMainMethodTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/optional/OptionalTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/stream_api/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/stream_api/ProductClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/stream_api/StreamApiCreationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/stream_api/StreamApiEndOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/stream_api/StreamApiIntermediateOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/stream_api/StreamExercise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/generic/genericExercise/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/generic/genericExercise/src/main/java/com/chuwa/learn/GenericClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/generic/genericExercise/src/main/java/com/chuwa/learn/GenericClassTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/generic/genericExercise/src/main/java/com/chuwa/learn/GenericMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/generic/genericExercise/src/main/java/com/chuwa/learn/GenericMultiArguments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/generic/genericExercise/src/main/java/com/chuwa/learn/NonGeneric.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShortQuestions/hw4.md" beforeDir="false" afterPath="$PROJECT_DIR$/ShortQuestions/hw4.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -16,10 +52,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2i1D80R68obxCS8oCwfunOUiCXW" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -27,19 +63,160 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.MethodReferenceExample.executor": "Run",
+    "Application.OptionalDemo.executor": "Run",
+    "JUnit.LambdaLearn.testFinal.executor": "Run",
+    "JUnit.OptionalMainMethodTest.executor": "Run",
+    "JUnit.OptionalMainMethodTest.testOrElse.executor": "Run",
+    "JUnit.OptionalTest.testOf.executor": "Run",
+    "JUnit.ProductClient.findAny.executor": "Run",
+    "JUnit.ProductClient.groupingBy.executor": "Run",
+    "JUnit.ProductClient.joining.executor": "Run",
+    "JUnit.ProductClient.summingInt.executor": "Run",
+    "JUnit.ProductClient.toList.executor": "Run",
+    "JUnit.ProductClient.toSet.executor": "Run",
+    "JUnit.StreamApiCreationTest.testCollection.executor": "Run",
+    "JUnit.StreamApiCreationTest.testOf.executor": "Run",
+    "JUnit.StreamApiIntermediateOperation.testDistinct.executor": "Run",
+    "JUnit.StreamApiIntermediateOperation.testFilter.executor": "Run",
+    "JUnit.StreamApiIntermediateOperation.testFlatMap.executor": "Run",
+    "JUnit.StreamApiIntermediateOperation.testIntermediateOperationChain.executor": "Run",
+    "JUnit.StreamApiIntermediateOperation.testLimit.executor": "Run",
+    "JUnit.StreamApiIntermediateOperation.testMap.executor": "Run",
+    "JUnit.StreamApiIntermediateOperation.testSkip.executor": "Run",
+    "JUnit.StreamApiIntermediateOperation.testSorted.executor": "Run",
+    "JUnit.StreamExercise.testMapAndFlatMap.executor": "Run",
+    "JUnit.StreamExercise.testMapAndFlatMap2.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "17",
+    "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/jingyiwang/Documents/Java-basic/chuwa0610",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.14424779",
     "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="JUnit.StreamExercise.testMapAndFlatMap2">
+    <configuration name="StreamApiIntermediateOperation.testFlatMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Java8NewFeature" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chuwa.learn.stream_api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chuwa.learn.stream_api" />
+      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.stream_api.StreamApiIntermediateOperation" />
+      <option name="METHOD_NAME" value="testFlatMap" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StreamApiIntermediateOperation.testIntermediateOperationChain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Java8NewFeature" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chuwa.learn.stream_api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chuwa.learn.stream_api" />
+      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.stream_api.StreamApiIntermediateOperation" />
+      <option name="METHOD_NAME" value="testIntermediateOperationChain" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StreamApiIntermediateOperation.testSorted" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Java8NewFeature" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chuwa.learn.stream_api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chuwa.learn.stream_api" />
+      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.stream_api.StreamApiIntermediateOperation" />
+      <option name="METHOD_NAME" value="testSorted" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StreamExercise.testMapAndFlatMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Java8NewFeature" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chuwa.learn.stream_api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chuwa.learn.stream_api" />
+      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.stream_api.StreamExercise" />
+      <option name="METHOD_NAME" value="testMapAndFlatMap" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StreamExercise.testMapAndFlatMap2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Java8NewFeature" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chuwa.learn.stream_api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chuwa.learn.stream_api" />
+      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.stream_api.StreamExercise" />
+      <option name="METHOD_NAME" value="testMapAndFlatMap2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="chuwa0610" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="chuwa0610" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.StreamExercise.testMapAndFlatMap2" />
+        <item itemvalue="JUnit.StreamExercise.testMapAndFlatMap" />
+        <item itemvalue="JUnit.StreamApiIntermediateOperation.testSorted" />
+        <item itemvalue="JUnit.StreamApiIntermediateOperation.testIntermediateOperationChain" />
+        <item itemvalue="JUnit.StreamApiIntermediateOperation.testFlatMap" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -49,6 +226,8 @@
       <option name="presentableId" value="Default" />
       <updated>1718649026771</updated>
       <workItem from="1718649027839" duration="13970000" />
+      <workItem from="1719001101868" duration="17438000" />
+      <workItem from="1719080769487" duration="21181000" />
     </task>
     <servers />
   </component>
