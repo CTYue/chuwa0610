@@ -1,0 +1,122 @@
+Java design pattern
+
+
+factory pattern:
+Define an interface for creating an object, allowing subclasses to decide which class to instantiate.
+The Factory Method makes the instantiation of a product class deferred to its subclasses.
+
+
+Structure
+There are 4 main role in the factory method pattern
+1.Abstract Factory (Abstract Factory):
+    Provides an interface for creating products, through which the caller accesses the factory method of the specific factory to create products.
+
+2.Concrete Factory (Concrete Factory):
+    Mainly implements the abstract method in the abstract factory, completing the creation of specific products.
+
+3.Product (Product):
+    Mainly implements the abstract method in the abstract factory, completing the creation of specific products.
+
+4.Concrete Product (Concrete Product):
+    Implements the interface defined by the abstract product role, created by the specific factory. It corresponds one-to-one with the specific factory.
+
+
+Example:
+
+
+
+//Step 1: Define the Coffee Interface (Product)
+//First, we define a common interface for all types of coffee.
+
+public interface Coffee {
+    void brew();
+}
+
+
+--------------------------------------------------------------------------------
+
+Step 2: Implement Concrete Coffee Classes (Concrete Products)
+Next, we create concrete classes for each type of coffee, implementing the Coffee interface.
+
+java
+public class Espresso implements Coffee {
+    @Override
+    public void brew() {
+        System.out.println("Brewing an Espresso...");
+    }
+}
+
+public class Cappuccino implements Coffee {
+    @Override
+    public void brew() {
+        System.out.println("Brewing a Cappuccino...");
+    }
+}
+
+public class Latte implements Coffee {
+    @Override
+    public void brew() {
+        System.out.println("Brewing a Latte...");
+    }
+}
+
+--------------------------------------------------------------------------------
+
+
+Step 3: Create the Coffee Factory (Creator)
+java
+
+// Abstract Factory
+public abstract class CoffeeFactory {
+    public abstract Coffee createCoffee(String type);
+
+    public Coffee orderCoffee(String type) {
+        Coffee coffee = createCoffee(type);
+        coffee.brew();
+        return coffee;
+    }
+}
+
+--------------------------------------------------------------------------------
+
+
+Step 4: Implement Concrete Coffee Factories (Concrete Creators)
+java
+Copy code
+// Concrete Factory
+public class SimpleCoffeeFactory extends CoffeeFactory {
+    @Override
+    public Coffee createCoffee(String type) {
+        switch (type.toLowerCase()) {
+            case "espresso":
+                return new Espresso();
+            case "cappuccino":
+                return new Cappuccino();
+            case "latte":
+                return new Latte();
+            default:
+                throw new IllegalArgumentException("Unknown coffee type: " + type);
+        }
+    }
+}
+
+--------------------------------------------------------------------------------
+Step 5: Use the Factory to Order Coffee
+java
+Copy code
+public class CoffeeShop {
+    public static void main(String[] args) {
+        CoffeeFactory coffeeFactory = new SimpleCoffeeFactory();
+
+        Coffee espresso = coffeeFactory.orderCoffee("espresso");
+        Coffee cappuccino = coffeeFactory.orderCoffee("cappuccino");
+        Coffee latte = coffeeFactory.orderCoffee("latte");
+    }
+}
+
+
+Example of Flow
+Client (CoffeeShop) calls orderCoffee("espresso") on SimpleCoffeeFactory.
+orderCoffee Method (in CoffeeFactory) calls createCoffee("espresso") on SimpleCoffeeFactory.
+createCoffee Method (in SimpleCoffeeFactory) creates and returns an Espresso object.
+orderCoffee Method calls brew on the Espresso object, resulting in the output: "Brewing an Espresso...".
