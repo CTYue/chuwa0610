@@ -1,5 +1,7 @@
 # A first-level heading
+
 ## A second-level heading
+
 ### A third-level heading
 
 **This is bold text**
@@ -11,6 +13,7 @@ This is a <sub>subscript</sub> text
 > Text that is a quote
 
 How to quote codes:
+
 ```
 git status
 git add
@@ -21,19 +24,15 @@ This is a link to [GitHub Pages](https://pages.github.com/).
 
 [Relative links example](hw1.md)
 
-
 - list1
 * list2
 + list3
-
 1. James1
 2. James2
 3. James3
-
-1. First list item
+4. First list item
    - First nested list item
      - Second nested list item
-
 - [x] BTC
 - [ ] ETH
 
@@ -46,7 +45,6 @@ A footnote can also have multiple lines[^2].
 [^1]: My reference.
 [^2]: To add line breaks within a footnote, prefix new lines with 2 spaces.
   This is a second line.
-
 
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
