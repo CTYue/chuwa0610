@@ -1,0 +1,3 @@
+[submodule "Coding/Coding/stream-api-exercises"]
+	path = Coding/Coding/stream-api-exercises
+	url = https://github.com/gavinklfong/stream-api-exercises.git
