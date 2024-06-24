@@ -177,21 +177,21 @@ public class Main {
 ## What is optional? why do you use it? write an optional example.
 It is a class that helps to deal with NullPointerException. We use them to do null-checkes.
 For example:
-```     
-        String[] str = new String[10];  
-        String lowercaseString = str[5].toLowerCase();  
-        System.out.print(lowercaseString);  
+```
+        String[] str = new String[10];
+        String lowercaseString = str[5].toLowerCase();
+        System.out.print(lowercaseString);
 ```
 will return NullPointerException. However, if we change it to
 ```
-        String[] str = new String[10];  
-        Optional<String> checkNull = Optional.ofNullable(str[5]);  
-        if(checkNull.isPresent()){  
-            String lowercaseString = str[5].toLowerCase();  
-            System.out.print(lowercaseString);  
-        }else  
-            System.out.println("string value is not present");  
-    }  
+        String[] str = new String[10];
+        Optional<String> checkNull = Optional.ofNullable(str[5]);
+        if(checkNull.isPresent()){
+            String lowercaseString = str[5].toLowerCase();
+            System.out.print(lowercaseString);
+        }else
+            System.out.println("string value is not present");
+    }
 ```
 We will be able to deal with null values and preventing the program from crushing.
 ## Why finally always be executed ?
@@ -226,19 +226,19 @@ I found these images helpful in understanding the principles
 We can use ___Lazy Initialization___, and syncronize the ```getInstance()``` functions
 eg:
 ```
-public class MyClass 
+public class MyClass
 {
 
   private static MyClass instance;
- 
-  private MyClass() 
+
+  private MyClass()
   {
     ...
   }
- 
-  synchronized public static MyClass getInstance() 
+
+  synchronized public static MyClass getInstance()
   {
-    if (instance == null) 
+    if (instance == null)
     {
       instance = new MyClass();
     }
