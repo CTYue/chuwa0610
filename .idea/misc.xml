@@ -4,11 +4,12 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/java-core/pom.xml" />
+        <option value="$PROJECT_DIR$/Coding/hw3/collections/pom.xml" />
+        <option value="$PROJECT_DIR$/Coding/hw4/hw4/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_22" default="true" project-jdk-name="22" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" default="true">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
