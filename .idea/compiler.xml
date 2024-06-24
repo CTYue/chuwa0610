@@ -9,11 +9,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="collections" />
+        <module name="hw4" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="collection" target="1.8" />
+      <module name="collections" target="1.8" />
       <module name="ear" target="1.5" />
       <module name="ejbs" target="1.8" />
       <module name="java-core" target="22" />
