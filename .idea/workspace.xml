@@ -5,34 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be80a07f-98d5-4ff8-af2d-72c96a8ddba3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/EmployeeData.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/EmployeeData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Exercise/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Exercise/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Exercise/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Exercise/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Exercise/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Exercise/ShoppingCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Exercise/ShoppingCartUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Exercise/ShoppingCartUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Generic/GenericClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Generic/GenericClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Generic/GenericClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Generic/GenericClassTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Generic/GenericMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Generic/GenericMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Generic/GenericMultiArguments.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Generic/GenericMultiArguments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Generic/NonGeneric.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Generic/NonGeneric.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Java8/Defult_interface/CLient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Java8/Defult_interface/CLient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Java8/Defult_interface/DIMImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Java8/Defult_interface/DIMImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Java8/Defult_interface/DIML.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Java8/Defult_interface/DIML.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Java8/Lambda/Foo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Java8/Lambda/Foo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Java8/MethodReference/MethodReferenceExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Java8/MethodReference/MethodReferenceExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Java8/Optional/OptionalDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Java8/Optional/OptionalDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Java8/StreamApi/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/main/java/com/chuwa/learn/Java8/StreamApi/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/test/java/com/chuwa/learn/LambdaLearn.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/test/java/com/chuwa/learn/LambdaLearn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/test/java/com/chuwa/learn/OptionalMainMethodTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/test/java/com/chuwa/learn/OptionalMainMethodTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/test/java/com/chuwa/learn/OptionalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/test/java/com/chuwa/learn/OptionalTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/test/java/com/chuwa/learn/ProductClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/test/java/com/chuwa/learn/ProductClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/test/java/com/chuwa/learn/StreamApiCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/test/java/com/chuwa/learn/StreamApiCreationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/test/java/com/chuwa/learn/StreamApiEndOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/test/java/com/chuwa/learn/StreamApiEndOperation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/test/java/com/chuwa/learn/StreamApiIntermediateOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/test/java/com/chuwa/learn/StreamApiIntermediateOperation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw4/hw4/src/test/java/com/chuwa/learn/StreamApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw4/hw4/src/test/java/com/chuwa/learn/StreamApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShortQuestions/hw4.md" beforeDir="false" afterPath="$PROJECT_DIR$/ShortQuestions/hw4.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,67 +44,67 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.CLient.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Client.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GenericClassTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GenericMethod.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GenericMultiArguments.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MethodReferenceExample.executor&quot;: &quot;Run&quot;,
-    &quot;Application.OptionalDemo.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.chuwa.learn.MavenProject.Builder.Client.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.chuwa.learn.MavenProject.Observer.Client.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.chuwa.learn.MavenProject.Singleton.Client.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AdditionalMapExerciseTest.learn_ConcurrentHashMap.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AdditionalMapExerciseTest.learn_EnumMap.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AdditionalMapExerciseTest.learn_IdentityHashMap.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ArrayListExerciseTest.learn_Inserting_And_Retrieving.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ArrayListExerciseTest.learn_Iterator.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ArrayListExerciseTest.learn_Remove_Replacing_Updating.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ArrayListExerciseTest.learn_Sorting.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ArraysExerciseTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ArraysExerciseTest.learn_common_operations.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ArraysExerciseTest.learn_copy_of_array.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ArraysExerciseTest.learn_search_and_sort.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CollectionsExerciseTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CollectionsExerciseTest.learn_common_collections_operations.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CollectionsExerciseTest.learn_thread_safe_ArrayList.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CopyOnWriteArrayListExerciseTest.learn_Inserting_And_Retrieving.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CopyOnWriteArrayListExerciseTest.learn_Iterator.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.HashMapExerciseTest.learn_Inserting_And_Retrieving.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.HashMapExerciseTest.learn_Remove_Replacing_Updating.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.HashSetExerciseTest.learn_Inserting_And_Retrieving_Removing.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LambdaLearn.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LambdaLearn.testFinal21.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LinkedHashMapExerciseTest.learn_Inserting_And_Retrieving.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LinkedHashMapExerciseTest.learn_Remove_Replacing_Updating.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LinkedListExerciseTest.learn_Inserting_And_Retrieving.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LinkedListExerciseTest.learn_Remove_Sort.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductClient.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StreamApiTest.exercise15a.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StreamExercise.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TreeMapExerciseTest.learn_Inserting_And_Retrieving.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TreeMapExerciseTest.learn_Remove_Replacing_Updating.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TreeSetExerciseTest.learn_Inserting_And_Retrieving_Removing.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.collection [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.collection [test].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;hongqiang__cai/hw4&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/15063/OneDrive/Documents/Chuwa/chuwa0610/Coding/hw4&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CLient.executor": "Run",
+    "Application.Client.executor": "Run",
+    "Application.GenericClassTest.executor": "Run",
+    "Application.GenericMethod.executor": "Run",
+    "Application.GenericMultiArguments.executor": "Run",
+    "Application.MethodReferenceExample.executor": "Run",
+    "Application.OptionalDemo.executor": "Run",
+    "Application.com.chuwa.learn.MavenProject.Builder.Client.executor": "Run",
+    "Application.com.chuwa.learn.MavenProject.Observer.Client.executor": "Run",
+    "Application.com.chuwa.learn.MavenProject.Singleton.Client.executor": "Run",
+    "JUnit.AdditionalMapExerciseTest.learn_ConcurrentHashMap.executor": "Run",
+    "JUnit.AdditionalMapExerciseTest.learn_EnumMap.executor": "Run",
+    "JUnit.AdditionalMapExerciseTest.learn_IdentityHashMap.executor": "Run",
+    "JUnit.AppTest.executor": "Run",
+    "JUnit.ArrayListExerciseTest.learn_Inserting_And_Retrieving.executor": "Run",
+    "JUnit.ArrayListExerciseTest.learn_Iterator.executor": "Run",
+    "JUnit.ArrayListExerciseTest.learn_Remove_Replacing_Updating.executor": "Run",
+    "JUnit.ArrayListExerciseTest.learn_Sorting.executor": "Run",
+    "JUnit.ArraysExerciseTest.executor": "Run",
+    "JUnit.ArraysExerciseTest.learn_common_operations.executor": "Run",
+    "JUnit.ArraysExerciseTest.learn_copy_of_array.executor": "Run",
+    "JUnit.ArraysExerciseTest.learn_search_and_sort.executor": "Run",
+    "JUnit.CollectionsExerciseTest.executor": "Run",
+    "JUnit.CollectionsExerciseTest.learn_common_collections_operations.executor": "Run",
+    "JUnit.CollectionsExerciseTest.learn_thread_safe_ArrayList.executor": "Run",
+    "JUnit.CopyOnWriteArrayListExerciseTest.learn_Inserting_And_Retrieving.executor": "Run",
+    "JUnit.CopyOnWriteArrayListExerciseTest.learn_Iterator.executor": "Run",
+    "JUnit.HashMapExerciseTest.learn_Inserting_And_Retrieving.executor": "Run",
+    "JUnit.HashMapExerciseTest.learn_Remove_Replacing_Updating.executor": "Run",
+    "JUnit.HashSetExerciseTest.learn_Inserting_And_Retrieving_Removing.executor": "Run",
+    "JUnit.LambdaLearn.executor": "Run",
+    "JUnit.LambdaLearn.testFinal21.executor": "Run",
+    "JUnit.LinkedHashMapExerciseTest.learn_Inserting_And_Retrieving.executor": "Run",
+    "JUnit.LinkedHashMapExerciseTest.learn_Remove_Replacing_Updating.executor": "Run",
+    "JUnit.LinkedListExerciseTest.learn_Inserting_And_Retrieving.executor": "Run",
+    "JUnit.LinkedListExerciseTest.learn_Remove_Sort.executor": "Run",
+    "JUnit.ProductClient.executor": "Run",
+    "JUnit.StreamApiTest.exercise15a.executor": "Run",
+    "JUnit.StreamExercise.executor": "Run",
+    "JUnit.TreeMapExerciseTest.learn_Inserting_And_Retrieving.executor": "Run",
+    "JUnit.TreeMapExerciseTest.learn_Remove_Replacing_Updating.executor": "Run",
+    "JUnit.TreeSetExerciseTest.learn_Inserting_And_Retrieving_Removing.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.collection [clean].executor": "Run",
+    "Maven.collection [test].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "hongqiang__cai/master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/15063/OneDrive/Documents/Chuwa/chuwa0610/Coding/hw4",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.chuwa.learn.MavenProject.Observer" />
@@ -251,6 +225,8 @@
       <workItem from="1718768499458" duration="1311000" />
       <workItem from="1718769833889" duration="141000" />
       <workItem from="1718769990185" duration="45865000" />
+      <workItem from="1719131340433" duration="514000" />
+      <workItem from="1719206904961" duration="1152000" />
     </task>
     <servers />
   </component>
