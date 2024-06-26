@@ -621,3 +621,209 @@ supplyAsync(fetch price). -> cf.thenApply((result) -> {
 4. Exception Handling
 - `CompletableFuture.exceptionally(Function<Throwable, T> fn)`: Handles exceptions and returns an alternative value.
 - `CompletableFuture.handle(BiFunction<T, Throwable, U> fn)`: Handles exceptions while allowing access to the result value (if any).
+
+## 23. Write a code to create 2 threads, one thread print 1,3,5,7,9, another thread print 2,4,6,8,10.
+1. One solution use synchronized and wait notify
+```
+public class Printer {
+   private static final Object monitor = new Object();
+   private static int value = 1;
+
+   public static void main(String[] args){
+      Runnable r = new PrintRunnable();
+      new Thread(r).start();
+      new Thread(r).start();
+   }
+
+   static class PrintRunnable implements Runnable {
+      @Override
+      public void run(){
+         synchronized(monitor){
+            while(value <= 10){
+               System.out.println(Thread.currentThread().getName() + ": " + value++);
+               monitor.notifyAll();
+               try {
+                  if(value <= 10) {
+                     monitor.wait();
+                  }
+               } catch (InterruptedException e){
+                  e.printStackTrace();
+               }
+            }
+         }
+      }
+   }
+}
+```
+2. One solution use ReentrantLock and await, signal
+```
+public class Printer {
+    private static final Object monitor = new Object();
+    private static int value = 1;
+
+    public static void main(String[] args) {
+        PrintRunnable runnable = new PrintRunnable();
+        new Thread(runnable).start();//t0
+        new Thread(runnable).start();//t1
+    }
+
+    static class PrintRunnable implements Runnable {
+        private final Lock lock = new ReentrantLock();
+        private final Condition condition = lock.newCondition();
+        @Override
+        public void run() {
+            lock.lock();
+            try   {
+                while (value <= 10) {
+                    System.out.println(Thread.currentThread().getName() + ": " + value++);
+                    condition.signalAll();
+                    try {
+                        condition.await();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            } finally {
+                lock.unlock();
+            }
+        }
+    }
+}
+```
+
+## 24. create 3 threads, one thread ouput 1-10, one thread output 11-20, one thread output 21-22. threads run sequence is random.
+```
+public class Printer{
+   private static int num = 1;
+
+   public static void main(String[] args){
+      Thread t0 = new Thread(() -> printNum());
+      Thread t1 = new Thread(() -> printNum());
+      Thread t2 = new Thread(() -> printNum());
+      t0.start();
+      t1.start();
+      t2.start();
+   }
+
+   public static synchronized void printNum(){
+      int count = 10;
+      while(count > 0){
+         System.out.println(Thread.currentThread().getName() + ": " + num++);
+         try {
+            Thread.sleep(500);
+         } catch (InterruptedException e){
+            e.printStackTrace();
+         }
+      }
+      Printer.class.notifyAll();
+   }
+}
+```
+
+## 25. Completable future
+1. Write a simple program that uses CompletableFuture to asynchronously get the sum and product of two integers, and print the results.
+```
+public class Main {
+   public static void main(String[] args){
+      int num1 = 2; 
+      int num2 = 3;
+
+      CompletableFuture<Integer> sumFuture = CompletableFuture.supplyAsync(() -> {
+         System.out.println(Thread.currentThread().getName() + ": " + "Calculating Sum...");
+         return num1 + num2;
+      });
+
+      CompletableFuture<Integer> productFuture = CompletableFuture.supplyAsync(() -> {
+         System.out.println(Thread.currentThread().getName() + ": " + "Calculating Product...");
+         return num1 * num2;
+      });
+
+      sumFuture.thenCombine(productFuture, (sum, product) -> {
+         System.out.println("Sum: " + sum);
+         System.out.println("Product: " + product);
+         return null;
+      }).join();
+
+      System.out.println("Calculation completed");
+   }
+}
+```
+2. Assume there is an online store that needs to fetch data from three APIs:products, reviews, and inventory. Use CompletableFuture to implement this scenario and merge the fetched data for further processing. 
+```
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.util.concurrent.CompletableFuture;
+
+public class FetchApi {
+    private static final HttpClient httpClient = HttpClient.newHttpClient();
+
+    public static CompletableFuture<String> getProductInformation() {
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://jsonplaceholder.typicode.com/todos/1"))
+                .build();
+        return httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+                .thenApply(HttpResponse::body);
+    }
+
+    public static CompletableFuture<String> getReviews() {
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://jsonplaceholder.typicode.com/todos/1"))
+                .header()
+                .build();
+        return httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+                .thenApply(HttpResponse::body);
+    }
+
+    public static CompletableFuture<String> getInventory() {
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://jsonplaceholder.typicode.com/todos/1"))
+                .build();
+        return httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+                .thenApply(HttpResponse::body);
+    }
+}
+```
+3. Implement exception handling. If an exception occurs during any API call, return a default value and log the exception information.
+```
+public class FetchApi {
+    private static final HttpClient httpClient = HttpClient.newHttpClient();
+
+    public static CompletableFuture<String> getProductInformation() {
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://jsonplaceholder.typicode.com/todos/1"))
+                .build();
+        return httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+                .thenApply(HttpResponse::body)
+                .exceptionally(ex -> {
+                    ex.printStackTrace(); 
+                    return "Default Product Information";
+                });
+    }
+
+    public static CompletableFuture<String> getReviews() {
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://jsonplaceholder.typicode.com/todos/1"))
+                .build();
+        return httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+                .thenApply(HttpResponse::body)
+                .exceptionally(ex -> {
+                    ex.printStackTrace(); 
+                    return "Default Reviews";
+                });
+    }
+
+    public static CompletableFuture<String> getInventory() {
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://jsonplaceholder.typicode.com/todos/1"))
+                .build();
+        return httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+                .thenApply(HttpResponse::body)
+                .exceptionally(ex -> {
+                    ex.printStackTrace();  
+                    return "Default Inventory";
+                });
+    }
+}
+```
