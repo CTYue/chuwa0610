@@ -401,6 +401,88 @@ See Coding/hw5/src/main/java/com/chuwa/learn
      Thread-1: 10
      Process finished with exit code 0
 ```
+Here's the solution using synchronized:
+```
+public class Test {
+    public static int value = 1;
+    public static Object object = new Object();
+    public static void main(String[] args) {
+        RunnableClass runnable = new RunnableClass();
+        new Thread(runnable).start();
+        new Thread(runnable).start();
+    }
+
+    static class RunnableClass implements Runnable {
+        public void run() {
+            while (true) {
+
+                synchronized (object) {
+                    if(value > 10) {
+                        break;
+                    }else{
+                        System.out.println(Thread.currentThread().getName()+": "+value);
+                        value++;
+                        object.notifyAll();
+                        try {
+                            if(value <= 10) {
+                                object.wait();
+                            }
+
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+
+}
+
+```
+Here's solution using Lock
+```
+public class Test2 {
+    public static int value = 1;
+    //public static Object object = new Object();
+    public static void main(String[] args) {
+        RunnableClass runnable = new RunnableClass();
+        new Thread(runnable).start();
+        new Thread(runnable).start();
+    }
+
+    static class RunnableClass implements Runnable {
+        private final Lock lock = new ReentrantLock();
+        private final Condition condition = lock.newCondition();
+
+        public void run() {
+            while(true){
+                lock.lock();
+                try {
+                    while(value <= 10) {
+                        System.out.println(Thread.currentThread().getName()+": "+value);
+                        value++;
+                        condition.signalAll();
+                        try {
+                            condition.await();
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+                }finally {
+                    lock.unlock();
+                }
+            }
+
+
+        }
+    }
+
+}
+
+```
 ## 24.  create 3 threads, one thread ouput 1-10, one thread output 11-20, one thread output 21-22. threads run
      sequence is random. (solution is in com.chuwa.exercise.t08_multithreading.PrintNumber1)
 ```
@@ -435,12 +517,39 @@ See Coding/hw5/src/main/java/com/chuwa/learn
      Thread-1: 29
      Thread-1: 30
 ```
+Here's the solution
+```
+public class Test3 {
+    private static int n = 1;
 
+    public static void main(String[] args) {
+        Thread t1 = new Thread(() -> printNumber());
+        Thread t2 = new Thread(() -> printNumber());
+        Thread t3 = new Thread(() -> printNumber());
+
+        t1.start();
+        t2.start();
+        t3.start();
+    }
+
+    private static synchronized void printNumber() {
+        int count = 10;
+        while (count-- > 0) {
+            System.out.println(Thread.currentThread().getName() + ": " + n++);
+
+        }
+
+        Test3.class.notifyAll();
+    }
+}
+```
 ## 25.  completable future:
 ### Homework 1: Write a simple program that uses CompletableFuture to asynchronously get the sum and product of two integers, and print the results.
+See [Q25a.java](..%2FCoding%2Fhw5%2Fsrc%2Fmain%2Fjava%2Fcom%2Fchuwa%2Flearn%2FQ25a.java)
 ### Homework 2: Assume there is an online store that needs to fetch data from three APIs: products, reviews, and inventory. Use CompletableFuture to implement this scenario and merge the fetched data for further processing. (需要找public api去模拟，)
 - Sign In to Developer.BestBuy.com
 - Best Buy Developer API Documentation (bestbuyapis.github.io)
-- 可以用fake api https://jsonplaceholder.typicode.com/
+- 可以用fake api https://jsonplaceholder.typicode.com/ \
+See [Q25b.java](..%2FCoding%2Fhw5%2Fsrc%2Fmain%2Fjava%2Fcom%2Fchuwa%2Flearn%2FQ25b.java) Because Developer.BestBuy.Com no longer gives API to free emails, I have to use https://jsonplaceholder.typicode.com/ for fake api. Products -> Posts, Reviews -> Comments, Inventory -> Users 
 ### Homework 3: For Homework 2, implement exception handling. If an exception occurs during any API call, return a default value and log the exception information.
- 
+See [Q25c.java](..%2FCoding%2Fhw5%2Fsrc%2Fmain%2Fjava%2Fcom%2Fchuwa%2Flearn%2FQ25c.java) used .exceptionally to the .sendAsync function to handle exceptions
