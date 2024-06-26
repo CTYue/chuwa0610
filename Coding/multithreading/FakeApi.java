@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.*;
-import java.util.HashMap;
 import java.util.concurrent.CompletableFuture;
 
 /**
@@ -28,7 +27,7 @@ public class FakeApi {
                     BufferedReader in = new BufferedReader(
                             new InputStreamReader(is));
                     String inputLine;
-                    StringBuffer content = new StringBuffer();
+                    StringBuilder content = new StringBuilder();
                     while (true) {
                         try {
                             if ((inputLine = in.readLine()) == null) break;
@@ -45,7 +44,10 @@ public class FakeApi {
                     }
                     return content.toString();
                 })
-                .thenAccept(System.out::println).join();
+                .exceptionallyAsync((ex) -> {
+                    System.out.println(ex.toString());
+                    return "";
+                }).thenAccept(System.out::println).join();
     }
 
     private static HttpURLConnection connection(URL url) {
