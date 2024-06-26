@@ -428,3 +428,196 @@ Concurrent collections are synchronized in nature. Traditional collections are n
 - Deque: `LinkedBlockingDeque`
 
 ## 20. What kind of locks do you know? What is the advantage of each lock?
+### **ReentrantLock**
+ReentrantLock offers the same concurrency and memory semantics as the implicit monitor lock accessed using synchronized methods and statements.
+```
+public class Lock {
+   ReentrantLock lock = new ReentrantLock()l
+   int counter = 0;
+
+   public void perform() {
+      lock.lock();
+      try {
+         count++;
+      } finally {
+         lock.unlock();
+      }
+   }
+}
+```
+### **ReentrantReadWriteLock**
+ReentrantReadWriteLock class implements the ReadWriteLock interface. It contains two locks:
+- **ReadLock** - if no thread acquired the write lock or requested for it, multiple threads can acquire the read lock.
+- **WriteLock** - if no thread are reading or writing, only one thread can acquire the write lock.
+```
+public class SynchronizedHashMapWithReadWriteLock {
+
+   Map<String,String> syncHashMap = new HashMap<>();
+   ReadWriteLock lock = new ReentrantReadWriteLock();
+   Lock writeLock = lock.writeLock();
+   Lock readLock = lock.readLock();
+
+   public void put(String key, String value) {
+      try {
+         writeLock.lock();
+         syncHashMap.put(key, value);
+      } finally {
+         writeLock.unlock();
+      }
+   }
+
+   public String remove(String key){
+      try {
+         writeLock.lock();
+         return syncHashMap.remove(key);
+      } finally {
+         writeLock.unlock();
+      }
+   }
+
+   public String get(String key){
+      try {
+         readLock.lock();
+         return syncHashMap.get(key);
+      } finally {
+         readLock.unlock();
+      }
+}
+
+   public boolean containsKey(String key) {
+      try {
+         readLock.lock();
+         return syncHashMap.containsKey(key);
+      } finally {
+         readLock.unlock();
+      }
+   }
+}
+```
+### **StampedLock**
+StampedLock supports both read and write locks. However, lock acquisition methods return a stamp that is used to release a lock or to check if the lock still valid.
+```
+public class StampedLockDemo {
+   Map<String,String> map = new HashMap<>();
+   private StampedLock lock = new StampedLock();
+
+   public void put(String key, String value){
+      long stamp = lock.writeLock();
+      try {
+         map.put(key, value);
+      } finally {
+         lock.unlockWrite(stamp);
+      }
+   }
+
+   public String get(String key) throws InterruptedException {
+      long stamp = lock.readLock();
+      try {
+         return map.get(key);
+      } finally {
+         lock.unlockRead(stamp);
+      }
+   }
+}
+```
+**Optimistic locking**: read operations don’t need to wait for write operation completion, and as a result of this, the full-fledged read lock isn’t required.
+```
+public String readWithOptimisticLock(String key) {
+   long stamp = lock.tryOptimisticRead();
+   String value = map.get(key);
+
+   if(!lock.validate(stamp)) {
+      stamp = lock.readLock();
+      try {
+         return map.get(key);
+      } finally {
+         lock.unlock(stamp);               
+      }
+   }
+   return value;
+}
+```
+
+## 21. What is future and completableFuture? List some main methods of ComplertableFuture.
+An instance of a `Future` is a placeholder for a result that will be produced by an asynchronous process and may not yet be available.
+```
+class Task implements Callable<String> {
+   @Override
+   public String call() throws Exception {
+      return longTimeCalculation();
+   }
+}
+
+class Main{
+   public static void main(String[] args){
+      ExecutorService es = Executors.newFixedThreadPool(4);
+      Callable<String> task = new Task();
+
+      Future<String> future = es.submit(task);
+      String res = future.get();
+      if(future.isDone()){
+         future.get();
+      } else {
+         future.cancel();
+      }
+   }
+}
+```
+`CompletableFuture` is an implementation of the `Future` interface. It extends the basic functionality of `Future` to let us have a lot more control over the results of out asynchronous operations. It has the option to chain function calls onto the result of the initial task.
+```
+class Main{
+   public static void main(String[] args) throws Exception{
+      CompletableFuture<Double> cf = CompletableFuture.supplyAsync(Main::fetchPrice);
+
+      // If success
+      cf.thenAccept((result) -> {
+         System.out.println("Price: " + result);
+      });
+
+      // If not
+      cf.exceptionally((e) -> {
+         e.printStackTrace();
+         return null;
+      })
+
+      System.out.println("Hello");
+
+      Thread.sleep(200);
+   }
+
+   static Double fetchPrice(){
+      try {
+         Thread.sleep(100);
+      } catch (InterruptedException e){
+
+      }
+
+      if(Math.random() < 0.3) {
+         throw new RuntimeException("fetch price failed");
+      }
+      return 5 + Math.random * 20;
+   }
+}
+```
+### Main methods of CompletableFuture
+1. Creating a CompletableFuture
+- `CompletableFuture.supplyAsync(Supplier<U> supplier)`: Executes the given task asynchronously and **returns the result**.
+- `CompletableFuture.runAsync(Runnable runnable)`: Executes the given task asynchronously, **without returning a value**.
+```
+supplyAsync(fetch price). -> cf.thenAccept((result) -> {
+            System.out.println("price: " + result);
+});
+supplyAsync(fetch price). -> cf.thenApply((result) -> {
+            System.out.println("price: " + result);
+        }).thenAccept();
+```
+2. Result Processing and Transformation
+- `CompletableFuture.thenApply(Function<T, U> fn) `: Processes the return value and transforms it into another type.
+- `CompletableFuture.thenAccept(Consumer<T> action)`: Processes the return value **without returning a new CompletableFuture**.
+- `CompletableFuture.thenRun(Runnable action)`: Ignores the return value and runs a runnable.
+3. Combination and Linking
+- `CompletableFuture.thenCompose(Function<T, CompletionStage<U>> fn)`: Links another CompletableFuture and passes the result to the next task.
+- `CompletableFuture.thenCombine(CompletionStage<U> other, BiFunction<T, U, V> fn)`: Combines the results of two CompletableFutures and returns a new CompletableFuture.
+4. Exception Handling
+- `CompletableFuture.exceptionally(Function<Throwable, T> fn)`: Handles exceptions and returns an alternative value.
+- `CompletableFuture.handle(BiFunction<T, Throwable, U> fn)`: Handles exceptions while allowing access to the result value (if any).
