@@ -168,6 +168,9 @@
     >Codes are in multithreading.PrintNumber1
 
 25. completable future: 
+
     1. Homework 1: Write a simple program that uses CompletableFuture to asynchronously get the sum and product of two integers, and print the results. 
     2. Homework 2: Assume there is an online store that needs to fetch data from three APIs: products, reviews, and inventory. Use CompletableFuture to implement this scenario and merge the fetched data for further processing. (需要找public api去模拟，) 1. Sign In to Developer.BestBuy.com 2. Best Buy Developer API Documentation (bestbuyapis.github.io) 3. 可以⽤fake api https://jsonplaceholder.typicode.com/ 
     3. Homework 3: For Homework 2, implement exception handling. If an exception occurs during any API call, return a default value and log the exception information.
+
+    >Codes are in multithreading.FakeApi
