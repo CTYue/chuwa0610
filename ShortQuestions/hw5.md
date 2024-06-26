@@ -161,12 +161,13 @@
 
 23. Write a code to create 2 threads, one thread print $1,3,5,7,9$, another thread print $2,4,6,8,10$. (solution is in com.chuwa.tutorial.t08_multithreading.c05_waitNotify.OddEventPrinter)
 
-    >Codes are in multithreading.OddEventPrinter.
+    >Codes are in multithreading.OddEventPrinter
 
-24. One solution use synchronized and wait notify
+24. create 3 threads, one thread ouput 1-10, one thread output 11-20, one thread output 21-22. threads run sequence is random.
 
-    >Codes are in multithreading.WaitNotify
+    >Codes are in multithreading.PrintNumber1
 
-25. One solution use ReentrantLock and await, signal
-
-    >Codes are in multithreading.ConditionLearn
+25. completable future: 
+    1. Homework 1: Write a simple program that uses CompletableFuture to asynchronously get the sum and product of two integers, and print the results. 
+    2. Homework 2: Assume there is an online store that needs to fetch data from three APIs: products, reviews, and inventory. Use CompletableFuture to implement this scenario and merge the fetched data for further processing. (需要找public api去模拟，) 1. Sign In to Developer.BestBuy.com 2. Best Buy Developer API Documentation (bestbuyapis.github.io) 3. 可以⽤fake api https://jsonplaceholder.typicode.com/ 
+    3. Homework 3: For Homework 2, implement exception handling. If an exception occurs during any API call, return a default value and log the exception information.
