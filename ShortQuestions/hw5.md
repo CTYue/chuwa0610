@@ -1,12 +1,5 @@
 1. Read: [link](https://www.interviewbit.com/multithreading-interview-questions/#class-level-lock-vs-object-level-lock)
 
-|             | class lock                                                                    | object lock                                                            |
-|-------------|-------------------------------------------------------------------------------|------------------------------------------------------------------------|
-| scope       | class-level                                                                   | instance-level                                                         |
-| Granularity | only 1 lock, shared across all instances                                      | each instance has own lock                                             |
-| Impact      | other sync methods are blocked                                                | other sync instance methods on the same object are blocked             |
-| Code        | method() {</br>  &nbsp;&nbsp;&nbsp;&nbsp;public synchornized(**Class.class**) | method() {</br>  &nbsp;&nbsp;&nbsp;&nbsp;public synchornized(**this**) |
-
 2. Write a thread-safe singleton class
      ```
      public class Singleton {
@@ -313,24 +306,22 @@
           ```
 
 22. Type the code by your self and try to understand it. (package com.chuwa.tutorial.t08_multithreading)
-    [code]()
+
 
 23. Write a code to create 2 threads, one thread print 1,3,5,7,9, another thread print 2,4,6,8,10. (solution is in
     com.chuwa.tutorial.t08_multithreading.c05_waitNotify.OddEventPrinter)
     1.  One solution use synchronized and wait notify
     2.  One solution use ReentrantLock and await, signal
 
-    [code](../Coding/23.java)
 
 24. create 3 threads, one thread ouput 1-10, one thread output 11-20, one thread output 21-22. threads run
     sequence is random. (solution is in com.chuwa.exercise.t08_multithreading.PrintNumber1)   
-    [code](../Coding/24.java)
+
 
 
 25. completable future:
     1. Homework 1: Write a simple program that uses CompletableFuture to asynchronously get the sum
-       and product of two integers, and print the results.   
-       [code](../Coding/251.java)
+       and product of two integers, and print the results.
 
     2. Homework 2: Assume there is an online store that needs to fetch data from three APIs: products,
        reviews, and inventory. Use CompletableFuture to implement this scenario and merge the fetched
