@@ -313,24 +313,24 @@
         ```
         
 22. Type the code by your self and try to understand it. (package com.chuwa.tutorial.t08_multithreading)
-    [code]()
+    [code](../Coding/hw5)
 
 23. Write a code to create 2 threads, one thread print 1,3,5,7,9, another thread print 2,4,6,8,10. (solution is in
      com.chuwa.tutorial.t08_multithreading.c05_waitNotify.OddEventPrinter)
-    1.  One solution use synchronized and wait notify
+    1.  One solution use synchronized and wait notify,mew12ty654t6
     2.  One solution use ReentrantLock and await, signal
     
-    [code](../Coding/23.java)
+    [code](../Coding/hw5/23.java)
     
 24. create 3 threads, one thread ouput 1-10, one thread output 11-20, one thread output 21-22. threads run
     sequence is random. (solution is in com.chuwa.exercise.t08_multithreading.PrintNumber1)   
-    [code](../Coding/24.java)
+    [code](../Coding/hw5/24.java)
 
 
 25. completable future:
     1. Homework 1: Write a simple program that uses CompletableFuture to asynchronously get the sum
         and product of two integers, and print the results.   
-        [code](../Coding/251.java)
+        [code](../Coding/hw5/251.java)
 
     2. Homework 2: Assume there is an online store that needs to fetch data from three APIs: products,
         reviews, and inventory. Use CompletableFuture to implement this scenario and merge the fetched
@@ -339,83 +339,95 @@
         2. Best Buy Developer API Documentation (bestbuyapis.github.io)
         3. 可以用fake api https://jsonplaceholder.typicode.com/
         ```
-        private static JSONArray fetchData(String urlString) {
-        ....
-        return jsonArrayFromURL;
+        private static final HttpClient httpClient = HttpClient.newHttpClient();
+
+        public static CompletableFuture<JSONObject> getPost(Object id) {
+    
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create("https://jsonplaceholder.typicode.com/posts/" + id ))
+                    .build();
+            System.out.println("getPost " + Thread.currentThread().getName());
+    
+            return httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+                    .thenApply(HttpResponse::body)
+                    .thenApply(JSONObject::new);
         }
-        CompletableFuture<JSONArray> postFuture = CompletableFuture.supplyAsync(() -> {
-            String urlString = "https://jsonplaceholder.typicode.com/posts";
-            
-            return    fetchData(urlString);
+    
+        public static CompletableFuture<JSONArray> getReviews(int postId) {
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create("https://jsonplaceholder.typicode.com/posts/"+postId+"/comments"))
+                    .header("Authorization", "Bearer YOUR_API_KEY")
+                    .build();
+            System.out.println("getReview " + Thread.currentThread().getName());
+            return httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+                    .thenApply(HttpResponse::body)
+                    .thenApply(JSONArray::new);
 
-        });
-
-        CompletableFuture<JSONArray> reviewFuture = CompletableFuture.supplyAsync(() -> {
-            String urlString = "https://jsonplaceholder.typicode.com/posts/1/comments";
-            
-            return fetchData(urlString);
-
-        });
-
-        CompletableFuture<JSONArray> inventoryFuture = CompletableFuture.supplyAsync(() -> {
-            String urlString = "https://jsonplaceholder.typicode.com/posts/1/comments";
-            
-            return fetchData(urlString);
-
-        });
-
-        CompletableFuture combineFuture = CompletableFuture.allOf(postFuture, inventoryFuture, reviewFuture);
-
-
-
+        }
+        
+        public static CompletableFuture<Integer> getInventory(int postId) {
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create("https://jsonplaceholder.typicode.com/posts/"+postId+"/comments"))
+                    .header("Authorization", "Bearer YOUR_API_KEY")
+                    .build();
+            return httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+                    .thenApply(HttpResponse::body)
+                    .thenApply(JSONArray::new)
+                    .thenApply(JSONArray::length);
         }
         ```
     3. Homework 3: For Homework 2, implement exception handling. If an exception occurs during any API
         call, return a default value and log the exception information.
        ```
-       private static JSONArray fetchData(String urlString) {
-        ....
-        return jsonArrayFromURL;
+        private static final HttpClient httpClient = HttpClient.newHttpClient();
+
+        public static CompletableFuture<JSONObject> getPost(Object id) {
+    
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create("https://jsonplaceholder.typicode.com/posts/" + id ))
+                    .build();
+            System.out.println("getPost " + Thread.currentThread().getName());
+    
+            return httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+                    .thenApply(HttpResponse::body)
+                    .thenApply(JSONObject::new)
+                    .exceptionally(ex -> {
+                        System.err.println("Error in getPost: " + ex.getMessage());
+                        return new JSONObject(); // Return default value
+                    });
         }
-        CompletableFuture<JSONArray> postFuture = CompletableFuture.supplyAsync(() -> {
-            String urlString = "https://jsonplaceholder.typicode.com/posts";
-            try {
-                fetchData(urlString);
-
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return null;
-        });
-
-        CompletableFuture<JSONArray> reviewFuture = CompletableFuture.supplyAsync(() -> {
-            String urlString = "https://jsonplaceholder.typicode.com/posts/1/comments";
-            try {
-                fetchData(urlString);
-
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return null;
-        });
-
-        CompletableFuture<JSONArray> inventoryFuture = CompletableFuture.supplyAsync(() -> {
-            String urlString = "https://jsonplaceholder.typicode.com/posts/1/comments";
-            try {
-                fetchData(urlString);
-
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return null;
-        });
-
-        CompletableFuture combineFuture = CompletableFuture.allOf(postFuture, inventoryFuture, reviewFuture);
-
-
-
+    
+        public static CompletableFuture<JSONArray> getReviews(int postId) {
+            HttpRequest request = HttpRequest.newBuilder()
+            .uri(URI.create("https://jsonplaceholder.typicode.com/posts/"+postId+"/comments"))
+            .header("Authorization", "Bearer YOUR_API_KEY")
+            .build();
+            System.out.println("getReview " + Thread.currentThread().getName());
+            return httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+            .thenApply(HttpResponse::body)
+            .thenApply(JSONArray::new)
+            .exceptionally(ex -> {
+            System.err.println("Error in getReviews: " + ex.getMessage());
+            return new JSONArray(); // Return default value
+            });
+    
         }
+    
+        public static CompletableFuture<Integer> getInventory(int postId) {
+            HttpRequest request = HttpRequest.newBuilder()
+            .uri(URI.create("https://jsonplaceholder.typicode.com/posts/"+postId+"/comments"))
+            .header("Authorization", "Bearer YOUR_API_KEY")
+            .build();
+            return httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+            .thenApply(HttpResponse::body)
+            .thenApply(JSONArray::new)
+            .thenApply(JSONArray::length)
+            .exceptionally(ex -> {
+            System.err.println("Error in getInventory: " + ex.getMessage());
+            return 0; // Return default value
+            });
+        }
+
+
+        
        ```
