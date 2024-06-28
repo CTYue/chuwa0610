@@ -291,30 +291,41 @@ docker stop some-mongo
    `GET /api/v1/customers/{customer-id}/payment-methods/defaults`
    `GET /api/v1/customers/{customer-id}/delivery-addresses/defaults`
 5. Find two collections of APIs examples. i.e. Twitter, PayPal, YouTube etc. - m 2#,
+   
    Twitter
-   | Description | Endpoint | Data collected |
-   | Real-time stream of tweets | GET /2/tweets/sample/stream | 1% random sample of publicly available tweets in real time. |
-   | | GET /2/tweets/search/stream | Filtered real-time stream of publicly available tweets. |
-   | Historical tweets | GET /2/tweets/search/recent | Tweets posted in the last 7 days. |
-   | | GET /2/tweets/search/all | Historical tweets posted anytime since 2006 (currently only available for Academic Research). |
-   | Volume of tweets | GET /2/tweets/counts/recent | Volume of tweet data for a search query. |
-   | Tweets lookup | GET /2/tweets/:id | Up-to-date information for tweets with specific identifiers. |
-   | Tweets created by a specific user | GET /2/users/:id/tweets | Tweets posted by a specific user. |
-   | Tweets mentioning a specific user | GET /2/users/:id/mentions | Tweets mentioning a specific user. |
-   | Users lookup | GET /2/users | Up-to-date information about specific users. |
+
+   | Description                       | Endpoint                    | Data collected                                                                                |
+   |-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------|
+   | Real-time stream of tweets        | GET /2/tweets/sample/stream | 1% random sample of publicly available tweets in real time.                                   |
+   |                                   | GET /2/tweets/search/stream | Filtered real-time stream of publicly available tweets.                                       |
+   | Historical tweets                 | GET /2/tweets/search/recent | Tweets posted in the last 7 days.                                                             |
+   |                                   | GET /2/tweets/search/all    | Historical tweets posted anytime since 2006 (currently only available for Academic Research). |
+   | Volume of tweets                  | GET /2/tweets/counts/recent | Volume of tweet data for a search query.                                                      |
+   | Tweets lookup                     | GET /2/tweets/:id           | Up-to-date information for tweets with specific identifiers.                                  |
+   | Tweets created by a specific user | GET /2/users/:id/tweets     | Tweets posted by a specific user.                                                             |
+   | Tweets mentioning a specific user | GET /2/users/:id/mentions   | Tweets mentioning a specific user.                                                            |
+   | Users lookup                      | GET /2/users                | Up-to-date information about specific users.                                                  |
 6. Design a collection of APis for a Blog Website, please specify GET POST PUT DELETE. Design APIs for the following features（思考：path variable 怎么用？有sub resources，哪些地方该用复数）
-   | List all blogs | GET /v1/blogs |
-   | Create a new blog | POST /v1/blogs |
-   | Get a specific blog | GET /v1/blogs/{blog-id} |
-   | Update a blog | PUT /v1/blogs/{blog-id} |
-   | Delete a blog | DELETE /v1/blogs/{blog-id} |
+   
+   | Description         | Endpoint                   |
+   |---------------------|----------------------------|
+   | List all blogs      | GET /v1/blogs              |
+   | Create a new blog   | POST /v1/blogs             |
+   | Get a specific blog | GET /v1/blogs/{blog-id}    |
+   | Update a blog       | PUT /v1/blogs/{blog-id}    |
+   | Delete a blog       | DELETE /v1/blogs/{blog-id} |
 
-   | List all posts in a blog | GET /v1/blogs/{blog-id}/posts |
-   | Create a new post in a blog | POST /v1/blogs/{blog-id}/posts |
-   | Get a specific post | GET /v1/blogs/{blog-id}/posts/{post-id} |
-   | Update a post | PUT /v1/blogs/{blog-id}/posts/{post-id} |
-   | Delete a post | DELETE /v1/blogs/{blog-id}/posts/{post-id} |
+   | Description                 | Endpoint                                   |
+   |-----------------------------|--------------------------------------------|
+   | List all posts in a blog    | GET /v1/blogs/{blog-id}/posts              |
+   | Create a new post in a blog | POST /v1/blogs/{blog-id}/posts             |
+   | Get a specific post         | GET /v1/blogs/{blog-id}/posts/{post-id}    |
+   | Update a post               | PUT /v1/blogs/{blog-id}/posts/{post-id}    |
+   | Delete a post               | DELETE /v1/blogs/{blog-id}/posts/{post-id} |
 
-   | List all comments on a post | GET /v1/blogs/{blog-id}/posts/{post-id}/comments |
-   | Add a comment to a post | POST /v1/blogs/{blog-id}/posts/{post-id}/comments |
-   | Delete a comment | DELETE /v1/blogs/{blog-id}/posts/{post-id}/comments/{comment-id} |
+
+   | Description                 | Endpoint                                                         |
+   |-----------------------------|------------------------------------------------------------------|
+   | List all comments on a post | GET /v1/blogs/{blog-id}/posts/{post-id}/comments                 |
+   | Add a comment to a post     | POST /v1/blogs/{blog-id}/posts/{post-id}/comments                |
+   | Delete a comment            | DELETE /v1/blogs/{blog-id}/posts/{post-id}/comments/{comment-id} |
