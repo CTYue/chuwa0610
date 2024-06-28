@@ -1,5 +1,6 @@
 # SQL
 
+![image](../Coding/hw6/sq.png)
 1. Create oms_company_address table
     ```
     CREATE TABLE oms_company_addresss (
@@ -65,6 +66,12 @@
     ```
 
 # NoSQL - MongoDB
+- create db, create collection, create 2 documents and with findOne() find()
+    ![image](../Coding/hw6/mongo1.png)   
+- update the document
+    ![image](../Coding/hw6/mongo2.png)   
+- delete and create another collection
+    ![image](../Coding/hw6/mongo3.png)  
 1. Create `test` DB   
     `use test`
 2. Create oms_company_address collection (method: createCollection() )
@@ -87,7 +94,7 @@
 4. Read one entry from oms_company_address collection (method: find() )
     ```
     db.oms_company_address.findOne()
-    db.oms_company_address.find({id:1})
+    db.oms_company_address.find({id:"2"})
     
     ```
 5. Read all entries from oms_company_address collection (method: find() )
@@ -107,9 +114,43 @@
 7. Remove one entry from oms_company_address collection( method:remove())
     ```
     remove is deprecated
-    db.oms_company_address.delete({id:1})
+    db.oms_company_address.deleteOne({id:"2"})
     ```
 8. (Optional) You can also try to create other tables that listed above
     ```
     db.createCollection("oms_cart_item")
     ```
+
+# API Design
+1. find the customer's payments, like credit card1,credit card2,paypal,ApplePay.
+   `GET v1/customers/{customerId}/payments`
+1. Find the customer's history orders from 10/10/2022 to 10/24/2022
+   `GET v1/customers/{customerId}/orders?startDate=2022-10-10&endDate=2022-10-24`
+2. find the customer's delievery addresses
+   `GET v1/customers/{customerId}/delivery_addresses`
+3. If I also want to get customer's default payment and default delievery address,what kind of the API (URL) should be ?       
+   - `GET v1/customers/{customerId}/payments?type=default`
+   - `GET v1/customers/{customerId}/delivery_address?type=default`
+4. Find 2 collection of APIs example, ie. Twitter,paypal,youtube, etc
+   - paypal
+     - https://api-m.sandbox.paypal.com/v1/invoicing/invoices?page=3&page_size=4&total_count_required=true
+     - https://api-m.sandbox.paypal.com/v2/checkout/orders/5O190127TN364715T
+   - youtube
+     - v1/operations/{operationsId}
+     - v1/projects/{projectsId}:predict
+     - v1/projects/{projectsId}/models
+5. Design a collection of APIs for a BLOG Website, please specify GET POST PUT DELETE
+    - get all posts
+      - GET v1/blog/posts
+    - get a single post
+      - GET v1/blog/posts/{id}
+    - create a post
+      - POST v1/blog/posts
+    - update a blog post
+      - PUT v1/blog/posts/{id}
+    - delete a blog
+      - DELETE v1/blog/posts/{id}
+    - get/create comments of a blog
+      - GET v1/blog/comments/{id}
+      - POST v1/blog/posts/{id}/comments
+     
