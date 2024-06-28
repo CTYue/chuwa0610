@@ -52,9 +52,70 @@ WHERE id = 4;
 ![sql5.png](supportingImages%2Fsql5.png)
 ## Exercise2
 ### 1. Create test DB
+```
+use test
+```
+![sql6.png](supportingImages%2Fsql6.png)
 ### 2. Create oms_company_address collection (method: createCollection() )
+```
+db.createCollection("oms_company_address")
+```
+![sql7.png](supportingImages%2Fsql7.png)
 ### 3. Insert few random entries to oms_company_address collection (method: insert() )
+```
+db.oms_company_address.insert([
+{
+id: 1,
+address_name: "OfficeA",
+send_status: 1,
+receive_status: 1,
+name: "Alice",
+phone: "123-456-7890",
+province: "California",
+city: "Los Angeles",
+region: "Westside",
+detailed_address: "123 Main St, Suite 100"
+},
+{
+id: 2,
+address_name: "OfficeB",
+send_status: 0,
+receive_status: 1,
+name: "Bob",
+phone: "987-654-3210",
+province: "Texas",
+city: "Dallas",
+region: "Northside",
+detailed_address: "456 Oak St, Suite 200"
+}
+])
+```
+![sql8.png](supportingImages%2Fsql8.png)
 ### 4. Read one entry from oms_company_address collection (method: find() )
+```
+db.oms_company_address.find({"id":1})
+```
+![sql9.png](supportingImages%2Fsql9.png)
 ### 5. Read all entries from oms_company_address collection (method: find() )
+```
+db.oms_company_address.find()
+```
+![sql10.png](supportingImages%2Fsql10.png)
 ### 6. Update one entry from oms_company_address collection (method: update() or save() )
+```
+db.oms_company_address.update(
+    { id: 1 }, 
+    {
+        $set: { 
+            phone: "666-6666-8888",
+        }
+    }
+)
+
+```
+![sql11.png](supportingImages%2Fsql11.png)
 ### 7. Remove one entry from oms_company_address collection (method: remove() )
+```
+db.oms_company_address.remove({"id":2})
+```
+![sql12.png](supportingImages%2Fsql12.png)
