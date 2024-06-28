@@ -5,47 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be80a07f-98d5-4ff8-af2d-72c96a8ddba3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Coding/hw5/src/main/java/com/chuwa/learn/Q25a.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/hw5/src/main/java/com/chuwa/learn/Q25b.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/hw5/src/main/java/com/chuwa/learn/Q25c.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShortQuestions/hw6.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/basicThread/Daemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/basicThread/Daemon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/basicThread/God.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/basicThread/God.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/basicThread/InterruptTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/basicThread/InterruptTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/basicThread/JoinTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/basicThread/JoinTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/basicThread/MyThreadWithIsInterrupted.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/basicThread/MyThreadWithIsInterrupted.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/basicThread/People.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/basicThread/People.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/basicThread/SleepForever.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/basicThread/SleepForever.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/basicThread/SleepTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/basicThread/SleepTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/basicThread/WhileTrue.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/basicThread/WhileTrue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/create/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/create/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/create/MyCallable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/create/MyCallable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/create/MyRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/create/MyRunnable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/create/MyThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/create/MyThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/deadLock/Counter.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/deadLock/Counter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/deadLock/DeadLock.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/deadLock/DeadLock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/AddStudentThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/AddStudentThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/AddTeacherThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/AddTeacherThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/AddThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/AddThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/AddThread2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/AddThread2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/Counter.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/Counter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/Counter1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/Counter1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/DecStudentThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/DecStudentThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/DecTeacherThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/DecTeacherThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/DecThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/DecThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/DecThread2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/DecThread2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/SynchronizedThreads.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/SynchronizedThreads.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/SynchronizedThreadsFailed.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/synchronzed/SynchronizedThreadsFailed.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/utilConcurrentLocks/AtomicLearn.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/utilConcurrentLocks/AtomicLearn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/utilConcurrentLocks/ConcurrentCollection.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/utilConcurrentLocks/ConcurrentCollection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/utilConcurrentLocks/IdGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/utilConcurrentLocks/IdGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/waitNotify/OddEvenPrinter$PrintRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/waitNotify/OddEvenPrinter$PrintRunnable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/waitNotify/OddEvenPrinter.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/waitNotify/OddEvenPrinter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/waitNotify/TaskQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/waitNotify/TaskQueue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/waitNotify/WaitNotify$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/waitNotify/WaitNotify$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/waitNotify/WaitNotify.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/target/classes/com/chuwa/learn/waitNotify/WaitNotify.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShortQuestions/hw5.md" beforeDir="false" afterPath="$PROJECT_DIR$/ShortQuestions/hw5.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/hw5/src/main/java/com/chuwa/learn/Q25b.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw5/src/main/java/com/chuwa/learn/Q25b.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +106,7 @@
     "TestNG.InterruptTest.testInterruptSleep.executor": "Run",
     "TestNG.InterruptTest.testInterruptWhileTrue.executor": "Run",
     "TestNG.InterruptTest.testIsInterrupted.executor": "Run",
-    "git-widget-placeholder": "hongqiang__cai/hw5",
+    "git-widget-placeholder": "hongqiang__cai/hw6",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/15063/OneDrive/Documents/Chuwa/chuwa0610/Coding/hw5",
@@ -183,12 +145,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ConcurrentCollection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.utilConcurrentLocks.ConcurrentCollection" />
+      <module name="hw5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chuwa.learn.utilConcurrentLocks.ReadWriteLockLearn" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OddEvenPrinter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.waitNotify.OddEvenPrinter" />
       <module name="hw5" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.chuwa.learn.waitNotify.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OddEvenPrinter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.waitNotify.OddEvenPrinter" />
+      <module name="hw5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chuwa.learn.waitNotify.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Q25b" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.Q25b" />
+      <module name="hw5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chuwa.learn.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -218,6 +219,37 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WaitNotify" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.waitNotify.WaitNotify" />
+      <module name="hw5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chuwa.learn.waitNotify.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InterruptTest.testIsInterrupted" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="hw5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chuwa.learn.basicThread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chuwa.learn.basicThread" />
+      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.basicThread.InterruptTest" />
+      <option name="METHOD_NAME" value="testIsInterrupted" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -280,7 +312,9 @@
       <workItem from="1719208357624" duration="347000" />
       <workItem from="1719208711215" duration="12000" />
       <workItem from="1719301537456" duration="210000" />
-      <workItem from="1719301817034" duration="22030000" />
+      <workItem from="1719301817034" duration="25135000" />
+      <workItem from="1719608558430" duration="99000" />
+      <workItem from="1719608666829" duration="2620000" />
     </task>
     <servers />
   </component>
