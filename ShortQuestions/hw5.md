@@ -1,70 +1,11 @@
 1. Read: [link](https://www.interviewbit.com/multithreading-interview-questions/#class-level-lock-vs-object-level-lock)
 
 2. Write a thread-safe singleton class
-     ```
-     public class Singleton {
-         private static volatile Singleton instance;
-         private Singleton() {
-         }
-         
-         public Singleton getSingleton(){
-             if (instance == null) {
-                 synchronized(this) {
-                     instance = new Singleton();
-                 }
-             }
-             return this.singleton;
-         }
-     }
-     ```
 3. How to create a new thread(Please also consider Thread Pool approach)?
     - extends class Thread
     - implements Runnable
     - using lambda
     - implements Callable with executorService
-   ```
-   // extends Thread
-   Thread t1 = new Thread(new Thread() {
-           @Override
-           public void run() {
-               System.out.println("Creating from Thread");
-           }
-       });
-    t1.start();
-    }
-   
-   // implements Runnable 
-   Thread r1 = new Thread(new Runnable() {
-           @Override
-           public void run() {
-               System.out.println("Creating from Runnable");
-           }
-       });
-    r1.start();
-   
-   // using lambda
-   Thread l1 = new Thread(()->{
-           System.out.println("Creating from lambda");
-       });
-    l1.start();
-   
-   // implements Callable
-   ExecutorService excutorService = Executors.newFixedThreadPool(4);
-   Callable<String> callable = () -> {
-       Thread.sleep(1000);
-       System.out.println("Creating from Callable");
-       return "Hello World";
-   };
-   Future<String> future = excutorService.submit(callable);
-   // String str = future.get()
-   
-   Runnable runnable = () -> {
-           System.out.println("from runnable");
-       };
-   Future<?> ans1 = executor.submit(runnable);
-   // ans1.get()
-   ...
-   ```   
 
 4. Difference between Runnable and Callable?
 
@@ -73,7 +14,6 @@
 | Return Type        | Void                                               | return a **V**                   |
 | Exception Handling | cannot throw checked Exception                     | can throw checked exception      |
 | With Executors     | return Future<?>, only check if complete of cancel | return Future<V>, can get result |
-
 
 5. What is the difference between t.start() and t.run()?
     - t.start(): start a new thread to execute the task
