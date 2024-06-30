@@ -49,10 +49,42 @@ insert into oms_company_address(id, address_name, send_status, receive_status, n
 ## MongoDB Non-SQL 
 
 ### 1. Create test DB
+```bash
+use test
+```
 ### 2. Create oms_company_address collection (method: createCollection() )
+```bash
+db.createCollection("oms_company_address")
+```
 ### 3. Insert few random entries to oms_company_address collection (method: insert() )
+```bash
+// insert one entry
+db.oms_company_address.insertOne({address_name: "Stanhope Ln", send_status: "1", receive_status: "0", name: "raphle", phone: "123",province: "CA", city: "Riverside",region: "LA", detail_address: "leave at the door"})
+
+// insert many
+db.oms_comany_address.insertMany([{address_name: "Stanhope Ln", send_status: "1", receive_status: "0", name: "kitten", phone: "123",province: "CA", city: "Riverside",region: "LA", detail_address: "leave at the door"}, 
+{address_name: "Stanhope Ln", send_status: "1", receive_status: "0", name: "Bob", phone: "123",province: "CA", city: "Riverside",region: "LA", detail_address: "leave at the door"},
+{address_name: "Stanhope Ln", send_status: "1", receive_status: "0", name: "steve", phone: "123",province: "CA", city: "Riverside",region: "LA", detail_address: "leave at the door"}
+])
+```
 ### 4. Read one entry from oms_company_address collection (method: find() )
+```bash
+db.oms_company_address.findOne()
+```
 ### 5. Read all entries from oms_company_address collection (method: find() )
-### 6. Updateoneentryfromoms_company_addresscollection(method:update()orsave()) 
-### 7. Removeoneentryfromoms_company_addresscollection(method:remove())
-### 8. (Optional)Youcanalsotrytocreateothertablesthatlistedabove
+```bash
+db.oms_company_address.find().pretty()
+```
+### 6. Update one entry from oms_company_address collection (method:update() or save()) 
+```bash
+db.oms_company_address.update({name: "shelby"}, {$set: {phone: "71454334", detail_address: "the little dark cold room" }})
+```
+### 7. Remove one entry from oms_company_address collection (method:remove())
+```bash
+// delete one
+db.oms_company_address.deleteOne({name: "shelby"})
+
+//delete all matches
+db.oms_company_address.deleteMany({ name: "kitten" })
+```
+### 8. (Optional)You can also try to create other tables that listed above
