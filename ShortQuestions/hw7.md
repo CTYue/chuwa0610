@@ -159,7 +159,7 @@
  ```
 
    - API: JSONPlaceholder (Fake Online REST API for Testing)
-   - Endpoint: [https://reqres.in/api/users](https://jsonplaceholder.typicode.com/posts)
+   - Endpoint: https://jsonplaceholder.typicode.com/posts
    - Status: 201 Created
    - Request Body : 
  ```JSON
@@ -180,7 +180,7 @@
  ```
 
    - API: DummyJSON (Fake Online REST API for Testing)
-   - Endpoint:[https://reqres.in/api/users](https://jsonplaceholder.typicode.com/posts)](https://dummyjson.com/products/add)
+   - Endpoint: https://dummyjson.com/products/add
    - Status: 201 Created
    - Request Body : 
  ```JSON
@@ -207,7 +207,7 @@
  ```
 
    - API: PunkAPI (Open Source API for Brewdog's DIY Dog)
-   - Endpoint:[[https://reqres.in/api/users](https://jsonplaceholder.typicode.com/posts)](https://dummyjson.com/products/add)](https://api.punkapi.com/v2/beers)
+   - Endpoint: https://dummyjson.com/products/add)](https://api.punkapi.com/v2/beers
    - Status: 404 Error
    - Request Body : 
  ```JSON
@@ -229,9 +229,126 @@
 
  ```
 
+ - ## 3 PUT API with json request body, please also paste the response here
+   - API: JSONPlaceholder (Fake Online REST API for Testing)
+   - Endpoint: https://jsonplaceholder.typicode.com/posts/1
+   - Status: 200 OK
+   - Request Body : 
+ ```JSON
+   {
+      "id": 1,
+      "title": "Howard's Updated Title",
+      "body": "This is the updated body",
+      "userId": 1
+   }
+
+ ```
+
+ ```JSON
+  {
+    "id": 1,
+    "title": "Howard's Updated Title",
+    "body": "This is the updated body",
+    "userId": 1
+  }
+```
 
 
 
- - 3 PUT API with json request body, please also paste the response here
- - 2 DELETE API
+   - API: Reqres (Fake Online REST API for Testing)
+   - Endpoint: https://reqres.in/api/users/2
+   - Status: 401 Unauthorized
+   - Request Body : 
+ ```JSON
+   {
+     "name": "Howard",
+     "job": "zion resident"
+   }
+
+ ```
+
+ ```JSON
+   {
+     "name": "Howard",
+     "job": "zion resident"
+   }
+ ```
+
+   - API: httpbin (Simple HTTP Request & Response Service)
+   - Endpoint: https://httpbin.org/status/500
+   - Status: 500 Internal Server Error
+   - Request Body : 
+ ```JSON
+   {
+     "name": "Howard",
+     "email": "howard@example.com"
+   }
+
+
+ ```
+
+ ```JSON
+   {
+     "status": 500,
+     "error": "Internal Server Error"
+   }
+ ``` 
+ - ## 2 DELETE API
+ - API: JSONPlaceholder (Fake Online REST API for Testing)
+ - Endpoint: https://reqres.in/api/users/2
+ - Status: 200 OK
+
+ - API: Reqres (Fake Online REST API for Testing)
+ - Endpoint: https://jsonplaceholder.typicode.com/posts/1
+ - Status: 204 No Content
+   
  - ## Each example with 404, 401,500 and any http status codes you know
+   - 404 Not found: The server cannot find the requested resource.
+   - 401 Unauthorized: The request requires user authentication.
+   - 500 Internal Server Error: The server encountered an unexpected condition that prevented it from fulfilling the request.
+   - 204 No Content: The server successfully processed the request, but there's no content to return.
+  
+# Part 2 SpringBoot Post 
+## 1. Create a file to list all of the annotations you learned and known, and explain the usage and how do you understand it.
+
+   ### 1. File name: annotations.md
+   ### 2. you'dbetter also list a code example under the annotations.
+   - refer to the annotaion md
+## 2. explainhowthebelowannotaitonsspecifythetableindatabase?
+
+```JAVA
+   @Column(columnDefinition = "varchar(255) default 'John Snow'")
+   private String name;
+   @Column(name="STUDENT_NAME", length=50, nullable=false, unique=false)
+   private String studentName;
+```
+- `@Column(columnDefinition = "varchar(255) default 'John Snow'")`: This annotation specifies that the `name` column will be of type `varchar` with a length of 255 characters and a default value of 'John Snow'.
+- `@Column(name="STUDENT_NAME", length=50, nullable=false, unique=false)`: This annotation specifies that the `studentName` column will be named `STUDENT_NAME` in the database, will have a length of 50 characters, cannot be null, and is not unique.
+
+## 3. What is the default column name of the table in the database for `@Column`?
+-  The default column name for @Column is the name of the field in the Java class.
+
+## 4. What are the layers in a Spring Boot application? What is the role of each layer?
+- ## Layers:
+- Controller Layer: Manages incoming HTTP requests, invokes the service layer, and returns responses.
+- Service Layer: Contains business logic and processes data between the controller and repository layers.
+- Repository Layer: Manages database operations using Spring Data JPA or other data access frameworks.
+- Model Layer: Represents the data and entities of the application.
+
+## 5. Describe the flow in all of the layers if an API is called by Postman.
+- ## Flow:
+- Client (Postman) sends an HTTP request to the Spring Boot application.
+- Controller Layer receives the request, processes it, and calls the appropriate service method.
+- Service Layer contains business logic and may call multiple repository methods to perform operations.
+- Repository Layer interacts with the database to perform CRUD operations.
+- Service Layer processes the data from the repository and sends it back to the controller.
+- Controller Layer sends the final response back to the client (Postman).
+
+## 6.What is `application.properties`? Do you know `application.yml`?
+- `application.properties`: A configuration file in Spring Boot used to define properties such as database configuration, server port, etc.
+- `application.yml`: An alternative to `application.properties`, using YAML format for defining configurations.
+
+## 7. Create a Project, name it `mongo-blog`, write a POST API for `mongo-blog`, change the database to MongoDB.
+- Refer to the coding folder: MongoBlog
+
+
