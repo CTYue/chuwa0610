@@ -106,8 +106,132 @@
  ```
 
    
- - ## 5 Post API with json request body, please also paste the response here
-   - 
+ - ## 5 Post API with json request body, please also paste the response here  
+ - API: Reqres (Fake Online REST API for Testing)
+ - Endpoint: https://reqres.in/api/users
+ - Status: 201 Created
+ - Request Body : 
+ ```JSON
+  {
+  "name": "Howard",
+  "job": "leader"
+  }
+ ```
+
+ ```JSON
+  {
+  "name": "Howard",
+  "job": "leader",
+  "id": "123",
+  "createdAt": "2024-07-01T14:28:55.123Z"
+  }
+
+ ```
+
+   - API: httpbin (Simple HTTP Request & Response Service)
+   - Endpoint: [https://reqres.in/api/users](https://httpbin.org/post)
+   - Status: 201 Created
+   - Request Body : 
+ ```JSON
+   {
+     "name": "Howard",
+     "email": "howard@example.com"
+   }
+
+ ```
+
+ ```JSON
+   {
+     "args": {},
+     "data": "{\"name\": \"Howard\", \"email\": \"howard@example.com\"}",
+     "files": {},
+     "form": {},
+     "headers": {
+       "Content-Type": "application/json",
+       "Host": "httpbin.org"
+     },
+     "json": {
+       "name": "Howard",
+       "email": "howard@example.com"
+     },
+     "url": "https://httpbin.org/post"
+   }
+ ```
+
+   - API: JSONPlaceholder (Fake Online REST API for Testing)
+   - Endpoint: [https://reqres.in/api/users](https://jsonplaceholder.typicode.com/posts)
+   - Status: 201 Created
+   - Request Body : 
+ ```JSON
+   {
+     "title": "foo",
+     "body": "bar",
+     "userId": 1
+   }
+ ```
+
+ ```JSON
+   {
+     "title": "foo",
+     "body": "bar",
+     "userId": 1,
+     "id": 101
+   }
+ ```
+
+   - API: DummyJSON (Fake Online REST API for Testing)
+   - Endpoint:[https://reqres.in/api/users](https://jsonplaceholder.typicode.com/posts)](https://dummyjson.com/products/add)
+   - Status: 201 Created
+   - Request Body : 
+ ```JSON
+   {
+    "title": "Howard's iPhone 15",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 1549,
+    "brand": "Apple",
+    "category": "smartphones"
+   }
+
+ ```
+
+ ```JSON
+   {
+     "id": 101,
+     "title": "Howard's iPhone 15",
+     "description": "An apple mobile which is nothing like apple",
+     "price": 1549,
+     "brand": "Apple",
+     "category": "smartphones"
+   }
+
+ ```
+
+   - API: PunkAPI (Open Source API for Brewdog's DIY Dog)
+   - Endpoint:[[https://reqres.in/api/users](https://jsonplaceholder.typicode.com/posts)](https://dummyjson.com/products/add)](https://api.punkapi.com/v2/beers)
+   - Status: 404 Error
+   - Request Body : 
+ ```JSON
+   {
+     "name": "Howard's Beer",
+     "tagline": "Best Beer",
+     "first_brewed": "07/2024",
+     "description": "A test beer"
+   }
+
+ ```
+
+ ```JSON
+   {
+     "statusCode": 404,
+     "error": "Not Found",
+     "message": "Resource not found"
+   }
+
+ ```
+
+
+
+
  - 3 PUT API with json request body, please also paste the response here
  - 2 DELETE API
  - ## Each example with 404, 401,500 and any http status codes you know
