@@ -2,6 +2,7 @@ package com.example.mongo_blog.entity;
 
 
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
@@ -11,7 +12,7 @@ import java.time.LocalDateTime;
 @Document("posts")
 public class Post {
 
-
+    @Id
     private Long id;
 
 
@@ -27,6 +28,7 @@ public class Post {
         this.content = content;
         this.description = description;
     }
+
 
     public Post() {
     }
