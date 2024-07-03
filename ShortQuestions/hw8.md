@@ -124,10 +124,12 @@ However in GraphQl, I can simply create a query:
 
 ```
 ## 9.  Finish the following API
-    REST
-    DELETE post by ID (with exception cases)
-    GraphQL
-    Query getAllPost
+### REST
+- DELETE post by ID (with exception cases)
+- see [PostController.java](..%2FCoding%2Fredbook%2Fsrc%2Fmain%2Fjava%2Fcom%2Fchuwa%2Fredbook%2Fcontroller%2FPostController.java)
+### GraphQL
+- Query getAllPost
+- See [PostGraphQlController.java](..%2FCoding%2Fredbook%2Fsrc%2Fmain%2Fjava%2Fcom%2Fchuwa%2Fredbook%2Fcontroller%2FPostGraphQlController.java)
 ## 10.  Create a Project, name it with mongo-blog, write a POST API for mongo-blog, change database to MongoDB;
 check [MongoBlogApplication.java](..%2FCoding%2Fhw7%2Fmongo-blog%2Fsrc%2Fmain%2Fjava%2Fcom%2Fexample%2Fmongo_blog%2FMongoBlogApplication.java)
 

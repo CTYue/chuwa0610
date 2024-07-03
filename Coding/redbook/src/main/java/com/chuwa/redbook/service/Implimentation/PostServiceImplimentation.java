@@ -75,4 +75,9 @@ public class PostServiceImplimentation implements PostService {
         return posttoPostDto(oldPost);
 
     }
+
+    @Override
+    public void deletePostById(long id) {
+        postRepository.deleteById(id);
+    }
 }

@@ -1,5 +1,6 @@
 type Query{
     getById(id:ID):Post
+    getAllPosts:[Post]
 }
 
 type Post{
