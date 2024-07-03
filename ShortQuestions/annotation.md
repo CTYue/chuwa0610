@@ -86,7 +86,7 @@ public class PostServiceImpl implements PostService {
 ### @Autowired
 - Used for dependency injection. This annotation allows Spring to resolve and inject collaborating beans into your bean. Automatically inject a bean with @Autowired on a class constructor, setter method, or field.
 ### @PostMapping
-- A shortcut for @RequestMapping(method = RequestMethod.POST). Used to map HTTP POST requests onto specific handler methods.
+- A shortcut for @RequestMapping(method = RequestMethod.POST). Tells Spring to deserialize the JSON or XML payload of an incoming request to a Java object. Used to map HTTP POST requests onto specific handler methods.
 ```java
 @RestController
 @RequestMapping("/api/v1/posts")
