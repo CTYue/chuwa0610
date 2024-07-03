@@ -1,37 +1,35 @@
-package com.chuwa.redbook.entity;
+package com.example.mongo_blog.entity;
 
-import jakarta.persistence.*;
-import org.hibernate.annotations.UpdateTimestamp;
+
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 
 
-@Entity
-@Table(
-        name = "posts",
-        uniqueConstraints = {
-                @UniqueConstraint(columnNames = {"title"})
-        }
-)
 
+@Document("posts")
 public class Post {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
 
-    @Column(name = "title", unique = true,nullable = false)
+
     private String title;
-    @Column(name = "content",nullable = false)
+
     private String content;
-    @Column(name = "description",nullable = false)
+
     private String description;
 
-    @CreatedDate
-    private LocalDateTime createDateTime;
-    @UpdateTimestamp
-    private LocalDateTime updateDateTime;
+    public Post(Long id, String title, String content, String description) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.description = description;
+    }
+
+    public Post() {
+    }
 
     public Long getId() {
         return id;
@@ -65,19 +63,4 @@ public class Post {
         this.description = description;
     }
 
-    public LocalDateTime getCreateDateTime() {
-        return createDateTime;
-    }
-
-    public void setCreateDateTime(LocalDateTime createDateTime) {
-        this.createDateTime = createDateTime;
-    }
-
-    public LocalDateTime getUpdateDateTime() {
-        return updateDateTime;
-    }
-
-    public void setUpdateDateTime(LocalDateTime updateDateTime) {
-        this.updateDateTime = updateDateTime;
-    }
 }

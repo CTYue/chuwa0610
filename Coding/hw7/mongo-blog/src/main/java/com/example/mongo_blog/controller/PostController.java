@@ -1,14 +1,13 @@
-package com.chuwa.redbook.controller;
+package com.example.mongo_blog.controller;
 
 
-import com.chuwa.redbook.payload.PostDto;
-import com.chuwa.redbook.service.PostService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.mongo_blog.payload.PostDto;
+import com.example.mongo_blog.service.PostService;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/posts")
@@ -20,8 +19,25 @@ public class PostController {
         this.postService = postService;
     }
 
-    public ResponseEntity<PostDto> createPost(PostDto postDto) {
+    @PostMapping
+    public ResponseEntity<PostDto> createPost(@RequestBody PostDto postDto) {
         PostDto response = postService.createPost(postDto);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
+
+    @GetMapping
+    public ResponseEntity<List<PostDto>> getAllPosts() {
+        return ResponseEntity.ok(postService.getAllPosts());
+    }
+
+/*    @GetMapping("/{id}")
+    public ResponseEntity<PostDto> getPostById(@PathVariable(name ="id") Long id) {
+        return ResponseEntity.ok(postService.getPostById(id));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<PostDto> updatePostById(@RequestBody PostDto postDto,@PathVariable(name ="id") Long id) {
+        PostDto updateDto = postService.updatePost(postDto, id);
+        return ResponseEntity.ok(updateDto);
+    }*/
 }

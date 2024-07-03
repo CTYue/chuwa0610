@@ -1,4 +1,4 @@
-package com.chuwa.redbook.payload;
+package com.example.mongo_blog.payload;
 
 public class PostDto {
     private Long id;
