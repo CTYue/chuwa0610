@@ -28,4 +28,38 @@
 ## 6. What is the application.properties? do you know application.yml?
 * Application.properties file is used to write the application-related property into that file. This file contains the different configuration which is required to run the application in a different environment, and each environment will have a different property defined by it. Inside the application properties file, we define every type of property like changing the port, database connectivity, connection to the eureka server, and many more.
 
-## 7. 
+## 7. What's the naming differences between GraphQL vs. REST ? Why is the differences ? 
+* REST APIs are resource-based. Each resource (e.g., user, post, comment) is represented by a URL.
+* GraphQL is operation-based, focusing on querying and mutating data rather than representing resources via URLs.
+
+## 8. Provide 2 real-world examples of N+1 problem in REST that can be solved by GraphQL. 
+### Example 1: Fetching Authors and Their Books
+* REST: GET /authors, GET /authors/1/books
+* Graphql: 
+```
+query {
+  authors {
+    id
+    name
+    books {
+      id
+      title
+    }
+  }
+}
+```
+### Example 2: Fetching Authors and Their Books
+* REST: GET /users, GET /users/1/orders
+* Graphql: 
+```
+query {
+  users {
+    id
+    name
+    orders {
+      id
+      item
+    }
+  }
+}
+```
