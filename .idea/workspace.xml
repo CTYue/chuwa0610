@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be80a07f-98d5-4ff8-af2d-72c96a8ddba3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ShortQuestions/hw8.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/hw7/mongo-blog/src/main/java/com/example/mongo_blog/entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw7/mongo-blog/src/main/java/com/example/mongo_blog/entity/Post.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -343,7 +343,7 @@
       <workItem from="1719866185991" duration="7912000" />
       <workItem from="1719877518772" duration="1105000" />
       <workItem from="1719878841489" duration="1192000" />
-      <workItem from="1719886093038" duration="5895000" />
+      <workItem from="1719886093038" duration="6816000" />
     </task>
     <servers />
   </component>
