@@ -1,0 +1,14 @@
+type Blog {
+    id : ID
+    title: String
+    content:String
+    author : String
+}
+
+type Query {
+
+}
+
+type Mutation {
+    createPost : Blog
+}
