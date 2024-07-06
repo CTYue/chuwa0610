@@ -1,6 +1,6 @@
 # Annotation
 
-## Entity Annotations (Java Persistence API - JPA)
+## Spring Data JPA Annotations (Java Persistence API - JPA)
 ### @Entity
 - Marks a class as a database table.
 ### @Table
@@ -32,6 +32,8 @@ private Long id;
 @Column(name= "title", unique = true, nullable = false)
 private String title;
 ```
+### @Transient
+- Indicate that a field is not to be persisted in the database.
 ### @CreatedDate
 - Marks a field to be filled automatically with the date when the entity is created.
 ```java
@@ -102,4 +104,49 @@ public class PostController {
     }
 }
 ```
+### @Transactional
+- define the boundaries of a transaction in a declarative way. This means that the developer doesn't have to manually handle transaction beginning and ending, and can instead focus on business logic.
+```java
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+@Service
+public class AccountService {
+
+    @Transactional
+    public void transferFunds(Account from, Account to, BigDecimal amount) {
+        from.debit(amount);
+        to.credit(amount);
+        accountRepository.save(from);
+        accountRepository.save(to);
+    }
+}
+```
+
+
+## Spring Data Query Annotations
+### @Query
+- Allows you to define a custom query using JPQL or SQL, which will be executed to retrieve data from the database. It can be used on repository methods.
+### @Param
+- Used in conjunction with @Query, it allows you to pass parameters to your custom queries.
+### @Modifying
+- Combined with @Query when the query updates or deletes data, requiring modification of the database.
+
+```java
+@Repository
+public interface EmployeeRepository extends JpaRepository<Employee, Long> {
+
+    @Query("SELECT e FROM Employee e WHERE e.lastName = :lastName")
+    List<Employee> findByLastName(@Param("lastName") String lastName);
+
+    @Modifying
+    @Query("UPDATE Employee e SET e.lastName = :lastName WHERE e.id = :id")
+    void updateLastName(@Param("id") Long id, @Param("lastName") String lastName);
+}
+```
+
+## Spring Data MongoDB Annotations
+### @Document
+- Indicate that a class should be mapped to a MongoDB document.
+### @Field
+- Specifies a document field to be mapped to a class field. You can customize the name of the document field if it differs from the Java class field name.
