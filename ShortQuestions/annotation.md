@@ -122,7 +122,38 @@ public class AccountService {
     }
 }
 ```
+### @Configuration
+- It indicates that a class declares one or more @Bean methods and may be processed by the Spring container to generate bean definitions and service requests for those beans at runtime. This approach is often seen as more type-safe compared to XML configurations, as it leverages the compile-time checks of Java.
+### @Bean
+- The @Bean annotation is used within @Configuration annotated classes to declare a Spring bean.
+```java
+@Configuration
+public class AppConfig {
+    @Bean
+    public MyService myService() {
+        return new MyService();
+    }
 
+    @Bean
+    public MyController myController() {
+        // Injecting MyService into MyController
+        return new MyController(myService());
+    }
+}
+```
+### @Component
+- @Component is a generic stereotype for any Spring-managed component. Other annotations like @Repository, @Service, and @Controller are specializations of @Component for more specific use cases.
+### @Controller
+- @Controller is used to mark classes as Spring MVC Controllers. This component handles HTTP requests and returns HTTP responses.
+```java
+@Controller
+public class HomeController {
+    @GetMapping("/")
+    public String home() {
+        return "home";  // Name of the view to render
+    }
+}
+```
 
 ## Spring Data Query Annotations
 ### @Query
@@ -150,3 +181,52 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 - Indicate that a class should be mapped to a MongoDB document.
 ### @Field
 - Specifies a document field to be mapped to a class field. You can customize the name of the document field if it differs from the Java class field name.
+
+
+## Common Validation Annotations
+### @NotNull
+- The annotated element must not be null.
+### @NotEmpty
+- The annotated element must not be null and must contain at least one non-whitespace character.
+### @NotBlank
+- The annotated element must not be null and must contain at least one non-whitespace character. Useful for strings.
+### @Email
+- The annotated element must be a valid email address.
+### @Size(min=, max=)
+- The annotated element size must be between the specified boundaries (if it is a string, the size of the string is evaluated).
+### @Min(value)
+- The annotated element must be a number whose value must be higher or equal to the specified minimum.
+### @Max(value)
+- The annotated element must be a number whose value must be lower or equal to the specified maximum.
+### @Positive
+- The annotated element must be a strictly positive number.
+### @PositiveOrZero
+- The annotated element must be a positive number or zero.
+### @Negative
+- The annotated element must be a strictly negative number.
+### @NegativeOrZero
+- The annotated element must be a negative number or zero.
+### @Pattern(regexp)
+- The annotated String must match the specified regular expression.
+### @Valid
+- Cascades validation to associated objects if they are annotated with @Valid.
+```java
+@RestController
+@Validated
+public class UserController {
+
+    @PostMapping("/users")
+    public String addUser(@Valid @RequestBody User user) {
+        // Assuming the business logic processes the user further
+        return "User added successfully!";
+    }
+}
+
+class User {
+    @NotBlank(message = "Username must not be blank")
+    @Size(min = 5, max = 15, message = "Username must be between 5 and 15 characters")
+    private String username;
+
+    // getters and setters
+}
+```
