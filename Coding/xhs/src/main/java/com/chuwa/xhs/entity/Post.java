@@ -3,6 +3,7 @@ package com.chuwa.xhs.entity;
 import jakarta.persistence.*;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
+import jakarta.validation.constraints.NotEmpty;
 
 import java.time.LocalDateTime;
 
@@ -19,12 +20,15 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotEmpty
     @Column(name= "title", unique = true, nullable = false)
     private String title;
 
+    @NotEmpty
     @Column(name= "content",nullable = false)
     private String content;
 
+    @NotEmpty
     @Column(name= "description",nullable = false)
     private String description;
 

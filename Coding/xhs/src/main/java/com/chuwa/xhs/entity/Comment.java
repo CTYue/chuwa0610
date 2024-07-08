@@ -6,19 +6,28 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Email;
 
 @Entity
 @Table(name = "comments")
 public class Comment {
     @Id
+    @NotEmpty
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @NotEmpty
     @JsonProperty("name")
     private String name;
+
+    @Email
     private String email;
+
+    @NotEmpty
     private String body;
 
+    @NotEmpty
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "post_id", nullable = false)
     private Post post;
