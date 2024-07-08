@@ -235,4 +235,107 @@ public class UserController {
     // step1 create object "Post"
     }
 ```
+### @Configuration
+- Used to indicate that a class declares one or more @Bean methods and may be processed by the Spring container to generate bean definitions and service requests for those beans at runtime.
+```java
+@Configuration
+public class AppConfig {
+
+    @Bean
+    public DataSource dataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/mydb");
+        dataSource.setUsername("user");
+        dataSource.setPassword("password");
+        return dataSource;
+    }
+
+    @Bean
+    public JdbcTemplate jdbcTemplate(DataSource dataSource) {
+        return new JdbcTemplate(dataSource);
+    }
+}
+
+```
+### @Beam
+- This bean will be managed by the Spring container, making it available for dependency injection throughout the application.
+```java
+@Configuration
+public class AppConfig {
+
+    @Bean
+    public DataSource dataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/mydb");
+        dataSource.setUsername("user");
+        dataSource.setPassword("password");
+        return dataSource;
+    }
+
+    @Bean
+    public JdbcTemplate jdbcTemplate(DataSource dataSource) {
+        return new JdbcTemplate(dataSource);
+    }
+}
+
+```
+## Validations
+### @NotNull
+- Ensures the annotated field is not null.
+```java
+@NotNull(message = "ID cannot be null")
+private Long id;
+```
+### @NotEmpty
+-  Ensures the annotated field is not empty (not null and not empty string).
+```java
+@NotEmpty(message = "Name cannot be empty")
+private String name;
+
+```
+### @NotBlank
+- Ensures the annotated field is not blank (not null and trimmed length > 0).
+```java
+@NotBlank(message = "Name cannot be blank")
+private String name;
+```
+### @Size
+-  Ensures the annotated field has a size between the specified min and max values.
+```java
+@Size(min = 2, max = 30, message = "Name must be between 2 and 30 characters")
+private String name;
+```
+### @Min
+- Ensures the annotated field has a value not less than the specified minimum.
+```java
+@Min(value = 18, message = "Age should not be less than 18")
+private int age;
+```
+### @Max
+- Ensures the annotated field has a value not more than the specified maximum.
+```java
+@Max(value = 100, message = "Age should not be more than 100")
+private int age;
+```
+### @Email
+- Ensures the annotated field is a valid email address.
+```java
+@Email(message = "Email should be valid")
+private String email;
+
+```
+### @Past
+- : Ensures the annotated field represents a date in the past.
+```java
+@Past(message = "Date of birth must be in the past")
+private LocalDate dateOfBirth;
+```
+### @Future
+-  Ensures the annotated field represents a date in the future.
+```java
+@Future(message = "Appointment date must be in the future")
+private LocalDate appointmentDate;
+```
 
