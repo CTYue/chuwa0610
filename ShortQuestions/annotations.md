@@ -138,3 +138,22 @@ public class PostJPQLRepositoryImpl implements PostJPQLRepository {
    EntityManager entityManager;
 }
 ```
+
+## 15. `@Bean`
+To declare an object that is managed by the Spring framework. Spring framework takes care of instantiation, configuration, and wiring up objects.
+```
+@Bean
+public ModelMapper modelMapper() {
+   return new ModelMapper();
+}
+```
+
+## 16. `@ExceptionHandler`
+This annotation is used to handel the specific exceptions and sending the custom responses to the client
+```
+@ExceptionHandler(ResourceNotFoundException.class)
+public ResponseEntity<ErrorDetails> handleResourceNotFoundException (ResourceNotFoundException exception, WebRequest webRequest) {
+   ErrorDetails errorDetails = new ErrorDetails(new Date(), exception.getMessage(), webRequest.getDescription(false));
+   return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
+}
+```
