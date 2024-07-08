@@ -48,6 +48,21 @@
    - **Usage**: Marks a class as a Data Access Object.
    - **Explanation**: Indicates that the class deals with data access logic.
 
+## Annotations Used by Repositories
+
+1. **@Query**
+   - **Usage**: Used to define a custom query at the method level in a repository interface, overriding the query derivation mechanism of Spring Data.
+   - **Explanation**: This annotation allows for the specification of SQL or JPQL directly on repository methods, providing a powerful way to execute complex queries that are not covered by the naming conventions of Spring Data.
+
+## Annotations Used in Global Exception
+
+1. **@ExceptionHandler**
+   + **Usage**: Marks a method in a controller or a controller advice class to handle exceptions thrown by request-handling methods within the controller or across all controllers.
+   + **Explanation**: This annotation allows specific methods to handle exceptions of certain types. When used in conjunction with `@ControllerAdvice`, it can handle exceptions globally across all controllers.
+2. **@ControllerAdvice**
+   - **Usage**: Declares a class that can contain global exception handlers, model attribute methods, and binder initializers.
+   - **Explanation**: This annotation enhances controllers by allowing you to apply common behavior across multiple controllers. It can be used to handle exceptions, bind input parameters, or add common model attributes to models before a controller action is invoked.
+
 ## General Annotations
 
 1. **@Override**
