@@ -26,26 +26,40 @@ public class User {
 }
 ```
 
-@Table
-Usage: This annotation specifies the table in the database with which this entity is mapped.
-
-@Id
-Usage: This annotation specifies the primary key of an entity.
-
-@GeneratedValue
-Usage: This annotation provides the specification of generation strategies for the values of primary keys.
-
-@Column
-Usage: This annotation is used to specify the mapped column for a persistent property or field.
-
-@RestController
-Usage: This annotation is used to create RESTful web services using Spring MVC.
-
-@RequestMapping
-Usage: This annotation is used to map web requests to specific handler classes or handler methods.
-
-@GetMapping
-Usage: This annotation is used to handle HTTP GET requests.
+@Override: Indicates that a method is intended to override a method in a superclass.
+@Deprecated: Marks a method or class as deprecated, indicating it should no longer be used.
+@SuppressWarnings: Instructs the compiler to suppress specific warnings.
+@SafeVarargs: Suppresses unchecked warnings related to varargs.
+@FunctionalInterface: Indicates that an interface is intended to be a functional interface (an interface with a single abstract method).
+@Retention: Specifies how long annotations with the annotated type are to be retained.
+@Target: Specifies the kinds of program elements to which an annotation type is applicable.
+@Inherited: Indicates that an annotation type is automatically inherited.
+@Documented: Indicates that elements using this annotation should be documented by javadoc and similar tools.
+@Repeatable: Indicates that the annotation type can be applied more than once to the same declaration or type use.
+@Entity: Used in JPA to specify that the class is an entity.
+@Table: Used in JPA to specify the table name in the database.
+@Column: Used in JPA to specify the column name in the database.
+@Id: Used in JPA to specify the primary key.
+@GeneratedValue: Used in JPA to specify the primary key generation strategy.
+@ManyToOne: Specifies a many-to-one relationship in JPA.
+@OneToMany: Specifies a one-to-many relationship in JPA.
+@ManyToMany: Specifies a many-to-many relationship in JPA.
+@OneToOne: Specifies a one-to-one relationship in JPA.
+@RestController: Indicates that the class is a Spring MVC controller where every method returns a domain object instead of a view.
+@RequestMapping: Maps HTTP requests to handler methods of MVC and REST controllers.
+@GetMapping: Maps HTTP GET requests onto specific handler methods.
+@PostMapping: Maps HTTP POST requests onto specific handler methods.
+@PutMapping: Maps HTTP PUT requests onto specific handler methods.
+@DeleteMapping: Maps HTTP DELETE requests onto specific handler methods.
+@PatchMapping: Maps HTTP PATCH requests onto specific handler methods.
+@Autowired: Marks a constructor, field, setter method, or config method as to be autowired by Spring's dependency injection facilities.
+@Qualifier: Used to indicate which bean should be injected when there are multiple beans of the same type.
+@Component: Indicates that an annotated class is a "component".
+@Service: Indicates that an annotated class is a "service".
+@Repository: Indicates that an annotated class is a "repository".
+@Configuration: Indicates that a class declares one or more @Bean methods and may be processed by the Spring container to generate bean definitions and service requests for those beans at runtime.
+@Bean: Indicates that a method produces a bean to be managed by the Spring container.
+@Transactional: Describes a transaction attribute on a method or class.
 
 
 2. explain how the below annotaitons specify the table in database?
