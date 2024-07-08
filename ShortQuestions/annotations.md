@@ -224,4 +224,105 @@
    @PersistenceContext
    EntityManager entityManager;
    ```
+1. @ResponseStatus
+   -  automatically applies the specified status code whenever that exception is thrown and not otherwise handled. 
+   ```
+   @ResponseStatus(HttpStatus.NOT_FOUND) // sets HTTP status to 404 Not Found
+   public class ResourceNotFoundException extends RuntimeException {
+      public ResourceNotFoundException(String message) {
+      super(message);
+      }
+   }
+   ```
+1. @Configuration
+   - to mark a class as a source of bean definitions for the Spring application context. It indicates that the class can be used by the Spring IoC (Inversion of Control) container as a configuration class to generate and manage beans.
+1. @Bean
+   - to indicate that a method produces a bean to be managed by the Spring container. 
+   - It is typically used in conjunction with @Configuration classes to define beans in a Spring application context
+   ```
+   @Configuration
+   public class CommonConfig {
 
+    /**
+     * 当需要把第三方lib放入到IOC容器时候，则会用@Bean
+     * @return
+     */
+    // "modelmapper" -> new ModelMapper();
+    @Bean
+    public ModelMapper modelMapper() {
+        return new ModelMapper();
+    }  
+   }
+   ```
+1. @ExceptionalHandler
+   - method level
+   - used to handle the specific exceptions and sending the custom responses to the client
+2. @ControllerAdvice
+   - Class Level
+   - handle exceptions globally across all controllers
+   - make this class be a bean
+   ``` 
+   @RestController
+   public class MyController {
+
+      @ExceptionHandler(ResourceNotFoundException.class)
+      @ResponseStatus(HttpStatus.NOT_FOUND)
+      public String handleResourceNotFound(ResourceNotFoundException ex) {
+        return ex.getMessage();
+      }
+   }
+   ```
+   ```
+   @ControllerAdvice
+   public class GlobalExceptionHandler {
+
+    @ExceptionHandler(ResourceNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public String handleResourceNotFound(ResourceNotFoundException ex) {
+        return ex.getMessage();
+    }
+
+    @ExceptionHandler(Exception.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public String handleGenericException(Exception ex) {
+        return "An unexpected error occurred";
+    }
+   }
+   ```
+1. Validation   
+   spring-boot-starter-validation
+   1. @NotEmpty   
+      or @NotEmpty(message = "Name should not be null or empty")
+   2. @NotNull
+   2. @Size
+      Field: min, max, message
+   3. @Email
+   4. @Pattern
+   4. @Valid // to apply rule to the parameter
+   
+   ```
+   public class User {
+      @Size(min = 2, max = 30, message = "Name must be between 2 and 30 characters")
+      private String name;
+   
+      @Pattern(regexp = "^[a-zA-Z0-9]+$", message = "The username must be alphanumeric")
+      private String username;
+
+      @NotEmpty
+      private String type;
+   
+      @Email
+      private String email;
+      ...
+   }
+   
+   @RestController
+   public class UserController {
+
+    @PostMapping("/users")
+    public ResponseEntity<String> createUser(@Valid @RequestBody User user) {
+        ...
+        return new ResponseEntity<>("User is valid", HttpStatus.OK);
+    }
+}
+   ```
