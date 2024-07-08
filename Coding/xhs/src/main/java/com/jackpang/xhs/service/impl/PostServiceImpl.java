@@ -4,7 +4,13 @@ import com.jackpang.xhs.dao.PostRepository;
 import com.jackpang.xhs.entity.Post;
 import com.jackpang.xhs.exception.ResourceNotFoundException;
 import com.jackpang.xhs.payload.PostDto;
+import com.jackpang.xhs.payload.PostResponse;
 import com.jackpang.xhs.service.PostService;
+import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,49 +23,51 @@ import java.util.stream.Collectors;
  * author: jinhao_pang
  * version: 1.0
  */
-
+@RequiredArgsConstructor
 @Service
 public class PostServiceImpl implements PostService {
 
-    private PostRepository postRepository;
-
-    public PostServiceImpl(PostRepository postRepository) {
-
-        this.postRepository = postRepository;
-    }
+    private final PostRepository postRepository;
+    private final ModelMapper modelMapper;
 
     @Override
     public PostDto createPost(PostDto postDto) {
-        Post post = new Post();
-        post.setTitle(postDto.getTitle());
-        post.setContent(postDto.getContent());
-        post.setDescription(postDto.getDescription());
-
+        Post post = modelMapper.map(postDto, Post.class);
         Post savedPost = postRepository.save(post);
-
-        return transferPostToPostDto(savedPost);
+        return modelMapper.map(savedPost, PostDto.class);
     }
 
-    private PostDto transferPostToPostDto(Post savedPost) {
-
-        PostDto response = new PostDto();
-        response.setId(savedPost.getId());
-        response.setTitle(savedPost.getTitle());
-        response.setContent(savedPost.getContent());
-        response.setDescription(savedPost.getDescription());
-        return response;
-    }
 
     @Override
-    public List<PostDto> getAllPost() {
-        List<Post> posts = postRepository.findAll();
-        return posts.stream().map(this::transferPostToPostDto).toList();
+    public PostResponse getAllPost(int pageNo, int pageSize, String sortBy, String sortDir) {
+        Sort sort = sortDir.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortBy).ascending()
+                : Sort.by(sortBy).descending();
+
+        // create pageable instance
+
+        PageRequest pageRequest = PageRequest.of(pageNo, pageSize, sort);
+//        PageRequest pageRequest = PageRequest.of(pageNo, pageSize, Sort.by(sortBy));
+//        PageRequest pageRequest = PageRequest.of(pageNo, pageSize, Sort.by(sortBy).descending());
+        Page<Post> pagePosts = postRepository.findAll(pageRequest);
+
+        // get content for page abject
+        List<Post> posts = pagePosts.getContent();
+        List<PostDto> postDtos = posts.stream().map(post -> modelMapper.map(post, PostDto.class)).collect(Collectors.toList());
+
+        PostResponse postResponse = new PostResponse();
+        postResponse.setContent(postDtos);
+        postResponse.setPageNo(pagePosts.getNumber());
+        postResponse.setPageSize(pagePosts.getSize());
+        postResponse.setTotalElements(pagePosts.getTotalElements());
+        postResponse.setTotalPages(pagePosts.getTotalPages());
+        postResponse.setLast(pagePosts.isLast());
+        return postResponse;
     }
 
     @Override
     public PostDto getPostById(Long id) {
         Post post = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", id));
-        return transferPostToPostDto(post);
+        return modelMapper.map(post, PostDto.class);
     }
 
     @Override
@@ -69,13 +77,14 @@ public class PostServiceImpl implements PostService {
         oldPost.setContent(newPostDto.getContent());
         oldPost.setDescription(newPostDto.getDescription());
         postRepository.save(oldPost);
-        return transferPostToPostDto(oldPost);
+        return modelMapper.map(oldPost, PostDto.class);
     }
 
     @Override
     public PostDto deleteById(Long id) {
         Post oldPost = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", id));
         postRepository.deleteById(id);
-        return transferPostToPostDto(oldPost);
+        return modelMapper.map(oldPost, PostDto.class);
     }
+
 }

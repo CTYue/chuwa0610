@@ -1,12 +1,15 @@
 package com.jackpang.xhs.controller;
 
 import com.jackpang.xhs.payload.PostDto;
+import com.jackpang.xhs.payload.PostResponse;
 import com.jackpang.xhs.service.PostService;
+import com.jackpang.xhs.util.AppConstants;
 import lombok.RequiredArgsConstructor;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -27,8 +30,15 @@ public class PostGraphQLController {
     }
 
     @QueryMapping
-    public List<PostDto> getAllPost() {
-        return postService.getAllPost();
+    public PostResponse getAllPosts(@Argument Integer pageNo,
+                                    @Argument Integer pageSize,
+                                    @Argument String sortBy,
+                                    @Argument String sortDir) {
+        int pageNoOrDefault = (pageNo != null) ? pageNo : Integer.parseInt(AppConstants.DEFAULT_PAGE_NUMBER);
+        int pageSizeOrDefault = (pageSize != null) ? pageSize : Integer.parseInt(AppConstants.DEFAULT_PAGE_SIZE);
+        String sortByOrDefault = (sortBy != null) ? sortBy : AppConstants.DEFAULT_SORT_BY;
+        String sortDirOrDefault = (sortDir != null) ? sortDir : AppConstants.DEFAULT_SORT_DIR;
+        return postService.getAllPost(pageNoOrDefault, pageSizeOrDefault, sortByOrDefault, sortDirOrDefault);
     }
 
     @MutationMapping

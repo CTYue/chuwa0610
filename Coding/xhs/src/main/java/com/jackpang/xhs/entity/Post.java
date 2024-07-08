@@ -8,6 +8,8 @@ import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * description: Post
@@ -34,6 +36,8 @@ public class Post {
     private String content;
     @Column(name = "description", nullable = false)
     private String description;
+    @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Comment> comments = new HashSet<>();
     @CreatedDate
     private LocalDateTime createDateTime;
     @UpdateTimestamp

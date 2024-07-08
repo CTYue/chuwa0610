@@ -63,6 +63,30 @@
    - **Usage**: Declares a class that can contain global exception handlers, model attribute methods, and binder initializers.
    - **Explanation**: This annotation enhances controllers by allowing you to apply common behavior across multiple controllers. It can be used to handle exceptions, bind input parameters, or add common model attributes to models before a controller action is invoked.
 
+## Annotations Used in Validation
+
+1. **@Valid**
+   + **Usage**: Used to specify that a particular property, method parameter, or method return type should be validated, enforcing constraints provided by other validation annotations.
+   + **Explanation**: This annotation is part of the Java Bean Validation (JSR 380) API. It is used on fields or method parameters to indicate that they should be checked for validity according to constraints defined on the field or object, such as `@NotEmpty`, `@Size`, etc.
+
+2. **@NotEmpty**
+   - **Usage**: Used to assert that the annotated string, collection, map, or array is not null or empty.
+   - **Explanation**: Often used in model validation to ensure that the fields which are required are not submitted as empty. This is particularly useful in form submission scenarios in web applications.
+
+3. **@Size**
+   - **Usage**: Specifies that a character sequence, collection, map, or array's size must be within the defined boundaries.
+   - **Explanation**: Can be used on a string to check if its length is within the specified min and max, or on collections to check their sizes. This provides a built-in way to ensure values meet specific size constraints directly in the data model.
+
+## Annotations Used in Configuration
+
+1. **@Configuration**
+   - **Usage**: Indicates that a class declares one or more `@Bean` methods and may be processed by the Spring container to generate bean definitions and service requests for those beans at runtime.
+   - **Explanation**: Part of Spring Framework’s Java-based configuration mechanism. This annotation allows developers to write configuration classes that create and configure Spring beans.
+
+2. **@Bean**
+   - **Usage**: Used at the method level; it indicates that a method produces a bean to be managed by the Spring container.
+   - **Explanation**: Within a class annotated with `@Configuration`, a method annotated with `@Bean` will get executed and its return value will be registered as a bean within a Spring application context. This allows for explicit declaration and configuration of Spring-managed beans.
+
 ## General Annotations
 
 1. **@Override**
