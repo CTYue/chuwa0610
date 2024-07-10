@@ -104,6 +104,60 @@ public class PostController {
     }
 }
 ```
+
+### @Qualifier
+- eliminate the issue of which bean needs to be injected
+```java
+public class FooService {
+     //  we can avoid ambiguity when Spring finds multiple beans of the same type.
+    @Autowired
+    @Qualifier("fooFormatter")
+    private Formatter formatter;
+}
+```
+### @Primary
+- decide which bean to inject when ambiguity is present regarding dependency injection. This annotation defines a preference when multiple beans of the same type are present. The bean associated with the @Primary annotation will be used unless otherwise indicated.
+```java
+// In this example, both methods return the same Employee type. The bean that Spring will inject is the one returned by the method tonyEmployee. This is because it contains the @Primary annotation. This annotation is useful when we want to specify which bean of a certain type should be injected by default.
+@Configuration
+public class Config {
+ 
+    @Bean
+    public Employee johnEmployee() {
+        return new Employee("John");
+    }
+ 
+    @Bean
+    @Primary
+    public Employee tonyEmployee() {
+        return new Employee("Tony");
+    }
+}
+```
+### @Resource
+- @Resource is the annotation that will help to extract beans from the container.
+```java
+@Configuration
+public class ApplicationContext {
+ 
+    // Put the bean into the spring container
+    @Bean(name = "userFile")
+    public File userFile() {
+        File file = new File("user.txt");
+        return file;
+    }
+}
+
+@Service
+class UserService {
+
+    // Ask the container to get the bean and 'put' it here (inject)
+    @Resource(name = "userFile")
+    private File userFile;
+
+}
+```
+
 ### @Transactional
 - define the boundaries of a transaction in a declarative way. This means that the developer doesn't have to manually handle transaction beginning and ending, and can instead focus on business logic.
 ```java
@@ -122,8 +176,6 @@ public class AccountService {
     }
 }
 ```
-### @Configuration
-- It indicates that a class declares one or more @Bean methods and may be processed by the Spring container to generate bean definitions and service requests for those beans at runtime. This approach is often seen as more type-safe compared to XML configurations, as it leverages the compile-time checks of Java.
 ### @Bean
 - The @Bean annotation is used within @Configuration annotated classes to declare a Spring bean.
 ```java
@@ -154,6 +206,36 @@ public class HomeController {
     }
 }
 ```
+### @ControllerAdvice
+- Used to handle exceptions across the whole application.
+```java
+@ControllerAdvice
+public class GlobalExceptionHandler {
+
+    @ExceptionHandler(value = Exception.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseBody
+    public String handleException(Exception e) {
+        return "An error occurred: " + e.getMessage();
+    }
+}
+```
+
+### @SpringBootApplication
+- @SpringBootApplication is a convenience annotation that adds all the following: @Configuration, @EnableAutoConfiguration, @ComponentScan.
+### @Configuration
+- Declares a class as the source for bean definitions
+### @EnableAutoConfiguration
+- Allows the application to add beans using classpath definitions
+### @ComponentScan
+- Used to specify the packages that Spring should scan for components, configurations, and services. Essentially, it tells Spring where to look for annotated classes that it should manage, like @Component, @Service, @Repository, and @Controller among others.
+```java
+@Configuration
+@ComponentScan(basePackages = "com.example.demo.services")
+public class AppConfig {
+    // Additional configuration or bean definitions can go here
+}
+```
 
 ## Spring Data Query Annotations
 ### @Query
@@ -181,7 +263,6 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 - Indicate that a class should be mapped to a MongoDB document.
 ### @Field
 - Specifies a document field to be mapped to a class field. You can customize the name of the document field if it differs from the Java class field name.
-
 
 ## Common Validation Annotations
 ### @NotNull
@@ -228,5 +309,25 @@ class User {
     private String username;
 
     // getters and setters
+}
+```
+
+## Java Dependency Injection
+### @Inject
+- Used to perform dependency injection in Java applications, allowing you to decouple the configuration and dependencies of your classes from the class code itself.
+```java
+//The @Inject on the constructor of MessagePrinter tells the DI container to inject an instance of MessageService when creating an instance of MessagePrinter.
+public class MessagePrinter {
+
+    private final MessageService messageService;
+
+    @Inject
+    public MessagePrinter(MessageService messageService) {
+        this.messageService = messageService;
+    }
+
+    public void printMessage() {
+        System.out.println(messageService.getMessage());
+    }
 }
 ```
