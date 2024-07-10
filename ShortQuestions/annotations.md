@@ -44,15 +44,15 @@
 2. **@Component**
    - **Usage**: Generic stereotype for any Spring-managed component.
    - **Explanation**: Indicates that a class is a Spring component. This annotation is a generic stereotype for any Spring-managed component. `@Repository`, `@Service`, and `@Controller` are specializations of `@Component` for more specific use cases.
-3. **@Repository**
-   - **Usage**: Marks a class as a Data Access Object.
-   - **Explanation**: Indicates that the class deals with data access logic.
 
 ## Annotations Used by Repositories
 
 1. **@Query**
    - **Usage**: Used to define a custom query at the method level in a repository interface, overriding the query derivation mechanism of Spring Data.
    - **Explanation**: This annotation allows for the specification of SQL or JPQL directly on repository methods, providing a powerful way to execute complex queries that are not covered by the naming conventions of Spring Data.
+1. **@Repository**
+   - **Usage**: Marks a class as a Data Access Object.
+   - **Explanation**: Indicates that the class deals with data access logic.
 
 ## Annotations Used in Global Exception
 
@@ -92,6 +92,30 @@
 1. **@Override**
    - **Usage**: Indicates that a method overrides a method in a superclass.
    - **Explanation**: Ensures that the subclass method correctly overrides a method in its superclass.
-2. **@Autowired**
+2. **@AliasFor**
+   - **Usage**: This annotation is used to declare that one attribute in an annotation is an alias for another attribute, either within the same annotation or in another annotation.
+   - **Mechanism**: `@AliasFor` ensures that the affected attributes in different annotations (or within the same annotation) carry the same value, effectively linking their behavior and values in Spring's annotation-driven configuration.
+
+## Annotations Used in Injection
+
+1. **@Autowired**
    - **Usage**: Marks a constructor, field, setter method, or config method as to be autowired by Spring's dependency injection facilities.
    - **Explanation**: This annotation is used to auto-inject bean on the setter method, constructor, a property, or methods.
+2. **@Qualifier**
+   - **Usage**: Used to disambiguate bean dependencies when more than one bean of the same type exists. It specifies which bean to inject when there are multiple candidates.
+   - **Explanation**: This annotation is used along with `@Autowired` in Spring to specify which exact bean should be autowired when multiple beans of the same type are configured in Spring's application context. It is particularly useful in scenarios where automatic choice by type (done by `@Autowired`) is ambiguous.
+3. **@Primary**
+   - **Usage**: Indicates that a particular bean should be given preference when multiple candidates are qualified to autowire a single-valued dependency.
+   - **Explanation**: If there are multiple beans of the same type, the `@Primary` annotation allows you to designate one of them as the preferred bean to be used when autowiring. This helps resolve conflicts where multiple beans could satisfy an autowiring dependency.
+4. **@Resource**
+   - **Usage**: Used for injecting beans by name. It is part of the JSR-250 annotation standard and not specific to Spring.
+   - **Explanation**: `@Resource` can inject dependencies by matching the name of the bean. Unlike `@Autowired`, which does type checking, `@Resource` does name-based resolution.
+5. **@Inject**
+   - **Usage**: Part of the JSR-330 standard for dependency injection. Similar to Spring’s `@Autowired` but without the optional and required distinctions.
+   - **Explanation**: `@Inject` can be used for automatic dependency injection. It is a standard-based annotation to inject dependencies, supporting constructor, field, and method injection without needing to be as explicit as `@Autowired`.
+6. **@Lookup**
+   - **Usage**: Used to dynamically override a bean method to return a bean from the Spring context, particularly useful for retrieving prototype scoped beans from within singleton scoped beans.
+   - **Mechanism**: When a singleton bean needs to interact with a prototype bean, `@Lookup` can be used to ensure a new instance of the prototype bean is injected every time it's needed, rather than during the singleton bean's initialization.
+7. **@Value**
+   - **Usage**: This annotation is used for injecting values into beans from externalized properties or to inject constant expressions.
+   - **Mechanism**: `@Value` can inject property values into components or use Spring Expression Language (SpEL) for more complex expressions. It supports injecting from property files, system properties, environment variables, and other sources.
