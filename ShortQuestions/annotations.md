@@ -157,3 +157,43 @@ public ResponseEntity<ErrorDetails> handleResourceNotFoundException (ResourceNot
    return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
 }
 ```
+
+## 17. `@ComponentScan`
+This annotation defines where Spring should scan the bean definations and generate the beans.
+```
+@Configuration
+@ComponentScan(basePackages = {"com.chuwa.springbasic"})
+public class BeanConfig {
+   // ...
+}
+```
+
+## 18. `@Configuration`
+This annotation declares a class as the source for bean definitions.
+```
+@Configuration
+@ComponentScan(basePackages = {"com.chuwa.springbasic"})
+public class BeanConfig {
+   // ...
+}
+```
+
+## 19. `@Qualifier`
+Adds a qualifier name to a specific bean
+```
+@Bean
+@Qualifier("primary")
+public ModelMapper modelMapper() {
+   return new ModelMapper();
+}
+```
+
+## 20. `@Primary`
+Sets the bean as primary bean. If no qualifier is used, Spring will always use this Bean first.
+```
+@Bean
+@Primary
+public ModelMapper modelMapper() {
+   return new ModelMapper();
+}
+```
