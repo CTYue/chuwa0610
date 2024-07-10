@@ -235,6 +235,18 @@ public class UserController {
     // step1 create object "Post"
     }
 ```
+### @SpringbootApplication
+- It is a combination of 3 annotations @Configuration, @EnableAutoConfiguration, and @ComponentScan
+- It is used to mark a configuration class that declares one or more @Bean methods and also triggers auto-configuration and component scanning.
+- Usually put in the main class
+```java
+@SpringBootApplication
+public class MyApp {
+    public static void main(String[] args) {
+        SpringApplication.run(MyApp.class, args);
+    }
+}
+```
 ### @Configuration
 - Used to indicate that a class declares one or more @Bean methods and may be processed by the Spring container to generate bean definitions and service requests for those beans at runtime.
 ```java
@@ -278,6 +290,175 @@ public class AppConfig {
     public JdbcTemplate jdbcTemplate(DataSource dataSource) {
         return new JdbcTemplate(dataSource);
     }
+}
+
+```
+## @ComponentScan
+- Used to allow Spring to scan the specified packages and register the beans with the Spring application context automatically.
+-  usually annotated with @Configuration
+```java
+@Configuration
+@ComponentScan(basePackages = "com.example.myapp")
+public class AppConfig {
+    // Other bean definitions
+}
+
+```
+
+### @EnableAutoConfiguration
+- Tells Spring Boot to start adding beans based on classpath settings, other beans, and various property settings. It attempts to configure your Spring application automatically based on the dependencies you have added.
+
+```java
+@EnableAutoConfiguration
+public class MyApp {
+// Application code
+}
+```
+### @Component
+- A generic stereotype for any Spring-managed component.
+- Can be used to annotate any class to make it a Spring bean.
+- No specific additional behavior is associated with it beyond making the class a Spring bean.
+```java
+@Component
+public class MyComponent {
+    public void perform() {
+        System.out.println("Performing task");
+    }
+}
+```
+### @Service
+- A specialization of @Component indicating that the annotated class is a service component.
+- Used for service layer components, which usually contain business logic.
+- No specific additional behavior, but it provides better readability and clarity regarding the class's role in the application.
+```java
+@Service
+public class MyService {
+  public void executeService() {
+    System.out.println("Executing service");
+  }
+}
+```
+### @Repository
+-  A specialization of @Component indicating that the annotated class is a repository (or DAO).
+- Used for data access layer components.
+- In addition to making the class a Spring bean, it also provides exception translation, converting database-related exceptions into Spring's DataAccessException.
+```java
+@Repository
+public class MyRepository {
+  public void saveData() {
+    System.out.println("Saving data");
+  }
+}
+```
+### @Controller
+- A specialization of @Component indicating that the annotated class is a web controller.
+- Used for presentation layer components, specifically to define web controllers in Spring MVC.
+- Used in conjunction with Spring MVC to map web requests to handler methods.
+```java
+@Controller
+public class MyController {
+    @GetMapping("/foo")
+    public String foo() {
+        return "foo";
+    }
+}
+```
+### @Autowired
+- Used to automatically wire a bean to a class field, constructor, or setter method.
+- By default, it wires by type. If multiple beans of the same type are available, an exception is thrown
+```java
+@Component
+public class MyComponent {
+  @Autowired
+  private MyService myService;
+
+  public void doSomething() {
+    myService.performService();
+  }
+}
+
+```
+### @Qualifier
+-  Used to resolve the ambiguity when multiple beans of the same type are available by specifying the exact bean to be injected.
+- Works in conjunction with @Autowired to provide more fine-grained control over which bean should be injected.
+```java
+@Component
+public class MyComponent {
+    @Autowired
+    @Qualifier("specificService")
+    private MyService myService;
+
+    public void doSomething() {
+        myService.performService();
+    }
+}
+
+//=============================================================
+@Service("specificService")
+public class SpecificService implements MyService {
+  public void performService() {
+    System.out.println("Specific Service");
+  }
+}
+
+@Service("anotherService")
+public class AnotherService implements MyService {
+  public void performService() {
+    System.out.println("Another Service");
+  }
+}
+
+```
+### @Resource
+- annotation for dependency injection. It can be used similarly to @Autowired, but it wires by name by default.
+```java
+@Component
+public class MyComponent {
+    @Resource(name = "specificService")
+    private MyService myService;
+
+    public void doSomething() {
+        myService.performService();
+    }
+}
+```
+### @Primary
+- Indicates that a bean should be given preference when multiple candidates qualify for autowiring.
+- Works with @Autowired to resolve ambiguity by marking one bean as the primary candidate for dependency injection.
+```java
+@Service
+@Primary
+public class PrimaryService implements MyService {
+    public void performService() {
+        System.out.println("Primary Service");
+    }
+}
+
+@Service
+public class SecondaryService implements MyService {
+    public void performService() {
+        System.out.println("Secondary Service");
+    }
+}
+
+@Component
+public class MyComponent {
+    @Autowired
+    private MyService myService;
+
+    public void doSomething() {
+        myService.performService(); // Will use PrimaryService
+    }
+}
+
+```
+### @Inject
+- Works similarly to @Autowired, injecting by type. It does not have Spring-specific features like @Qualifier.
+```java
+@Component
+public class MyComponent {
+    @Inject
+    private MyService myService;
 }
 
 ```
