@@ -154,6 +154,7 @@
     }
     ```
 1. @RestController
+   = @Controller + @ResponseBody
     - a controller component in the MVC (Model-View-Controller) architecture.
     - @PostMapping
       - map HTTP POST requests onto specific handler methods in Spring controllers
@@ -183,6 +184,33 @@
        }
     }
     ```
+   - @Controller + @ResponseBody
+   ```
+   @Controller
+   @RequestMapping("/api/v1/posts")
+   public class PostController {
+      @Autowired
+      private PostService postService;
+      
+      @PostMapping()
+      public @ResponseBody ResponseEntity<PostDto> createPost(@RequestBody PostDto
+      postDto) {
+         PostDto postResponse = postService.createPost(postDto);
+         return new ResponseEntity<>(postResponse, HttpStatus.CREATED);
+      }
+   }
+   ```
+   - Content Negotiation
+     - consumes: consume content-type from request
+     - produces: contents to front-end, front-end only accept the type it defined
+   ```java
+   @PutMapping(value = "/{id}", produces = "text/pdf", consumes = "application/xml")
+   public ResponseEntity<PostDto> updatePostById(@RequestBody PostDto postDto,
+   @PathVariable(name = "id") long id) {
+    PostDto postResponse = postService.updatePost(postDto, id);
+    return new ResponseEntity<>(postResponse, HttpStatus.OK);
+   }
+   ```
 1. @Controller
    a controller annotation
    could used for graphQLController
