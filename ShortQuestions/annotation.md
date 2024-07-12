@@ -82,7 +82,7 @@ public class PostServiceImpl implements PostService {
 }
 ```
 ### @RestController
-- It is a specialized version of the @Controller annotation that includes the @ResponseBody annotation. This means that it's designed for building RESTful web services where the response body of a method is serialized directly into the response format (usually JSON or XML). Annotate a class to define it as a controller where every method returns a domain object instead of a view.
+- (`@RestController = @Controller + @ResponseBody`) It is a specialized version of the @Controller annotation that includes the @ResponseBody annotation. This means that it's designed for building RESTful web services where the response body of a method is serialized directly into the response format (usually JSON or XML). Annotate a class to define it as a controller where every method returns a domain object instead of a view.
 ### @RequestMapping
 - Maps HTTP requests to handler methods of MVC and REST controllers.
 ### @Autowired
@@ -104,6 +104,9 @@ public class PostController {
     }
 }
 ```
+### @GetMapping
+### @PutMapping
+### @DeleteMapping
 
 ### @Qualifier
 - eliminate the issue of which bean needs to be injected
