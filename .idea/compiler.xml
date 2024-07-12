@@ -14,6 +14,7 @@
         <module name="mongo-blog" />
         <module name="redbook" />
         <module name="hw5" />
+        <module name="springmvc-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

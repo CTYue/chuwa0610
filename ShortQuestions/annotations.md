@@ -462,6 +462,62 @@ public class MyComponent {
 }
 
 ```
+### @PropertySource
+- Used to specify the location of a properties file to be loaded into the Spring Environment. This is useful for externalizing configuration and injecting properties into Spring beans.
+```java
+@Configuration
+@PropertySource("classpath:application.properties")
+public class AppConfig {
+    @Value("${my.property}")
+    private String myProperty;
+
+    @Bean
+    public MyBean myBean() {
+        return new MyBean(myProperty);
+    }
+}
+```
+
+### @EnableTransactionManagement
+- Enables Spring's annotation-driven transaction management capability, allowing the use of `@Transactional` annotations in service layer methods to manage transactions.
+```java
+@Configuration
+@EnableTransactionManagement
+public class AppConfig {
+    
+    @Bean
+    public PlatformTransactionManager transactionManager() {
+        return new DataSourceTransactionManager(dataSource());
+    }
+    
+    @Bean
+    public DataSource dataSource() {
+        return new DriverManagerDataSource("jdbc:h2:mem:testdb");
+    }
+}
+```
+
+### @EnableWebMvc
+- Enables Spring's MVC support in a Java-based configuration. It imports the Spring MVC configuration, which sets up the DispatcherServlet, enables default MVC components, and allows the use of `@Controller` annotations.
+```java
+@Configuration
+@EnableWebMvc
+@ComponentScan(basePackages = "com.example.web")
+public class WebConfig implements WebMvcConfigurer {
+    
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/resources/**")
+                .addResourceLocations("/resources/");
+    }
+    
+    @Override
+    public void configureViewResolvers(ViewResolverRegistry registry) {
+        registry.jsp("/WEB-INF/views/", ".jsp");
+    }
+}
+```
+
 ## Validations
 ### @NotNull
 - Ensures the annotated field is not null.
