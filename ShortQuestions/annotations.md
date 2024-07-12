@@ -197,3 +197,13 @@ public ModelMapper modelMapper() {
    return new ModelMapper();
 }
 ```
+
+## 21. `@Controller`
+`@Controller` annotation is also a specialization of @Component annotation. The `@Controller` annotation indicates that a particular class serves the role of a controller. Spring Controller annotation is typically used in combination with annotated handler methods based on the `@RequestMapping` annotation. It can be applied to classes only. It’s used to mark a class as a web request handler. It’s mostly used with Spring MVC applications.
+
+```
+@Controller
+public class myController {
+ //...
+}
+```
