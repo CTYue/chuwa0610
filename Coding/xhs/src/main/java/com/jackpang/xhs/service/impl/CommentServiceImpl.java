@@ -8,6 +8,7 @@ import com.jackpang.xhs.exception.BlogAPIException;
 import com.jackpang.xhs.exception.ResourceNotFoundException;
 import com.jackpang.xhs.payload.CommentDto;
 import com.jackpang.xhs.service.CommentService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -20,13 +21,12 @@ import java.util.stream.Collectors;
  * @date 7/8/24 11:10 PM
  */
 @Service
+@RequiredArgsConstructor
 public class CommentServiceImpl implements CommentService {
 
-    @Autowired
-    private CommentRepository commentRepository;
+    private final CommentRepository commentRepository;
 
-    @Autowired
-    private PostRepository postRepository;
+    private final PostRepository postRepository;
 
     @Override
     public CommentDto createComment(long postId, CommentDto commentDto) {
@@ -50,7 +50,7 @@ public class CommentServiceImpl implements CommentService {
         List<Comment> comments = commentRepository.findByPostId(postId);
 
         // convert list of comment entities to list of comment dto's
-        return comments.stream().map(comment -> mapToDto(comment)).collect(Collectors.toList());
+        return comments.stream().map(this::mapToDto).collect(Collectors.toList());
     }
 
     @Override
