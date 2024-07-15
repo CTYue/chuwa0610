@@ -207,3 +207,21 @@ public class myController {
  //...
 }
 ```
+
+## 22. `@PreAuthorize`
+The @PreAuthorize annotation checks the given expression before entering the method. The @PreAuthorize(“hasRole(‘ROLE_VIEWER’)”) has the same meaning as @Secured(“ROLE_VIEWER”)
+```
+@PreAuthorize("hasRole('ROLE_VIEWER')")
+public String getUsernameInUpperCase() {
+    return getUsername().toUpperCase();
+}
+```
+
+## 23. `@PostAuthorize()`
+@PostAuthorize annotation verifies it after the execution of the method and could alter the result. @PreAuthorize expressions can be replaced by @PostAuthorize ones.
+```
+@PostAuthorize("#username == authentication.principal.username")
+public String getMyRoles2(String username) {
+    //...
+}
+```
