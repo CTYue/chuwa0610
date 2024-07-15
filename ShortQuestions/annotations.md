@@ -211,6 +211,16 @@
     return new ResponseEntity<>(postResponse, HttpStatus.OK);
    }
    ```
+1. @PreAuthorize
+   ```
+   @PreAuthorize("hasRole('ADMIN')")
+   @PostMapping
+   public ResponseEntity<PostDto> updatePostById(@RequestBody PostDto postDto,
+   @PathVariable(name = "id") long id) {
+    PostDto postResponse = postService.updatePost(postDto, id);
+    return new ResponseEntity<>(postResponse, HttpStatus.OK);
+   }
+   ```
 1. @Controller
    a controller annotation
    could used for graphQLController
@@ -410,4 +420,43 @@ spring-boot-starter-validation
    ```
    @PersistenceContext
    EntityManager entityManager;
+   ```
+
+# application.properties
+1. @Value
+   ```
+   // application.properties
+   security.jwt.secret=your_secret_key_here
+   
+   // get data
+   @Value("${security.jwt.secret}")
+   private String jwtSecret;
+   ```
+
+# Spring Secuity
+1. @EnableWebSecurity
+   ```
+   @Configuration
+   @EnableWebSecurity
+   public class SecurityConfig extends WebSecurityConfigurerAdapter {
+   
+       @Override
+       protected void configure(HttpSecurity http) throws Exception {
+           http
+               .authorizeRequests()
+                   .antMatchers("/public/**").permitAll()
+                   .antMatchers("/admin/**").hasRole("ADMIN")
+                   .anyRequest().authenticated()
+                   .and()
+               .formLogin()
+                   .loginPage("/login")
+                   .defaultSuccessUrl("/dashboard")
+                   .permitAll()
+                   .and()
+               .logout()
+                   .logoutUrl("/logout")
+                   .logoutSuccessUrl("/login?logout")
+                   .permitAll();
+       }
+   }
    ```
