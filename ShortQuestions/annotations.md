@@ -74,3 +74,29 @@
 
 
 
+## Others
+
+### `@ModelAttribute`
+
+1. 当在控制器方法上使用 `@ModelAttribute` 注解时，该方法会在每个请求之前执行，并将方法的返回值添加到模型中。示例代码如下：
+
+```java
+@Controller
+public class UserController {
+
+    @ModelAttribute("user")
+    public User getUser() {
+        // 创建并返回一个新的 User 对象
+        return new User();
+    }
+
+    @RequestMapping("/user")
+    public String handleUser() {
+        // 处理 user 对象
+        return "userView";
+    }
+}
+```
+
+2. 当在控制器方法的参数上使用 `@ModelAttribute` 注解时，Spring MVC 会尝试从模型中获取一个名称为 `"user"` 的属性，并将其绑定到方法参数上。
+
