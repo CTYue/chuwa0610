@@ -225,3 +225,61 @@ public String getMyRoles2(String username) {
     //...
 }
 ```
+
+## 24. `@Aspect`
+An aspect is a class that implements enterprise application concerns that cut across multiple classes, such as transaction management. Aspects can be a normal class configured through Spring XML configuration or we can use Spring AspectJ integration to define a class as Aspect using @Aspect annotation.
+
+## 25. Advice
+- `@Before` - Run before the method execution
+- `@After` – Run after the method returned a result
+- `@AfterReturning` – Run after the method returned a result, intercept the returned result as well. @AfterThrowing – Run after the method throws an exception
+- `@Around` – Run around the method execution, combine all three advices above, requires ProceedingJoinPoint as parameter type in the advice method while above advice annotations requires JoinPoint as parameter type.
+   ```
+   @Aspect
+   public class EmployeeAspect {
+
+      @Before("execution(public String getName())")
+      public void getNameAdvice(){
+         System.out.println("Executing Advice on getName()");
+      }
+
+      @Before("execution(* com.journaldev.spring.service.*.get*())")
+      public void getAllAdvice(){
+         System.out.println("Service method getter called");
+      }
+   }
+   ```
+
+## 26. `@EnableScheduling`
+To enable support for scheduling tasks and the @Scheduled annotation in Spring.
+   ```
+   @Configuration
+   @EnableScheduling
+   public class SpringConfig {
+      // ...
+   }
+   ```
+
+## 27. `@Scheduled`
+Spring Boot provides the ability to schedule tasks for execution at a given time period with the help of @Scheduled annotation.
+   ```
+   @Component
+   public class Scheduler {
+
+      // Method
+      // To trigger the scheduler every one minute
+      // between 19:00 PM to 19:59 PM
+      @Scheduled(cron = "0 * 19 * * ?")
+      public void scheduleTask()
+      {
+         SimpleDateFormat dateFormat = new SimpleDateFormat(
+               "dd-MM-yyyy HH:mm:ss.SSS");
+
+         String strDate = dateFormat.format(new Date());
+
+         System.out.println(
+               "Cron job Scheduler: Job running at - "
+               + strDate);
+      }
+   }
+   ```
