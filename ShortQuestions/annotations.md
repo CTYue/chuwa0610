@@ -91,3 +91,24 @@ public void deleteUser(@PathVariable Long id) {
 - @Override: Indicates that a method overrides a method in a superclass.
 
 - @Autowired: Marks a constructor, field, setter method, or config method as to be autowired by Spring's dependency injection facilities.
+
+# 5. @Transactional
+
+- Indicates that the method or class should be executed within a transactional context.
+
+# 6. @CreatedDate
+
+- Used in conjunction with Spring Data JPA Auditing to automatically populate date fields
+
+# 7. LastModifiedDate
+
+- Used in conjunction with Spring Data JPA Auditing to automatically populate date fields.
+
+# 8. @Test
+
+- To run Junit Tests
+
+# 9. @SpringbootApplication
+
+- It is a combination of 3 annotations @Configuration, @EnableAutoConfiguration, and @ComponentScan
+- It is used to mark a configuration class that declares one or more @Bean methods and also triggers auto-configuration and component scanning.
