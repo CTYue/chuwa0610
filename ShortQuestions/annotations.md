@@ -460,3 +460,22 @@ spring-boot-starter-validation
        }
    }
    ```
+   
+# AOP
+1. @Aspect
+```
+@Aspect
+public class LoggingAspect {
+    
+    @Before("execution(* com.example.service.*.*(..))")
+    public void logBefore(JoinPoint joinPoint) {
+        System.out.println("Logging before method: " + joinPoint.getSignature().getName());
+    }
+
+    @After("execution(* com.example.service.*.*(..))")
+    public void logAfter(JoinPoint joinPoint) {
+        System.out.println("Logging after method: " + joinPoint.getSignature().getName());
+    }
+}
+
+```
