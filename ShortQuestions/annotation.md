@@ -334,3 +334,79 @@ public class MessagePrinter {
     }
 }
 ```
+
+## Spring Aspect-Oriented Programming (AOP)
+First, ensure your Spring project includes AOP dependencies in your pom.xml:
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-aop</artifactId>
+</dependency>
+```
+
+### @Before
+- Run before the method execution
+
+### @After
+- Run after the method returned a result
+
+### @AfterReturning
+- Run after the method returned a result, intercept the returned result as well.
+
+### @AfterThrowing
+- Run after the method throws an exception
+
+### @Around
+- Run around the method execution, combine all three advices above, requires `ProceedingJoinPoint` as parameter type in the advice method while above advice annotations requires `JoinPoint` as parameter type.
+
+```java
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.*;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class LoggingAspect {
+
+    // Run before the method execution
+    @Before("execution(* com.example.service.MessageService.sendMessage(..))")
+    public void beforeSendMessage(JoinPoint joinPoint) {
+        System.out.println("Before sending message: " + joinPoint.getSignature());
+    }
+
+    // Run after the method returned a result
+    @After("execution(* com.example.service.MessageService.sendMessage(..))")
+    public void afterSendMessage(JoinPoint joinPoint) {
+        System.out.println("After sending message: " + joinPoint.getSignature());
+    }
+
+    // Run after the method returned a result, intercept the returned result as well
+    @AfterReturning(pointcut = "execution(* com.example.service.MessageService.getMessage(..))", returning = "result")
+    public void afterReturningGetMessage(JoinPoint joinPoint, String result) {
+        System.out.println("After returning from getMessage: " + result);
+    }
+
+    // Run after the method throws an exception
+    @AfterThrowing(pointcut = "execution(* com.example.service.MessageService.sendMessage(..))", throwing = "ex")
+    public void afterThrowingSendMessage(JoinPoint joinPoint, Exception ex) {
+        System.out.println("After throwing in sendMessage: " + ex.getMessage());
+    }
+
+    // Run around the method execution
+    @Around("execution(* com.example.service.MessageService.sendMessage(..))")
+    public Object aroundSendMessage(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+        System.out.println("Before around advice");
+        Object result = null;
+        try {
+            result = proceedingJoinPoint.proceed(); // Continue with method execution
+            System.out.println("After around advice (returning)");
+        } catch (Throwable ex) {
+            System.out.println("After around advice (exception): " + ex.getMessage());
+            throw ex;
+        }
+        return result;
+    }
+}
+
+```
