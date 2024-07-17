@@ -1,4 +1,134 @@
 # AnnoTations
+### @Aspect
+- Used to declare a class as an aspect, which contains advice methods that apply cross-cutting concerns. This annotation is a marker that indicates the class contains methods annotated with advice annotations like `@Before`, `@After`, etc.
+```java
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class LoggingAspect {
+    // This class is an aspect
+}
+```
+
+### @Before
+- Used to declare advice that runs before the matched join point method execution. It is typically used to perform actions like logging, security checks, etc., before the main logic of the method is executed.
+```java
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class LoggingAspect {
+
+    @Before("execution(* com.example.service.UserService.createUser(..))")
+    public void logBeforeMethod() {
+        System.out.println("A user is about to be created.");
+    }
+}
+```
+
+### @After
+- Used to declare advice that runs after the matched join point method execution, regardless of its outcome (whether it returns normally or throws an exception). This is useful for tasks such as cleanup or logging the completion of a method.
+```java
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.After;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class LoggingAspect {
+
+    @After("execution(* com.example.service.UserService.createUser(..))")
+    public void logAfterMethod() {
+        System.out.println("The user creation process has finished.");
+    }
+}
+```
+
+### @AfterReturning
+- Used to declare advice that runs after the matched join point method returns normally (i.e., without throwing an exception). This is useful for logging the return value or processing the result of a method.
+```java
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class LoggingAspect {
+
+    @AfterReturning(pointcut = "execution(* com.example.service.UserService.createUser(..))", returning = "result")
+    public void logAfterReturning(Object result) {
+        System.out.println("User created successfully with result: " + result);
+    }
+}
+```
+
+### @AfterThrowing
+- Used to declare advice that runs after the matched join point method exits by throwing an exception. This is useful for logging exceptions or performing error handling.
+```java
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.AfterThrowing;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class LoggingAspect {
+
+    @AfterThrowing(pointcut = "execution(* com.example.service.UserService.createUser(..))", throwing = "error")
+    public void logAfterThrowing(Throwable error) {
+        System.out.println("An error occurred during user creation: " + error.getMessage());
+    }
+}
+```
+
+### @Around
+- Used to declare advice that runs around the matched join point method execution. This advice has control over when (or if) the method is executed. It can be used for tasks like performance monitoring, transaction management, etc.
+```java
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Around;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class LoggingAspect {
+
+    @Around("execution(* com.example.service.UserService.createUser(..))")
+    public Object logAroundMethod(ProceedingJoinPoint joinPoint) throws Throwable {
+        System.out.println("Before creating user");
+        Object result = joinPoint.proceed(); // Proceed with the method execution
+        System.out.println("After creating user");
+        return result;
+    }
+}
+```
+
+### @Pointcut
+- Used to declare and reuse pointcut expressions. It is typically defined as an empty method annotated with `@Pointcut`, and the pointcut expression is used to specify where advice should be applied.
+```java
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class LoggingAspect {
+
+    @Pointcut("execution(* com.example.service.UserService.createUser(..))")
+    public void createUserPointcut() {
+        // Pointcut expression
+    }
+
+    @Before("createUserPointcut()")
+    public void logBeforeMethod() {
+        System.out.println("A user is about to be created.");
+    }
+}
+```
+
 ### @JsonProperty
 -  to indicate the property name in JSON.
 ```java
