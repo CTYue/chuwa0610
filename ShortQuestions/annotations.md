@@ -98,3 +98,89 @@ public class UserController {
   
 }
 ```
+
+## Spring Security
+
+### @EnableWebSecurity
+
+This annotation is used to enable Spring Security's web security support and provide the Spring MVC integration.
+
+```bash
+@Configuration
+@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+  // configuration for security filters, authenticatoin providers, etc.
+}
+```
+
+### @Secured
+Used to apply security constraints at the method level based on roles
+```bash
+@Controller
+public class MyController {
+  @Secured("ROLE_ADMIN")
+  @GetMapping("/admin") 
+  public String adminPage() {
+    // controller logic
+    return "admin";
+  }
+}
+```
+
+### @PreAuthorize and @PostAuthorize:
+These annotations enable expression-based access control at the method level
+```bash
+@Controller 
+public class MyController {
+  @PreAuthorize("hasRole('ADMIN')")
+  @GetMapping("/admin")
+  public String adminPage() {
+    // Controller logic
+    return "admin";
+  }
+  
+  @PostAuthorize("returnObject.owner == authentication.name")
+  @GetMapping("/resource/{id}")
+  public Resource getResource(@PathVariable Long id) {
+    // Method logic
+    return resourceService.getResourceById(id);
+  }
+}
+```
+
+### @AuthenticationPrincipal
+Used to inject the currently authenticated principal(user) into a controller method.
+```bash
+@Controller
+public class ProfileController {
+  @GetMapping("/profile")
+  public String userProfile(@AuthenticationPrincipal UserPrincipal principal) {
+    // access authenticated usr details via principal object
+    return "profile";
+  }
+}
+```
+
+### @CrossOrigin
+Enable cross-origin requests (CORS) for specific handler methods or controller classes
+```bash
+@RestController
+@CrossOrigin(orgin = "http://localhost:8081")
+public class MyRestController {
+  @GetMapping("/api/data")
+  public String getData() {
+    return "Data from REST API";
+  }
+}
+```
+
+### @EnableGlobalMethodSecurity
+Enables method-level security with Spring Security's pre/post annotations
+```bash
+@Configuration
+@EnableGlobalMethodSecurity(prePostEnabled = true)
+public class MethodSecurityConfig extends GlobalMethodSecurityConfiguration {
+  // Additional configuration if needed
+}
+```
+
