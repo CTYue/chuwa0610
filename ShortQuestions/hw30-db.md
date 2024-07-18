@@ -1,5 +1,5 @@
 
-# MySQL
+# MySQL 
 ## 1. Create oms_company_address table
 ![mysqlTest.png](mysqlTest.png)
 ```sql
