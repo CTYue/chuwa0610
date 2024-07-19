@@ -2,11 +2,7 @@ package com.chuwa.redbook.entity;
 
 import jakarta.persistence.*;
 
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Past;
-import org.aspectj.lang.annotation.Before;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 
@@ -24,8 +20,6 @@ import java.time.LocalDateTime;
 public class Post {
 
     @Id
-    @NotNull
-    @Min(value = 0)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -41,7 +35,6 @@ public class Post {
     private String description;
 
 
-    @Past
     @CreatedDate
     private LocalDateTime createDateTime;
 

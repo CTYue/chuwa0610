@@ -15,8 +15,6 @@ import java.time.LocalDateTime;
 @Table(name = "comments")
 public class Comment {
     @Id
-    @NotNull
-    @Min(value = 0)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
@@ -30,7 +28,6 @@ public class Comment {
     @JoinColumn(name = "post_id", nullable = false)
     private Post post;
 
-    @Past
     @CreationTimestamp
     private LocalDateTime createDateTime;
 
