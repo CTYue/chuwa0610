@@ -56,6 +56,8 @@ public class SecurityDBConfig {
                         authorize
                                 .requestMatchers(HttpMethod.GET, "/api/**").permitAll()
                                 .requestMatchers(HttpMethod.POST, "/api/v1/auth/**").permitAll()
+                                .requestMatchers(HttpMethod.GET, "/v3/**").permitAll()
+                                .requestMatchers(HttpMethod.GET, "/swagger-ui/**").permitAll()
                                 .anyRequest().authenticated()
                 )
 //                .httpBasic(withDefaults())

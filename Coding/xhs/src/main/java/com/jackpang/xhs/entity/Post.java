@@ -1,9 +1,11 @@
 package com.jackpang.xhs.entity;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 
@@ -42,5 +44,15 @@ public class Post {
     private LocalDateTime createDateTime;
     @UpdateTimestamp
     private LocalDateTime updateDateTime;
-
+    @Override
+    public String toString() {
+        return "Post{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", content='" + content + '\'' +
+                ", createDateTime=" + createDateTime +
+                ", updateDateTime=" + updateDateTime +
+                '}';
+    }
 }

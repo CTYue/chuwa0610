@@ -2,7 +2,10 @@ package com.jackpang.xhs.controller;
 
 import com.jackpang.xhs.payload.CommentDto;
 import com.jackpang.xhs.service.CommentService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,8 +17,10 @@ import java.util.List;
  * @author b1go
  * @date 6/23/22 11:30 PM
  */
+@Tag(name = "Comments", description = "CRUD REST APIs for Comment Resource")
 @RestController
 @RequestMapping("/api/v1")
+@RequiredArgsConstructor
 public class CommentController {
 
     /**
@@ -24,8 +29,7 @@ public class CommentController {
      * how many ways we can do Dependency Injection?
      * which way is the best one?
      */
-    @Autowired
-    private CommentService commentService;
+    private final CommentService commentService;
 
     /**
      * TODO: Questions
@@ -38,17 +42,20 @@ public class CommentController {
      * @param commentDto
      * @return
      */
+    @Operation(summary = "Create Comment REST API")
     @PostMapping("/posts/{postId}/comments")
     public ResponseEntity<CommentDto> createComment(@PathVariable(value = "postId") long id,
                                                     @Valid @RequestBody CommentDto commentDto) {
         return new ResponseEntity<>(commentService.createComment(id, commentDto), HttpStatus.CREATED);
     }
 
+    @Operation(summary = "Get All Comments by Post ID REST API")
     @GetMapping("/posts/{postId}/comments")
     public List<CommentDto> getCommentsByPostId(@PathVariable(value = "postId") Long postId) {
         return commentService.getCommentsByPostId(postId);
     }
 
+    @Operation(summary = "Get single Comment by ID REST API")
     @GetMapping("/posts/{postId}/comments/{id}")
     public ResponseEntity<CommentDto> getCommentsById(
             @PathVariable(value = "postId") Long postId,
@@ -58,6 +65,7 @@ public class CommentController {
         return new ResponseEntity<>(commentDto, HttpStatus.OK);
     }
 
+    @Operation(summary = "Update single Comment by ID REST API")
     @PutMapping("/posts/{postId}/comments/{id}")
     public ResponseEntity<CommentDto> updateComment(@PathVariable(value = "postId") Long postId,
                                                     @PathVariable(value = "id") Long commentId,
@@ -66,6 +74,7 @@ public class CommentController {
         return new ResponseEntity<>(updateComment, HttpStatus.OK);
     }
 
+    @Operation(summary = "Delete single Comment by ID REST API")
     @DeleteMapping("/posts/{postId}/comments/{id}")
     public ResponseEntity<String> deleteComment(@PathVariable(value = "postId") Long postId,
                                                 @PathVariable(value = "id") Long commentId) {
