@@ -184,3 +184,21 @@
 17.  In Interceptor, What is preHandle? What is postHandle?
      - The preHandle method is invoked before the actual handler method of the controller is executed.
      - The postHandle method is invoked after the handler method of the controller has been invoked but before the view is rendered.
+     
+18.  What is Swagger, why do we need it? What does it do except "documentation"?
+     -  OpenAPI Specification, is a framework for designing, building, documenting, and consuming RESTful web services.
+     - Reasons need it
+       - Standarization
+       - Ease of Understanding
+       - Efficiency in Development
+       - Client Generation
+       - Interactive Documentation
+       - API testing
+       - Automation
+     - documentation
+       - API design
+       - Code Generation
+       - API Validation
+       - Mock Servers
+       - API testing
+       - API monitoring
