@@ -12,7 +12,6 @@ import com.jackpang.xhs.security.JwtTokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -50,7 +49,7 @@ public class AuthJWTController {
 
     @PostMapping("/signin")
     public ResponseEntity<JWTAuthResponse> authenticateUser(@RequestBody LoginDto loginDto) {
-        logger.info(loginDto.getAccountOrEmail() + "is trying to sign in our application");
+        logger.info("{} is trying to sign in our application", loginDto.getAccountOrEmail());
 
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
                 loginDto.getAccountOrEmail(), loginDto.getPassword()
@@ -63,7 +62,7 @@ public class AuthJWTController {
         JWTAuthResponse jwtAuthResponse = new JWTAuthResponse(token);
         jwtAuthResponse.setTokenType("JWT");
 
-        logger.info(loginDto.getAccountOrEmail() + "sign in successfully");
+        logger.info("{} sign in successfully", loginDto.getAccountOrEmail());
         return ResponseEntity.ok(jwtAuthResponse);
     }
 
@@ -89,7 +88,7 @@ public class AuthJWTController {
         user.setPassword(passwordEncoder.encode(signUpDto.getPassword()));
 
         Role roles;
-        if (signUpDto.getAccount().contains("chuwa")) {
+        if (signUpDto.getAccount().contains("account")) {
             roles = roleRepository.findByName("ROLE_ADMIN").get();
         } else {
             roles = roleRepository.findByName("ROLE_USER").get();

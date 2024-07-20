@@ -1,0 +1,34 @@
+services:
+  app:
+    image: springboot-xhs-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/redbook?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=123456
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  db:
+    image: mysql:8.4.0
+    environment:
+      MYSQL_DATABASE: redbook
+      MYSQL_ROOT_PASSWORD: 123456
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+
+volumes:
+  db-data:
+    external: true
+    name: decd1372a7f200b492d126a0421e87305c731ef02696c38afa43d8d0c9f5c732

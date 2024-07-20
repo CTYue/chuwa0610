@@ -50,8 +50,6 @@ public class SecurityDBConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http.csrf(AbstractHttpConfigurer::disable)
-                .exceptionHandling(ex->ex.authenticationEntryPoint(authenticationEntryPoint))
-                .sessionManagement(session-> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authorize ->
                         authorize
                                 .requestMatchers(HttpMethod.GET, "/api/**").permitAll()
@@ -60,6 +58,8 @@ public class SecurityDBConfig {
                                 .requestMatchers(HttpMethod.GET, "/swagger-ui/**").permitAll()
                                 .anyRequest().authenticated()
                 )
+                .exceptionHandling(ex->ex.authenticationEntryPoint(authenticationEntryPoint))
+                .sessionManagement(session-> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
 //                .httpBasic(withDefaults())
                 .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
                 .build();

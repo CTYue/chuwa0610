@@ -8,7 +8,6 @@ import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.UnsupportedJwtException;
 import io.jsonwebtoken.security.Keys;
 import io.jsonwebtoken.security.SignatureException;
-import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;
@@ -25,18 +24,19 @@ import java.util.Date;
 public class JwtTokenProvider {
 
     @Value("${app.jwt-secret}")
-    private String jwtSecret;
+    String jwtSecret;
+    //        = Jwts.SIG.HS512.key().build()
     @Value("${app.jwt-expiration-milliseconds}")
     private int jwtExpirationInMs;
 
-
     public SecretKey getSigningKey() {
         return Keys.hmacShaKeyFor(jwtSecret.getBytes());
-//        this.key = Jwts.SIG.HS512.key().build();
+//        return jwtSecret;
     }
 
     /**
      * generate token
+     *
      * @param authentication
      * @return
      */
@@ -55,6 +55,7 @@ public class JwtTokenProvider {
 
     /**
      * get username from the token
+     *
      * @param token
      * @return
      */
@@ -68,14 +69,15 @@ public class JwtTokenProvider {
 
     /**
      * validate JWT token
+     *
      * @param token
      * @return
      */
     public boolean validateToken(String token) {
-        try{
+        try {
             Jwts.parser().verifyWith(getSigningKey()).build().parseSignedClaims(token);
             return true;
-        }catch (SignatureException ex){
+        } catch (SignatureException ex) {
             throw new BlogAPIException(HttpStatus.BAD_REQUEST, "Invalid JWT signature");
         } catch (MalformedJwtException ex) {
             throw new BlogAPIException(HttpStatus.BAD_REQUEST, "Invalid JWT token");
