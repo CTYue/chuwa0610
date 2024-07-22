@@ -706,3 +706,167 @@ private LocalDate dateOfBirth;
 private LocalDate appointmentDate;
 ```
 
+
+
+## Testing
+### @BeforeAll
+- Used to declare a static method that will be executed once before all test methods in the current class. This is typically used to set up static resources or perform expensive setup operations that need to be done only once.
+```java
+import org.junit.jupiter.api.BeforeAll;
+
+public class ExampleTest {
+    @BeforeAll
+    public static void initAll() {
+        // Code to set up resources shared across all tests
+    }
+}
+```
+
+### @BeforeEach
+- Used to declare a method that will be executed before each test method. This is typically used to set up the test environment for each test case.
+```java
+import org.junit.jupiter.api.BeforeEach;
+
+public class ExampleTest {
+    @BeforeEach
+    public void init() {
+        // Code to set up resources before each test
+    }
+}
+```
+
+### @Test
+- Used to declare a method as a test method. This method contains the logic to be tested.
+```java
+import org.junit.jupiter.api.Test;
+
+public class ExampleTest {
+    @Test
+    public void testMethod() {
+        // Code for the test case
+    }
+}
+```
+
+### @AfterEach
+- Used to declare a method that will be executed after each test method. This is typically used to clean up resources used during the test.
+```java
+import org.junit.jupiter.api.AfterEach;
+
+public class ExampleTest {
+    @AfterEach
+    public void tearDown() {
+        // Code to clean up resources after each test
+    }
+}
+```
+
+### @AfterAll
+- Used to declare a static method that will be executed once after all test methods in the current class. This is typically used to clean up static resources or perform final clean-up operations.
+```java
+import org.junit.jupiter.api.AfterAll;
+
+public class ExampleTest {
+    @AfterAll
+    public static void tearDownAll() {
+        // Code to clean up resources shared across all tests
+    }
+}
+```
+### @Mock
+- Creates a mock object of the annotated class
+```java
+@RunWith(MockitoJUnitRunner.class) 
+class StudentTest { 
+
+	@Mock
+	Pen pen;
+	@Test
+	public void writeWithPenTest() throws Exception { 
+		Mockito.when(pen.getRedPen()).thenReturn("Red Pen");
+	} 
+
+}
+
+```
+### @InjectMocks
+- Creates and instance of the class and mocks that created using @Mock
+- Doesn't even need to initialize the class
+```java
+// student need a pen
+class Student { 
+
+	private Pen pen; 
+
+	public Student(Pen pen) { 
+		this.pen = pen; 
+	} 
+
+	public String write() { 
+		return "Student Write with: " + pen.getRedPen(); 
+	} 
+
+}
+
+// then
+@RunWith(MockitoJUnitRunner.class)
+class StudentTest {
+
+    @Mock
+    Pen pen;
+
+    @InjectMocks
+    Student student;
+
+    @Test
+    public void writeWithPenTest() throws Exception {
+        Mockito.when(pen.getRedPen()).thenReturn("Red Pen");
+        assertEquals("Student Write with: Red Pen", student.write());
+    }
+
+}
+
+```
+
+### `@Mock`
+- `@Mock` is used to create a mock object. A mock object is a simulated object that mimics the behavior of real objects in controlled ways. Mocks are used to isolate the class under test by simulating its dependencies.
+-  By default, all methods of a mock return either null, zero, or false, depending on the return type. You can specify the behavior of the mock's methods using `Mockito.when()`.
+
+```java
+@RunWith(MockitoJUnitRunner.class)
+public class SomeTest {
+
+    @Mock
+    private List<String> mockedList;
+
+    @Test
+    public void testMock() {
+        Mockito.when(mockedList.get(0)).thenReturn("Mocked Element");
+
+        assertEquals("Mocked Element", mockedList.get(0));
+        assertNull(mockedList.get(1)); // by default, other methods return null
+    }
+}
+```
+
+### `@Spy`
+- `@Spy` is used to create a spy object. A spy object is a real instance of a class, but its methods can be stubbed. This means you can call real methods on the spy object while still having the ability to override specific methods.
+- By default, all methods of a spy call the real methods unless they are stubbed. This allows for partial mocking, where you can mock specific methods and let others behave as normal.
+
+```java
+@RunWith(MockitoJUnitRunner.class)
+public class SomeTest {
+
+    @Spy
+    private List<String> spiedList = new ArrayList<>();
+
+    @Test
+    public void testSpy() {
+        spiedList.add("Real Element");
+        Mockito.doReturn("Spied Element").when(spiedList).get(0);
+
+        assertEquals("Spied Element", spiedList.get(0)); // stubbed method
+        assertEquals(1, spiedList.size()); // real method
+    }
+}
+```

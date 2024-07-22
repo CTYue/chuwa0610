@@ -95,7 +95,7 @@ public class CommentServiceImplimentation implements CommentService {
         commentRepository.delete(comment);
     }
 
-    private CommentDto mapToDto(Comment comment) {
+     public CommentDto mapToDto(Comment comment) {
         CommentDto commentDto = new CommentDto();
         commentDto.setId(comment.getId());
         commentDto.setName(comment.getName());
@@ -105,7 +105,7 @@ public class CommentServiceImplimentation implements CommentService {
         return commentDto;
     }
 
-    private Comment mapToEntity(CommentDto commentDto) {
+    public Comment mapToEntity(CommentDto commentDto) {
         Comment comment = new Comment();
         comment.setId(commentDto.getId());
         comment.setName(commentDto.getName());
