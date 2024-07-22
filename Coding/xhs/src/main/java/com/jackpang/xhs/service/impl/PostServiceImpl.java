@@ -36,6 +36,12 @@ public class PostServiceImpl implements PostService {
         return modelMapper.map(savedPost, PostDto.class);
     }
 
+    @Override
+    public List<PostDto> getAllPost() {
+        List<Post> posts = postRepository.findAll();
+        return posts.stream().map(post -> modelMapper.map(post, PostDto.class)).collect(Collectors.toList());
+    }
+
 
     @Override
     public PostResponse getAllPost(int pageNo, int pageSize, String sortBy, String sortDir) {

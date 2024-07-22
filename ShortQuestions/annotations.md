@@ -119,3 +119,29 @@
 7. **@Value**
    - **Usage**: This annotation is used for injecting values into beans from externalized properties or to inject constant expressions.
    - **Mechanism**: `@Value` can inject property values into components or use Spring Expression Language (SpEL) for more complex expressions. It supports injecting from property files, system properties, environment variables, and other sources.
+
+## Annotations Used by Testing
+
+1. **@SpringBootTest**
+
+   - **Usage**: Used for configuring a Spring Boot test environment.
+
+   - **Explanation**: The `@SpringBootTest` annotation is used with Spring Boot test classes to provide full integration testing capabilities. It boots up the entire Spring context or just specific layers of the application depending on the configuration. This annotation ensures that all the necessary Spring components are loaded, and the application configuration is applied, making it ideal for end-to-end testing or when a test requires the entire context.
+
+2. **@Mock**
+
+   - **Usage**: Used to create a mock version of a class in automated tests.
+
+   - **Explanation**: `@Mock` is an annotation from the Mockito framework that is used to create and inject mocked instances. It replaces the actual implementation of a class with a dummy version that allows the developer to control the outputs of certain functions for testing purposes. This is particularly useful in unit testing, where testing in isolation is crucial, and external dependencies need to be eliminated.
+
+3. **@Spy**
+
+   - **Usage**: Used to create a spy on an actual object.
+
+   - **Explanation**: `@Spy` is also an annotation from Mockito which is used to create a partial mock or a spy. A spy allows you to create a wrapper around the actual object but still retain some of the original behaviors. Over specific functions, you can then provide stubbed responses or track interactions without affecting the rest of the original object’s behavior. This is useful in scenarios where you want to mock only certain parts of an object while keeping the rest of the behavior intact.
+
+4. **@InjectMocks**
+
+   - **Usage**: Used to inject mock fields into the tested object automatically.
+
+   - **Explanation**: `@InjectMocks` is used to create an instance of a class and inject mocks created with `@Mock` or `@Spy` annotations into it. This annotation simplifies the setup of tests by automatically injecting required dependencies as mocks. This is particularly useful when the class under test has multiple dependencies, and you want to focus on testing its behavior rather than dealing with the overhead of setting up each dependency manually.

@@ -27,7 +27,7 @@ import java.util.Set;
         })
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
+//@AllArgsConstructor
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,6 +44,16 @@ public class Post {
     private LocalDateTime createDateTime;
     @UpdateTimestamp
     private LocalDateTime updateDateTime;
+
+    public Post(Long id, String title, String content, String description, LocalDateTime createDateTime, LocalDateTime updateDateTime) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.description = description;
+        this.createDateTime = createDateTime;
+        this.updateDateTime = updateDateTime;
+    }
+
     @Override
     public String toString() {
         return "Post{" +
