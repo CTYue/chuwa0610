@@ -20,7 +20,7 @@
       - only methods with public visibility will be recommend, not with other scope
       - aspects cannot be advised by other aspects
 5.  Explain following concept in your own words, you may include code snippet as part of your answer.
-    ![IMAGE](../Coding/hw47/AOP.png)
+    ![IMAGE](../Coding/hw46/AOP.png)
     - Aspect
       - using @Aspect
       - Similar to @ControllerAdvice
@@ -151,7 +151,7 @@
      - 
 11.  How does Spring Batch work? you may include code snippet as part of your answer.
      
-     ![IMAGE](../Coding/hw47/Spring-Batch.png)   
+     ![IMAGE](../Coding/hw46/Spring-Batch.png)   
      [Spring Batch Tutorial](https://blog.51cto.com/u_15499328/5278139)
 
      - one Batch process includes one Job
