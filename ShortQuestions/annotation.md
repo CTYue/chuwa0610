@@ -410,3 +410,111 @@ public class LoggingAspect {
 }
 
 ```
+
+## Java testing frameworks (JUnit)
+### @Test
+- indicates that a method is a test method
+### @BeforeAll
+- annotated method should be run once before all tests in the current test class
+### @AfterAll 
+- @AfterAll is used to annotate methods that should run once after all tests in the test class have been executed.
+### @BeforeEach
+- @BeforeEach is used to annotate methods that should be executed before each test is run.
+### @AfterEach
+- @AfterEach is used to annotate methods that should be run after each test is executed.
+```java
+public class DatabaseTests {
+    static Database db;
+
+    @BeforeAll
+    public static void setupDatabase() {
+        db = new Database();
+        db.connect();
+    }
+
+    @Test
+    public void testConnection() {
+        assertTrue(db.isConnected(), "Database should be connected.");
+    }
+}
+``` 
+
+### @SpringBootTest
+- This annotation tells Spring Boot to go and find the main configuration class (one with @SpringBootApplication, for example) and use that to start a Spring application context. @SpringBootTest can be used when a test requires the whole application to be up and running, such as when you're doing end-to-end tests or when the components being tested are tightly integrated with various Spring functionalities.
+```java
+@SpringBootTest
+public class FullApplicationTest {
+
+    @Test
+    public void contextLoads() {
+        // test whether the application context loads properly
+    }
+}
+```
+### @Mock
+- @Mock is a Mockito annotation used to create mock instances of objects.
+```java
+public class ServiceTest {
+    
+    @Mock
+    private Dependency dependency;
+
+    private Service service;
+
+    @BeforeEach
+    public void setup() {
+        MockitoAnnotations.openMocks(this);
+        service = new Service(dependency);
+    }
+
+    @Test
+    public void testServiceMethod() {
+        when(dependency.someMethod()).thenReturn("Expected Value");
+        assertEquals("Expected Value", service.useDependency());
+    }
+}
+```
+### @Spy
+- @Spy is another Mockito annotation but, unlike @Mock, it creates a spy on the real objects, meaning it will track all interactions with the spy but still perform the actual operations unless those calls are specifically stubbed to behave otherwise.
+```java
+public class ComplexServiceTest {
+
+    @Spy
+    private ComplexService service = new ComplexService();
+
+    @BeforeEach
+    public void setup() {
+        MockitoAnnotations.openMocks(this);
+    }
+
+    @Test
+    public void testServiceBehavior() {
+        doReturn("Mocked").when(service).someComplexMethod();
+        assertEquals("Mocked", service.someComplexMethod());
+        verify(service).someComplexMethod();
+    }
+}
+```
+### @InjectMocks
+- @InjectMocks is used to automatically inject mocked or spied dependencies into the class under test. Mockito will attempt to inject fields annotated with @Mock or @Spy into the specified class.
+```java
+public class SomeServiceTest {
+
+    @Mock
+    private Dependency dependency;
+
+    @InjectMocks
+    private SomeService service;
+
+    @BeforeEach
+    public void setup() {
+        MockitoAnnotations.openMocks(this);
+    }
+
+    @Test
+    public void testServiceUsingDependency() {
+        when(dependency.calculate()).thenReturn(42);
+        assertEquals(42, service.performCalculation());
+    }
+}
+```
