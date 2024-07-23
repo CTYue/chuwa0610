@@ -40,17 +40,13 @@ class PostControllerIntegrationTest {
     private ObjectMapper objectMapper;
 
     @Mock
-    private PostService postService;
-
-
-    @Mock
-    private CommentRepository commentRepository;
+    private PostServiceImpl postService;
 
     @Mock
     private PostRepository postRepository;
 
-    @Mock
-    private CommentServiceImpl commentService;
+    @InjectMocks
+    private PostController postController;
 
 
 
