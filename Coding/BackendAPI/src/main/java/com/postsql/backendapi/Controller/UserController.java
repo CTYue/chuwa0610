@@ -29,13 +29,15 @@ public class UserController {
         return userService.addUser(userDTO);
     }
 
-    @DeleteMapping("/{id}")
-    public void deleteUser(@PathVariable String id) {
-        userService.deleteUser(id);
-    }
     @GetMapping("/{id}")
     public UserDTO getUser(@PathVariable String id) {
         return userService.findById(id);
+    }
+
+
+    @DeleteMapping("/{id}")
+    public void deleteUser(@PathVariable String id) {
+        userService.deleteUser(id);
     }
 
 }

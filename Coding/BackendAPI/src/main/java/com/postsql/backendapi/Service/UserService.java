@@ -3,6 +3,8 @@ package com.postsql.backendapi.Service;
 import com.postsql.backendapi.DTO.UserDTO;
 import com.postsql.backendapi.Mapper.UserMapper;
 import com.postsql.backendapi.Repository.UserRepository;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.postsql.backendapi.Model.User;
