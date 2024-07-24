@@ -518,3 +518,32 @@ public class SomeServiceTest {
     }
 }
 ```
+
+## MicroService
+### @EnableEurekaServer
+- The `@EnableEurekaServer` annotation is used with Spring Cloud Netflix Eureka to set up a service registry that allows microservices to register themselves and to discover other services for communication.
+```java
+@SpringBootApplication
+@EnableEurekaServer // Enable Eureka Server
+public class EurekaServerApplication {
+  public static void main(String[] args) {
+    SpringApplication.run(EurekaServerApplication.class, args);
+} }
+```
+### @HystrixCommand
+- The `@HystrixCommand` annotation is part of the Hystrix library, which was as part of their Spring Cloud suite for handling latency and fault tolerance in distributed systems. When one service calls another, but the another service has a problem, Hystrix can catch all problems of underlying services and process a fallback plan
+```java
+@Service
+public class ReliableService {
+
+    @HystrixCommand(fallbackMethod = "reliable")
+    public String risky() {
+        throw new RuntimeException("Failed!");
+        // Actual risky operations go here
+    }
+
+    public String reliable() {
+        return "Recovered Failure!";
+    }
+}
+```
