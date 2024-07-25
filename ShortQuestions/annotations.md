@@ -283,3 +283,15 @@ Spring Boot provides the ability to schedule tasks for execution at a given time
       }
    }
    ```
+
+## 28. `@EnableEurekaServer`
+This annotation starts a Eureka server, which is an application that holds the information about all client-service application.
+```
+@SpringBootApplication
+@EnableEurekaServer
+public class EurekaServerApplication {
+   public static void main(String[] args){
+      SpringApplication.run(EurekaServerApplication.class, args);
+   }
+}
+```
