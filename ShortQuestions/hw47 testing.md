@@ -104,6 +104,7 @@
      what kind of tests are written by you? what is the purpose of each type of tests? 
     - Write Unit testcase : verify the correctness of individual units of code
     - Integration test: verify that different components or systems work together correctly.
+    - smoke test
     
 15. Add unit test for CommentServiceImpl, the coverage should be 100%.
 
