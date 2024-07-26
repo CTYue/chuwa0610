@@ -11,13 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be80a07f-98d5-4ff8-af2d-72c96a8ddba3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Coding/redbook/src/test/java/com/chuwa/redbook/CommentServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/redbook/src/test/java/com/chuwa/redbook/PostControllerIntegrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/redbook/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/redbook/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/redbook/src/main/java/com/chuwa/redbook/service/Implimentation/CommentServiceImplimentation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/redbook/src/main/java/com/chuwa/redbook/service/Implimentation/CommentServiceImplimentation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShortQuestions/annotations.md" beforeDir="false" afterPath="$PROJECT_DIR$/ShortQuestions/annotations.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShortQuestions/hw16.md" beforeDir="false" afterPath="$PROJECT_DIR$/ShortQuestions/hw16.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShortQuestions/hw17.md" beforeDir="false" afterPath="$PROJECT_DIR$/ShortQuestions/hw17.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +164,7 @@
     "TestNG.PostControllerIntegrationTest.executor": "Run",
     "TestNG.PostControllerIntegrationTest.testDeletePostById.executor": "Run",
     "Tomcat Server.Tomcat 9.0.91.executor": "Run",
-    "git-widget-placeholder": "hongqiang__cai/hw16",
+    "git-widget-placeholder": "#288 on hongqiang__cai/hw17",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
@@ -428,6 +423,9 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.OddEvenPrinter" />
+      <item itemvalue="Application.Q25b" />
+      <item itemvalue="Application.WaitNotify" />
       <item itemvalue="JUnit.CommentServiceTest" />
       <item itemvalue="JUnit.CommentServiceTest.testDeleteComment_ThrowsBlogAPIException" />
       <item itemvalue="JUnit.CommentServiceTest.testUpdateComment_ThrowBlogAPIException" />
@@ -488,6 +486,8 @@
       <workItem from="1719886093038" duration="55469000" />
       <workItem from="1721023553713" duration="25350000" />
       <workItem from="1721376236774" duration="21893000" />
+      <workItem from="1721810052293" duration="4916000" />
+      <workItem from="1721982694586" duration="343000" />
     </task>
     <servers />
   </component>
