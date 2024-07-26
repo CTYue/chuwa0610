@@ -11,9 +11,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="hw4" />
         <module name="collections" />
-        <module name="mongo-blog" />
         <module name="redbook" />
         <module name="hw5" />
+        <module name="mongo-blog" />
+        <module name="demo" />
         <module name="springmvc-demo" />
       </profile>
     </annotationProcessing>
@@ -31,6 +32,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo" options="-parameters" />
       <module name="mongo-blog" options="-parameters" />
       <module name="redbook" options="-parameters" />
     </option>
