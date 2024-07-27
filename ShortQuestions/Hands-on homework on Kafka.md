@@ -15,9 +15,11 @@ See [KafkaConsumerService.java](..%2FCoding%2Fhw18%2FSpring-Producer-Consumer-ma
   - In the right conner is the consumer printing out received messages.
   - On the right is the webUi showing the customer with 3 consumers(consumer_group)
 ![kf2.png](supportingImages%2Fkf2.png)
-- Increase number of consumers in a single consumer group, observe what happens, explain your observation.
-- With 3 partitions:
-  - 2 Consumers: A consumer is assigned to multiple partitions.
-  - 3 Consumers: Each consumer is assigned to one partition.
-  - 4 Consumers: 3 consumers are assigned to the 3 partitions, and 1 consumer remains idle.
+- Please figure out a good approach to generate partition keys, so your message can be redirected to different partitions. (My demo producer curl has a fixed partition key)
+With the set up in [KafkaProducerService.java](..%2FCoding%2Fhw18%2FSpring-Producer-Consumer-main%2Fsrc%2Fmain%2Fjava%2Fcom%2Fchuwa%2Fdemo%2Fservice%2FKafkaProducerService.java), The partitions is based on the key value in the request
 ![kf3.png](supportingImages%2Fkf3.png)
+- Increase number of consumers in a single consumer group, observe what happens, explain your observation.
+  - With 3 partitions:
+    - 2 Consumers: A consumer is assigned to multiple partitions.
+    - 3 Consumers: Each consumer is assigned to one partition.
+    - 4 Consumers: 3 consumers are assigned to the 3 partitions, and 1 consumer remains idle.
