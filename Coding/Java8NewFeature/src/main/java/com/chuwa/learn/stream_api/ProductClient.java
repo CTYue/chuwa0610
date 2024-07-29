@@ -20,93 +20,113 @@ public class ProductClient {
     @Test
     public void toList(){
         // create a new list
-        List<Product> filteredProducts = productList.stream().filter(product -> product.getStock() > 10).collect(Collectors.toList());
-
+//        List<Product> filteredProducts = productList.stream().filter(product -> product.getStock() > 10).collect(Collectors.toList());
+         List<Product> filteredProducts = productList.stream().filter(product -> product.getStock() > 10).collect(Collectors.toList());
     }
     @Test
     public void toSet(){
-        Set<String> uniqueCategories = productList.stream().map(Product::getCategory).collect(Collectors.toSet());
+//        Set<String> uniqueCategories = productList.stream().map(Product::getCategory).collect(Collectors.toSet());
+         Set<String> uniqueCategories = productList.stream().map(product -> product.getCategory()).collect(Collectors.toSet());
     }
     @Test
     public void joining(){
-        String allProductNames = productList.stream().map(Product::getName).collect(Collectors.joining(", "));
-
-        String allProductNamesNewLine = productList.stream()
-                .map(Product::getName)
-                .collect(Collectors.joining("\n"));
+//        String allProductNames = productList.stream().map(Product::getName).collect(Collectors.joining(", "));
+//
+//        String allProductNamesNewLine = productList.stream()
+//                .map(Product::getName)
+//                .collect(Collectors.joining("\n"));
+       String allProductNames = productList.stream().map(product -> product.getName()).collect(Collectors.joining(", "));
+       String allProductNamesNewLine = productList.stream().map(product -> product.getName()).collect(Collectors.joining("\n"));
     }
     @Test
     public void summingInt() {
         // Calculate the total stock of all products.
-        int totalStock = productList.stream()
-                .collect(Collectors.summingInt(Product::getStock));
+//        int totalStock = productList.stream()
+//                .collect(Collectors.summingInt(Product::getStock));
+            int totalStock = productList.stream().collect(Collectors.summingInt(product -> product.getStock()));
     }
 
     @Test
     public void groupingBy() {
-        // Group the products by category and calculate the total stock for each category.
-        Map<String, Integer> categoryStock = productList.stream()
-                .collect(Collectors.groupingBy(Product::getCategory, Collectors.summingInt(Product::getStock)));
+//        // Group the products by category and calculate the total stock for each category.
+//        Map<String, Integer> categoryStock = productList.stream()
+//                .collect(Collectors.groupingBy(Product::getCategory, Collectors.summingInt(Product::getStock)));
+//
+//        // Group the products by category and calculate the average price for each category.
+//        Map<String, Double> categoryAveragePrice = productList.stream()
+//                .collect(Collectors.groupingBy(Product::getCategory, Collectors.averagingDouble(Product::getPrice)));
 
-        // Group the products by category and calculate the average price for each category.
-        Map<String, Double> categoryAveragePrice = productList.stream()
-                .collect(Collectors.groupingBy(Product::getCategory, Collectors.averagingDouble(Product::getPrice)));
+       Map<String, Integer> categoryStock = productList.stream().collect(Collectors.groupingBy(product -> product.getCategory(), Collectors.summingInt(product-> product.getStock())));
+       Map<String, Double> categoryAveragePrice = productList.stream().collect(Collectors.groupingBy(product -> product.getCategory(), Collectors.averagingDouble(product->product.getPrice())));
     }
     @Test
     public void maxBy() {
         // 给定一个Product列表，使用Stream API的maxBy()方法找出价格最高的产品。
-        Optional<Product> maxPriceProduct = productList.stream()
-                .collect(Collectors.maxBy(Comparator.comparingDouble(Product::getPrice)));
+//        Optional<Product> maxPriceProduct = productList.stream()
+//                .collect(Collectors.maxBy(Comparator.comparingDouble(Product::getPrice)));
+        Optional<Product> maxPriceProduct = productList.stream().collect(Collectors.maxBy(Comparator.comparingDouble(product-> product.getPrice())));
     }
 
     @Test
     public void partitioningBy() {
         // 给定一个Product列表，使用Stream API的partitioningBy()方法按产品价格是否高于100分组。
-        Map<Boolean, List<Product>> partitionedProducts = productList.stream()
-                .collect(Collectors.partitioningBy(p -> p.getPrice() > 100));
+//        Map<Boolean, List<Product>> partitionedProducts = productList.stream()
+//                .collect(Collectors.partitioningBy(p -> p.getPrice() > 100));
+        Map<Boolean, List<Product>> partitionedProducts = productList.stream().collect(Collectors.partitioningBy(p -> p.getPrice() > 100));
     }
 
     @Test
     public void mapping() {
-        Set<String> upperCaseNames = productList.stream()
-                .map(Product::getName)
-                .map(String::toUpperCase)
-                .collect(Collectors.toSet());
+//        Set<String> upperCaseNames = productList.stream()
+//                .map(Product::getName)
+//                .map(String::toUpperCase)
+//                .collect(Collectors.toSet());
+        Set<String> upperCaseNames = productList.stream().map(product -> product.getName()).map(p->p.toUpperCase()).collect(Collectors.toSet());
     }
 
     @Test
     public void match() {
-        boolean isAnyProductExpensive = productList.stream()
-                .anyMatch(product -> product.getPrice() > 250);
+//        boolean isAnyProductExpensive = productList.stream()
+//                .anyMatch(product -> product.getPrice() > 250);
+//        System.out.println("Is there any expensive product? " + isAnyProductExpensive);
+        boolean isAnyProductExpensive = productList.stream().anyMatch(product -> product.getPrice() > 250);
         System.out.println("Is there any expensive product? " + isAnyProductExpensive);
 
         // allMatch example
-        boolean areAllProductsInStock = productList.stream()
-                .allMatch(product -> product.getStock() > 0);
+//        boolean areAllProductsInStock = productList.stream()
+//                .allMatch(product -> product.getStock() > 0);
+//        System.out.println("Are all products in stock? " + areAllProductsInStock);
+        boolean areAllProductsInStock = productList.stream().allMatch(product -> product.getStock() > 0);
         System.out.println("Are all products in stock? " + areAllProductsInStock);
 
         // noneMatch example
-        boolean areNoProductsFree = productList.stream()
-                .noneMatch(product -> product.getPrice() == 0);
+//        boolean areNoProductsFree = productList.stream()
+//                .noneMatch(product -> product.getPrice() == 0);
+//        System.out.println("Are there no free products? " + areNoProductsFree);
+        boolean areNoProductsFree = productList.stream().noneMatch(product -> product.getPrice() == 0);
         System.out.println("Are there no free products? " + areNoProductsFree);
     }
 
     @Test
     public void findFirst() {
         // findFirst example
-        Optional<Product> firstExpensiveProduct = productList.stream()
-                .filter(product -> product.getPrice() > 100)
-                .findFirst();
-        firstExpensiveProduct.ifPresent(product -> System.out.println("First expensive product: " + product.getName()));
+//        Optional<Product> firstExpensiveProduct = productList.stream()
+//                .filter(product -> product.getPrice() > 100)
+//                .findFirst();
+//        firstExpensiveProduct.ifPresent(product -> System.out.println("First expensive product: " + product.getName()));
+        Optional<Product> firstExpensiveProduct = productList.stream().filter(product -> product.getPrice() > 100).findFirst();
+        firstExpensiveProduct.ifPresent(product -> System.out.println("First expensive product " + product.getName()));
     }
 
     @Test
     public void findAny() {
 
         // findAny example
-        Optional<Product> anyLowStockProduct = productList.stream()
-                .filter(product -> product.getStock() < 10)
-                .findAny();
+//        Optional<Product> anyLowStockProduct = productList.stream()
+//                .filter(product -> product.getStock() < 10)
+//                .findAny();
+//        anyLowStockProduct.ifPresent(product -> System.out.println("Any low stock product: " + product.getName()));
+        Optional<Product> anyLowStockProduct = productList.stream().filter(product -> product.getStock() < 10).findAny();
         anyLowStockProduct.ifPresent(product -> System.out.println("Any low stock product: " + product.getName()));
     }
 }
