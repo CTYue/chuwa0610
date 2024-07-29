@@ -460,3 +460,106 @@ spring-boot-starter-validation
        }
    }
    ```
+   
+# AOP
+1. @Aspect
+```
+@Aspect
+public class LoggingAspect {
+    
+    @Before("execution(* com.example.service.*.*(..))")
+    public void logBefore(JoinPoint joinPoint) {
+        System.out.println("Logging before method: " + joinPoint.getSignature().getName());
+    }
+
+    @After("execution(* com.example.service.*.*(..))")
+    public void logAfter(JoinPoint joinPoint) {
+        System.out.println("Logging after method: " + joinPoint.getSignature().getName());
+    }
+}
+
+```
+
+# TEST
+1. @Mock 
+2. @Test
+3. @InjectMocks
+4. @ExtendWith(MockitoExtension.class) // Junit 5
+```
+@RunWith(MockitoJUnitRunner.class)
+public class MyServiceTest {
+
+    @Mock
+    private MyDependency myDependencyMock;
+
+    @BeforeEach
+    void setUp() {
+        MockitoAnnotations.openMocks(this); // Initializes the mocks
+    }
+
+    @InjectMocks
+    private MyService myService;
+
+    @Test
+    void testDoSomething() {
+        when(myDependencyMock.someMethod()).thenReturn("mocked response");
+
+        String result = myService.doSomething();
+
+        // Your assertions here
+        assertEquals("expected result", result);
+    }
+}
+
+```
+5. example
+```
+@SpringBootTest
+class XhsApplicationTests {
+
+    @Mock
+    private CommentRepository commentRepository;
+
+    @Mock
+    private PostRepository postRepository;
+
+    @InjectMocks
+    private CommentServiceImpl commentService;
+
+    @BeforeEach
+    void setUp(){
+        MockitoAnnotations.openMocks(this);
+    }
+
+    @Test
+    void testUpdateComment() {
+        long postId = 1L;
+        long commentId = 1L;
+        CommentDto commentDtoRequest = new CommentDto();
+        commentDtoRequest.setName("Updated Name");
+        commentDtoRequest.setEmail("updated@example.com");
+        commentDtoRequest.setBody("Updated comment body.");
+
+        Post post = new Post();
+        post.setId(postId);
+
+        Comment comment = new Comment();
+        comment.setId(commentId);
+        comment.setPost(post);
+        comment.setName("Old Name");
+        comment.setEmail("old@example.com");
+        comment.setBody("Old comment body.");
+
+        when(postRepository.findById(postId)).thenReturn(Optional.of(post));
+        when(commentRepository.findById(commentId)).thenReturn(Optional.of(comment));
+        when(commentRepository.save(any(Comment.class))).thenReturn(comment);
+
+        CommentDto updatedComment = commentService.updateComment(postId, commentId, commentDtoRequest);
+
+        assertNotNull(updatedComment);
+        assertEquals("Updated Name", updatedComment.getName());
+        assertEquals("updated@example.com", updatedComment.getEmail());
+        assertEquals("Updated comment body.", updatedComment.getBody());
+    }
+}
+```
