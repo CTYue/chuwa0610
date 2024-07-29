@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="mongodb@mongo">
+  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.52">
+    <root id="1">
+      <ServerVersion>7.0.11</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="admin"/>
+    <schema id="3" parent="1" name="config"/>
+    <schema id="4" parent="1" name="local"/>
+    <schema id="5" parent="1" name="test">
+      <Current>1</Current>
+      <LastIntrospectionLocalTimestamp>2024-07-24.21:20:31</LastIntrospectionLocalTimestamp>
+    </schema>
+    <table id="6" parent="5" name="user"/>
+    <column id="7" parent="6" name="_id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="8" parent="6" name="_class">
+      <DasType>String|12s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="9" parent="6" name="address">
+      <DasType>String|12s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="10" parent="6" name="email">
+      <DasType>String|12s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="11" parent="6" name="role">
+      <DasType>String|12s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="12" parent="6" name="user_name">
+      <DasType>String|12s</DasType>
+      <Position>6</Position>
+    </column>
+  </database-model>
+</dataSource>

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="springmvc-demo:war" />
+      <artifact name="springmvc-demo:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a82346b4-9404-4ffe-a7c6-8e5db31fc7b7" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/de6c6dfc-dbca-4bf6-b170-9fdd40377aad.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/sa.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/BackendAPI_0_0_1_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/BackendAPI-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/BackendAPI-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/classes/com/postsql/backendapi/BackendApiApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/classes/com/postsql/backendapi/Controller/UserController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/classes/com/postsql/backendapi/DTO/UserDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/classes/com/postsql/backendapi/Mapper/UserMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/classes/com/postsql/backendapi/Model/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/classes/com/postsql/backendapi/Repository/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/classes/com/postsql/backendapi/Service/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/surefire-reports/2024-07-21T22-51-28_575.dumpstream" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/surefire-reports/2024-07-21T23-13-38_836.dumpstream" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/surefire-reports/TEST-com.postsql.backendapi.BackendApiApplicationTests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/surefire-reports/com.postsql.backendapi.BackendApiApplicationTests.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/test-classes/com/postsql/backendapi/BackendApiApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/test-classes/com/postsql/backendapi/Controller/UserControllerTest$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/test-classes/com/postsql/backendapi/Controller/UserControllerTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/BackendAPI/target/test-classes/com/postsql/backendapi/Service/UserServiceTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dockerfile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2iWl1zqal5JojCyrbFmJXRGJywo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.UserControllerTest.deleteUserTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerTest.getAllUsersTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerTest.getUserTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.addUserTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.deleteUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.findByIdTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.getAllUserTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.testfindById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.testgetAllUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.java in BackendAPI.executor&quot;: &quot;Coverage&quot;,
+    &quot;Maven.springmvc-demo [clean,install...].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BackendApiApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat 服务器.Tomcat 9.0.91.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;aierken__shalayiding/hw17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/mygithub/chuwa0610/Coding/BackendAPI&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\mygithub\chuwa0610\Coding" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\mygithub\chuwa0610\Coding" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.UserControllerTest.deleteUserTest">
+    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BackendAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.postsql.backendapi.Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.postsql.backendapi.Controller" />
+      <option name="MAIN_CLASS_NAME" value="com.postsql.backendapi.Controller.UserControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.deleteUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BackendAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.postsql.backendapi.Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.postsql.backendapi.Controller" />
+      <option name="MAIN_CLASS_NAME" value="com.postsql.backendapi.Controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="deleteUserTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.getAllUsersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BackendAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.postsql.backendapi.Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.postsql.backendapi.Controller" />
+      <option name="MAIN_CLASS_NAME" value="com.postsql.backendapi.Controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="getAllUsersTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.getUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BackendAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.postsql.backendapi.Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.postsql.backendapi.Controller" />
+      <option name="MAIN_CLASS_NAME" value="com.postsql.backendapi.Controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="getUserTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in BackendAPI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BackendAPI" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/Coding/BackendAPI/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.91" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.91" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="openjdk-22" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="springmvc-demo:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/springmvc_demo_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="f71b1803-2729-4475-8b66-b46765999bfe" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61262" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="springmvc-demo:war" />
+          <artifact name="springmvc-demo:war exploded" />
+        </option>
+        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/Coding/springmvc5-demo/pom.xml" goal="clean install -DskipTests" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserControllerTest.deleteUserTest" />
+        <item itemvalue="JUnit.java in BackendAPI" />
+        <item itemvalue="JUnit.UserControllerTest.getUserTest" />
+        <item itemvalue="JUnit.UserControllerTest" />
+        <item itemvalue="JUnit.UserControllerTest.getAllUsersTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="a82346b4-9404-4ffe-a7c6-8e5db31fc7b7" name="更改" comment="" />
+      <created>1719614003907</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719614003907</updated>
+      <workItem from="1719614006354" duration="5487000" />
+      <workItem from="1719625192575" duration="50000" />
+      <workItem from="1719871303948" duration="5602000" />
+      <workItem from="1719950843864" duration="1420000" />
+      <workItem from="1720041071087" duration="3412000" />
+      <workItem from="1720381970812" duration="5455000" />
+      <workItem from="1720501348137" duration="2608000" />
+      <workItem from="1720760158125" duration="5671000" />
+      <workItem from="1720828597714" duration="2919000" />
+      <workItem from="1720846735267" duration="1097000" />
+      <workItem from="1720847851386" duration="129000" />
+      <workItem from="1720847993562" duration="5289000" />
+      <workItem from="1720911356262" duration="4891000" />
+      <workItem from="1721076712987" duration="8773000" />
+      <workItem from="1721341001681" duration="298000" />
+      <workItem from="1721341312043" duration="119000" />
+      <workItem from="1721606247212" duration="1375000" />
+      <workItem from="1721615639080" duration="3007000" />
+      <workItem from="1721782834451" duration="3022000" />
+      <workItem from="1721796062344" duration="259000" />
+      <workItem from="1721796338393" duration="13366000" />
+      <workItem from="1721962942651" duration="410000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/chuwa0610$java_in_BackendAPI.ic" NAME="java in BackendAPI Coverage Results" MODIFIED="1721859526902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+  </component>
+</project>
