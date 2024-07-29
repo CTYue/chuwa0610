@@ -1,0 +1,26 @@
+type Query{
+    getById(id: ID): Post
+    getAllPosts(pageNo: Int, pageSize: Int, sortBy: String, sortDir: String): PostResponse
+}
+
+type Post{
+    id: ID
+    title: String
+    content: String
+    description: String
+}
+
+type PostResponse {
+    content: [Post]
+    pageNo: Int
+    pageSize: Int
+    totalElements: Float
+    totalPages: Int
+    last: Boolean
+}
+
+
+type Mutation{
+    createPost(title: String!, content: String!, description: String!): Post
+    deleteById(id:ID!): Post
+}
