@@ -211,6 +211,16 @@
     return new ResponseEntity<>(postResponse, HttpStatus.OK);
    }
    ```
+1. @PreAuthorize
+   ```
+   @PreAuthorize("hasRole('ADMIN')")
+   @PostMapping
+   public ResponseEntity<PostDto> updatePostById(@RequestBody PostDto postDto,
+   @PathVariable(name = "id") long id) {
+    PostDto postResponse = postService.updatePost(postDto, id);
+    return new ResponseEntity<>(postResponse, HttpStatus.OK);
+   }
+   ```
 1. @Controller
    a controller annotation
    could used for graphQLController
@@ -411,3 +421,145 @@ spring-boot-starter-validation
    @PersistenceContext
    EntityManager entityManager;
    ```
+
+# application.properties
+1. @Value
+   ```
+   // application.properties
+   security.jwt.secret=your_secret_key_here
+   
+   // get data
+   @Value("${security.jwt.secret}")
+   private String jwtSecret;
+   ```
+
+# Spring Secuity
+1. @EnableWebSecurity
+   ```
+   @Configuration
+   @EnableWebSecurity
+   public class SecurityConfig extends WebSecurityConfigurerAdapter {
+   
+       @Override
+       protected void configure(HttpSecurity http) throws Exception {
+           http
+               .authorizeRequests()
+                   .antMatchers("/public/**").permitAll()
+                   .antMatchers("/admin/**").hasRole("ADMIN")
+                   .anyRequest().authenticated()
+                   .and()
+               .formLogin()
+                   .loginPage("/login")
+                   .defaultSuccessUrl("/dashboard")
+                   .permitAll()
+                   .and()
+               .logout()
+                   .logoutUrl("/logout")
+                   .logoutSuccessUrl("/login?logout")
+                   .permitAll();
+       }
+   }
+   ```
+   
+# AOP
+1. @Aspect
+```
+@Aspect
+public class LoggingAspect {
+    
+    @Before("execution(* com.example.service.*.*(..))")
+    public void logBefore(JoinPoint joinPoint) {
+        System.out.println("Logging before method: " + joinPoint.getSignature().getName());
+    }
+
+    @After("execution(* com.example.service.*.*(..))")
+    public void logAfter(JoinPoint joinPoint) {
+        System.out.println("Logging after method: " + joinPoint.getSignature().getName());
+    }
+}
+
+```
+
+# TEST
+1. @Mock 
+2. @Test
+3. @InjectMocks
+4. @ExtendWith(MockitoExtension.class) // Junit 5
+```
+@RunWith(MockitoJUnitRunner.class)
+public class MyServiceTest {
+
+    @Mock
+    private MyDependency myDependencyMock;
+
+    @BeforeEach
+    void setUp() {
+        MockitoAnnotations.openMocks(this); // Initializes the mocks
+    }
+
+    @InjectMocks
+    private MyService myService;
+
+    @Test
+    void testDoSomething() {
+        when(myDependencyMock.someMethod()).thenReturn("mocked response");
+
+        String result = myService.doSomething();
+
+        // Your assertions here
+        assertEquals("expected result", result);
+    }
+}
+
+```
+5. example
+```
+@SpringBootTest
+class XhsApplicationTests {
+
+    @Mock
+    private CommentRepository commentRepository;
+
+    @Mock
+    private PostRepository postRepository;
+
+    @InjectMocks
+    private CommentServiceImpl commentService;
+
+    @BeforeEach
+    void setUp(){
+        MockitoAnnotations.openMocks(this);
+    }
+
+    @Test
+    void testUpdateComment() {
+        long postId = 1L;
+        long commentId = 1L;
+        CommentDto commentDtoRequest = new CommentDto();
+        commentDtoRequest.setName("Updated Name");
+        commentDtoRequest.setEmail("updated@example.com");
+        commentDtoRequest.setBody("Updated comment body.");
+
+        Post post = new Post();
+        post.setId(postId);
+
+        Comment comment = new Comment();
+        comment.setId(commentId);
+        comment.setPost(post);
+        comment.setName("Old Name");
+        comment.setEmail("old@example.com");
+        comment.setBody("Old comment body.");
+
+        when(postRepository.findById(postId)).thenReturn(Optional.of(post));
+        when(commentRepository.findById(commentId)).thenReturn(Optional.of(comment));
+        when(commentRepository.save(any(Comment.class))).thenReturn(comment);
+
+        CommentDto updatedComment = commentService.updateComment(postId, commentId, commentDtoRequest);
+
+        assertNotNull(updatedComment);
+        assertEquals("Updated Name", updatedComment.getName());
+        assertEquals("updated@example.com", updatedComment.getEmail());
+        assertEquals("Updated comment body.", updatedComment.getBody());
+    }
+}
+```
