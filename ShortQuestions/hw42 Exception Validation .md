@@ -78,10 +78,9 @@
 6.  Apply above annotations to your previous homework projects as possible as you can.
     [code](../Coding/hw42)
 7.  watch those videos(泛泛地看一遍，能理解多少是多少，没有必要看其它视频。)
-   1.  Spring 简介： https://www.youtube.com/watch?v=l0MqsOADAUE&list=PLmOn9nNkQxJFbsU4Qz8CdR
-       iVM4Qs3ci75&index=64
-   2. IOC/DI: https://www.youtube.com/watch?v=PyMxNr2p0C0&list=PLmOn9nNkQxJFbsU4Qz8CdRiVM4Q
-          s3ci75&index=65
+   1.  Spring 简介： https://www.youtube.com/watch?v=l0MqsOADAUE&list=PLmOn9nNkQxJFbsU4Qz8CdRiVM4Qs3ci75&index=64
+
+   2. IOC/DI: https://www.youtube.com/watch?v=PyMxNr2p0C0&list=PLmOn9nNkQxJFbsU4Qz8CdRiVM4Qs3ci75&index=65
    3. IOC container: https://www.youtube.com/watch?v=pLa77Tw-yyI&list=PLmOn9nNkQxJFbsU4Qz8CdRiV
           M4Qs3ci75&index=66
    4. Bean:

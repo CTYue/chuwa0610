@@ -313,24 +313,24 @@
         ```
         
 22. Type the code by your self and try to understand it. (package com.chuwa.tutorial.t08_multithreading)
-    [code](../Coding/hw5)
+    [code](../Coding/hw24)
 
 23. Write a code to create 2 threads, one thread print 1,3,5,7,9, another thread print 2,4,6,8,10. (solution is in
      com.chuwa.tutorial.t08_multithreading.c05_waitNotify.OddEventPrinter)
     1.  One solution use synchronized and wait notify,mew12ty654t6
     2.  One solution use ReentrantLock and await, signal
     
-    [code](../Coding/hw5/23.java)
+    [code](../Coding/hw24/23.java)
     
 24. create 3 threads, one thread ouput 1-10, one thread output 11-20, one thread output 21-22. threads run
     sequence is random. (solution is in com.chuwa.exercise.t08_multithreading.PrintNumber1)   
-    [code](../Coding/hw5/24.java)
+    [code](../Coding/hw24/24.java)
 
 
 25. completable future:
     1. Homework 1: Write a simple program that uses CompletableFuture to asynchronously get the sum
         and product of two integers, and print the results.   
-        [code](../Coding/hw5/251.java)
+        [code](../Coding/hw24/251.java)
 
     2. Homework 2: Assume there is an online store that needs to fetch data from three APIs: products,
         reviews, and inventory. Use CompletableFuture to implement this scenario and merge the fetched

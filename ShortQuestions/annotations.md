@@ -1,6 +1,14 @@
-#Lombok
-1. Database.Hibernate
+[Restful](#restful)   
+[Validation](#validation)   
+[IOC/DI](#ioc-di)   
+[Exception](#exception)
+[EntityManager](#entitymanager)
 
+
+# RESTFul
+   @Entity, @Repository, @Service, @RestController
+1. Database.Hibernate
+   Define database class
     **@Entity:**
     - Marks a class as a JPA entity, representing a table in the realtional database.   
     
@@ -120,11 +128,8 @@
       )
       private Set<Project> projects;
    }
-   
-   
-   
-   
    ```
+
 1. @Repository
     - Data Access Object (DAO)
    ```
@@ -149,6 +154,7 @@
     }
     ```
 1. @RestController
+   = @Controller + @ResponseBody
     - a controller component in the MVC (Model-View-Controller) architecture.
     - @PostMapping
       - map HTTP POST requests onto specific handler methods in Spring controllers
@@ -178,6 +184,43 @@
        }
     }
     ```
+   - @Controller + @ResponseBody
+   ```
+   @Controller
+   @RequestMapping("/api/v1/posts")
+   public class PostController {
+      @Autowired
+      private PostService postService;
+      
+      @PostMapping()
+      public @ResponseBody ResponseEntity<PostDto> createPost(@RequestBody PostDto
+      postDto) {
+         PostDto postResponse = postService.createPost(postDto);
+         return new ResponseEntity<>(postResponse, HttpStatus.CREATED);
+      }
+   }
+   ```
+   - Content Negotiation
+     - consumes: consume content-type from request
+     - produces: contents to front-end, front-end only accept the type it defined
+   ```java
+   @PutMapping(value = "/{id}", produces = "text/pdf", consumes = "application/xml")
+   public ResponseEntity<PostDto> updatePostById(@RequestBody PostDto postDto,
+   @PathVariable(name = "id") long id) {
+    PostDto postResponse = postService.updatePost(postDto, id);
+    return new ResponseEntity<>(postResponse, HttpStatus.OK);
+   }
+   ```
+1. @PreAuthorize
+   ```
+   @PreAuthorize("hasRole('ADMIN')")
+   @PostMapping
+   public ResponseEntity<PostDto> updatePostById(@RequestBody PostDto postDto,
+   @PathVariable(name = "id") long id) {
+    PostDto postResponse = postService.updatePost(postDto, id);
+    return new ResponseEntity<>(postResponse, HttpStatus.OK);
+   }
+   ```
 1. @Controller
    a controller annotation
    could used for graphQLController
@@ -215,17 +258,8 @@
 
    }
    ```
-1. @Autowired
-   - inject bean
-
-1. @PersistenceContext
-   - It injects an EntityManager.
-   ```
-   @PersistenceContext
-   EntityManager entityManager;
-   ```
 1. @ResponseStatus
-   -  automatically applies the specified status code whenever that exception is thrown and not otherwise handled. 
+   -  automatically applies the specified status code whenever that exception is thrown and not otherwise handled.
    ```
    @ResponseStatus(HttpStatus.NOT_FOUND) // sets HTTP status to 404 Not Found
    public class ResourceNotFoundException extends RuntimeException {
@@ -234,11 +268,89 @@
       }
    }
    ```
+   
+# Validation
+spring-boot-starter-validation
+1. @NotEmpty   
+   or @NotEmpty(message = "Name should not be null or empty")
+2. @NotNull
+2. @Size
+   Field: min, max, message
+3. @Email
+4. @Pattern
+4. @Valid // to apply rule to the parameter
+
+   ```
+   public class User {
+      @Size(min = 2, max = 30, message = "Name must be between 2 and 30 characters")
+      private String name;
+   
+      @Pattern(regexp = "^[a-zA-Z0-9]+$", message = "The username must be alphanumeric")
+      private String username;
+
+      @NotEmpty
+      private String type;
+   
+      @Email
+      private String email;
+      ...
+   }
+   
+   @RestController
+   public class UserController {
+
+    @PostMapping("/users")
+    public ResponseEntity<String> createUser(@Valid @RequestBody User user) {
+        ...
+        return new ResponseEntity<>("User is valid", HttpStatus.OK);
+    }
+   }
+   ```
+   
+# IOC DI
+1. @Autowired
+   - inject bean at runtime
+   ```
+   1. 如果只有一个impl,则默认用这个impl
+   2. 如果有多个impl, 则查看是否有@Qualifier
+   3.如果有多个impl, 且无@Qualifier, 按变量名(By Name)
+   4. 如果有多个impl, 且无@Qualifier, 按变量名(By Name)不行， 则查看是否有@Primary (因为这个是type level的)
+   5. 若无，则报错 (NoUniqueBeanDefinitionException) 
+   ```
+1. @Qualifier
+   - to specify which inject which bean
+   ```
+   interface Animal(){...}
+   @Component
+   @Primary
+   class Dog implements Animal{...}
+   @Component
+   class Cat implements Animal{...}
+   
+   public classA {
+      @Autowired
+      priviate Animal cat;
+   }
+   ```
+1. @Primary
+   - give a specific bean precedence when multiple beans of the same type exist in the Spring context.
+1. @Component
+   - 普通Component
+   ```
+   @Component
+   public class GreetingService {
+       public String greet(String name) {
+           return "Hello, " + name + "!";
+       }
+   }
+   ```
 1. @Configuration
    - to mark a class as a source of bean definitions for the Spring application context. It indicates that the class can be used by the Spring IoC (Inversion of Control) container as a configuration class to generate and manage beans.
 1. @Bean
+   - typically used with **@Configuration**
+   - usually to define 3rd Party lib
    - to indicate that a method produces a bean to be managed by the Spring container. 
-   - It is typically used in conjunction with @Configuration classes to define beans in a Spring application context
+   - define beans in a Spring application context
    ```
    @Configuration
    public class CommonConfig {
@@ -254,6 +366,18 @@
     }  
    }
    ```
+1. @ComponentScan
+   - often use with @Configuration
+   ```
+   @Configuration
+   @ComponentScan(basePackages = {"com.example.service", "com.example.repository"})
+   public class AppConfig {
+   }
+   ```
+1. @SpringBootApplication
+   = @Configuration + @ComponentScan + @EnableAutoConfiguration
+
+# Exception
 1. @ExceptionalHandler
    - method level
    - used to handle the specific exceptions and sending the custom responses to the client
@@ -289,40 +413,153 @@
     }
    }
    ```
-1. Validation   
-   spring-boot-starter-validation
-   1. @NotEmpty   
-      or @NotEmpty(message = "Name should not be null or empty")
-   2. @NotNull
-   2. @Size
-      Field: min, max, message
-   3. @Email
-   4. @Pattern
-   4. @Valid // to apply rule to the parameter
-   
+
+# EntityManager
+1. @PersistenceContext
+   - It injects an EntityManager.
    ```
-   public class User {
-      @Size(min = 2, max = 30, message = "Name must be between 2 and 30 characters")
-      private String name;
-   
-      @Pattern(regexp = "^[a-zA-Z0-9]+$", message = "The username must be alphanumeric")
-      private String username;
+   @PersistenceContext
+   EntityManager entityManager;
+   ```
 
-      @NotEmpty
-      private String type;
+# application.properties
+1. @Value
+   ```
+   // application.properties
+   security.jwt.secret=your_secret_key_here
    
-      @Email
-      private String email;
-      ...
+   // get data
+   @Value("${security.jwt.secret}")
+   private String jwtSecret;
+   ```
+
+# Spring Secuity
+1. @EnableWebSecurity
+   ```
+   @Configuration
+   @EnableWebSecurity
+   public class SecurityConfig extends WebSecurityConfigurerAdapter {
+   
+       @Override
+       protected void configure(HttpSecurity http) throws Exception {
+           http
+               .authorizeRequests()
+                   .antMatchers("/public/**").permitAll()
+                   .antMatchers("/admin/**").hasRole("ADMIN")
+                   .anyRequest().authenticated()
+                   .and()
+               .formLogin()
+                   .loginPage("/login")
+                   .defaultSuccessUrl("/dashboard")
+                   .permitAll()
+                   .and()
+               .logout()
+                   .logoutUrl("/logout")
+                   .logoutSuccessUrl("/login?logout")
+                   .permitAll();
+       }
    }
+   ```
    
-   @RestController
-   public class UserController {
+# AOP
+1. @Aspect
+```
+@Aspect
+public class LoggingAspect {
+    
+    @Before("execution(* com.example.service.*.*(..))")
+    public void logBefore(JoinPoint joinPoint) {
+        System.out.println("Logging before method: " + joinPoint.getSignature().getName());
+    }
 
-    @PostMapping("/users")
-    public ResponseEntity<String> createUser(@Valid @RequestBody User user) {
-        ...
-        return new ResponseEntity<>("User is valid", HttpStatus.OK);
+    @After("execution(* com.example.service.*.*(..))")
+    public void logAfter(JoinPoint joinPoint) {
+        System.out.println("Logging after method: " + joinPoint.getSignature().getName());
     }
 }
-   ```
+
+```
+
+# TEST
+1. @Mock 
+2. @Test
+3. @InjectMocks
+4. @ExtendWith(MockitoExtension.class) // Junit 5
+```
+@RunWith(MockitoJUnitRunner.class)
+public class MyServiceTest {
+
+    @Mock
+    private MyDependency myDependencyMock;
+
+    @BeforeEach
+    void setUp() {
+        MockitoAnnotations.openMocks(this); // Initializes the mocks
+    }
+
+    @InjectMocks
+    private MyService myService;
+
+    @Test
+    void testDoSomething() {
+        when(myDependencyMock.someMethod()).thenReturn("mocked response");
+
+        String result = myService.doSomething();
+
+        // Your assertions here
+        assertEquals("expected result", result);
+    }
+}
+
+```
+5. example
+```
+@SpringBootTest
+class XhsApplicationTests {
+
+    @Mock
+    private CommentRepository commentRepository;
+
+    @Mock
+    private PostRepository postRepository;
+
+    @InjectMocks
+    private CommentServiceImpl commentService;
+
+    @BeforeEach
+    void setUp(){
+        MockitoAnnotations.openMocks(this);
+    }
+
+    @Test
+    void testUpdateComment() {
+        long postId = 1L;
+        long commentId = 1L;
+        CommentDto commentDtoRequest = new CommentDto();
+        commentDtoRequest.setName("Updated Name");
+        commentDtoRequest.setEmail("updated@example.com");
+        commentDtoRequest.setBody("Updated comment body.");
+
+        Post post = new Post();
+        post.setId(postId);
+
+        Comment comment = new Comment();
+        comment.setId(commentId);
+        comment.setPost(post);
+        comment.setName("Old Name");
+        comment.setEmail("old@example.com");
+        comment.setBody("Old comment body.");
+
+        when(postRepository.findById(postId)).thenReturn(Optional.of(post));
+        when(commentRepository.findById(commentId)).thenReturn(Optional.of(comment));
+        when(commentRepository.save(any(Comment.class))).thenReturn(comment);
+
+        CommentDto updatedComment = commentService.updateComment(postId, commentId, commentDtoRequest);
+
+        assertNotNull(updatedComment);
+        assertEquals("Updated Name", updatedComment.getName());
+        assertEquals("updated@example.com", updatedComment.getEmail());
+        assertEquals("Updated comment body.", updatedComment.getBody());
+    }
+}
+```

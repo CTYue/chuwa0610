@@ -1,6 +1,6 @@
 # SQL
 
-![image](../Coding/hw6/sq.png)
+![image](../Coding/hw30/sq.png)
 1. Create oms_company_address table
     ```
     CREATE TABLE oms_company_addresss (
@@ -67,11 +67,11 @@
 
 # NoSQL - MongoDB
 - create db, create collection, create 2 documents and with findOne() find()
-    ![image](../Coding/hw6/mongo1.png)   
+    ![image](../Coding/hw30/mongo1.png)   
 - update the document
-    ![image](../Coding/hw6/mongo2.png)   
+    ![image](../Coding/hw30/mongo2.png)   
 - delete and create another collection
-    ![image](../Coding/hw6/mongo3.png)  
+    ![image](../Coding/hw30/mongo3.png)  
 1. Create `test` DB   
     `use test`
 2. Create oms_company_address collection (method: createCollection() )

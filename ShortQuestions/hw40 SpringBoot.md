@@ -2,52 +2,52 @@
 Practice with below examples (You can find any Open APIs on the internet):   
 1. 5 GET APIs with different response type
    1. GET https://jsonmock.hackerrank.com/api/food_outlets   
-   ![image](../Coding/hw7/RESTFul/get1.png)
+   ![image](../Coding/hw30_2/RESTFul/get1.png)
    2. GET https://jsonmock.hackerrank.com/api/food_outlets?page=1   
-   ![image](../Coding/hw7/RESTFul/get2.png)
+   ![image](../Coding/hw30_2/RESTFul/get2.png)
    3. GET https://jsonmock.hackerrank.com/api/food_outlets?page=1&city=Seattle
-   ![image](../Coding/hw7/RESTFul/get3.png)
+   ![image](../Coding/hw30_2/RESTFul/get3.png)
    4. GET https://jsonmock.hackerrank.com/api/food_outlets?page=1&id=41
-   ![image](../Coding/hw7/RESTFul/get4.png)
+   ![image](../Coding/hw30_2/RESTFul/get4.png)
    5. GET https://jsonmock.hackerrank.com/api/food_outlets?page=4
-   ![image](../Coding/hw7/RESTFul/get5.png)
+   ![image](../Coding/hw30_2/RESTFul/get5.png)
     
 2. 5 Post API with json request body, please also paste the response here
    1. POST https://jsonplaceholder.typicode.com/posts
-   ![image](../Coding/hw7/RESTFul/post1.png)
+   ![image](../Coding/hw30_2/RESTFul/post1.png)
    2. POST https://jsonplaceholder.typicode.com/posts
-   ![image](../Coding/hw7/RESTFul/post2.png)
+   ![image](../Coding/hw30_2/RESTFul/post2.png)
    3. POST https://jsonplaceholder.typicode.com/posts
-   ![image](../Coding/hw7/RESTFul/post3.png)
+   ![image](../Coding/hw30_2/RESTFul/post3.png)
    4. POST https://jsonplaceholder.typicode.com/posts
-   ![image](../Coding/hw7/RESTFul/post4.png)
+   ![image](../Coding/hw30_2/RESTFul/post4.png)
    5. POST https://jsonplaceholder.typicode.com/posts
-   ![image](../Coding/hw7/RESTFul/post5.png)
+   ![image](../Coding/hw30_2/RESTFul/post5.png)
 3. 3 PUT API with json request body, please also paste the response here 
    1. PUT https://sonplaceholder.typicode.com/posts/100
-   ![image](../Coding/hw7/RESTFul/PUT1.png)
+   ![image](../Coding/hw30_2/RESTFul/PUT1.png)
    2. PUT https://sonplaceholder.typicode.com/posts/100
-   ![image](../Coding/hw7/RESTFul/PUT2.png)
+   ![image](../Coding/hw30_2/RESTFul/PUT2.png)
    3. PUT https://sonplaceholder.typicode.com/posts/100
-   ![image](../Coding/hw7/RESTFul/PUT3.png)
+   ![image](../Coding/hw30_2/RESTFul/PUT3.png)
    
 4. 2 DELETE API
    1. DELETE1 https://{{jsonhost}}/posts/100
-   ![image](../Coding/hw7/RESTFul/DELETE1.png)
+   ![image](../Coding/hw30_2/RESTFul/DELETE1.png)
    2. DELETE2 https://{{jsonhost}}/posts/88
-   ![image](../Coding/hw7/RESTFul/DELETE2.png)
+   ![image](../Coding/hw30_2/RESTFul/DELETE2.png)
 5. Each example with 404, 401,500 and any http status codes you know
     - 404
       - not found error, Client error response
-      ![image](../Coding/hw7/RESTFul/404.png)
+      ![image](../Coding/hw30_2/RESTFul/404.png)
     - 401
       - unauthorized, client does not have access rights
-      ![image](../Coding/hw7/RESTFul/401.png)
+      ![image](../Coding/hw30_2/RESTFul/401.png)
     - 500
       - internal server error
     - 200 OK
       - the request has succeeded
-      ![image](../Coding/hw7/RESTFul/200.png)
+      ![image](../Coding/hw30_2/RESTFul/200.png)
 
 # [annotation](#annotation)
 [annotations.md](./annotations.md)
@@ -95,7 +95,7 @@ Practice with below examples (You can find any Open APIs on the internet):
 
 5.  Describe the flow in all of the layers if an API is called by Postman.
     - Client <-> Controller <-> Service  <-> DAO <-> db
-    ![image](../Coding/hw7/RESTFul/flow.png)
+    ![image](../Coding/hw30_2/RESTFul/flow.png)
 
 6.  What is the application.properties? do you know application.yml?
     - configuration files in Spring Boot
