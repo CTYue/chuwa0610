@@ -6,6 +6,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.OptionalDouble;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -39,15 +40,16 @@ public class StreamExercise {
 //                .collect(Collectors.toList());
 //
 //       collect.forEach(e-> System.out.println(e));
-        List<String> words = new ArrayList<String>();
-        words.add("hello");
-        words.add("world");
+        List<Integer> numbers = Arrays.asList(20, 3, 78, 9, 6, 53, 73, 99, 24, 32);
 
-        List<List<String>> collect = words.stream().map(word -> Arrays.stream(word.split(""))
-                .distinct()
-                .collect(Collectors.toList()))
-                .collect(Collectors.toList());
-//        collect.forEach(e -> System.out.println(e));
-        System.out.println(collect);
+        OptionalDouble average = numbers.stream()
+                .mapToInt(Integer::intValue)
+                .average();
+
+        if (average.isPresent()) {
+            System.out.println("The average is " + average.getAsDouble());
+        } else {
+            System.out.println("Could not calculate the average.");
+        }
     }
 }
