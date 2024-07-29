@@ -11,10 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be80a07f-98d5-4ff8-af2d-72c96a8ddba3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/config/KafkaConsumerGroup2Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/service/KafkaConsumerGroup2Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/Entities/ConsumedMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/controller/RestComtroller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/service/MessageStoreService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/controller/KafkaConsumerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/controller/KafkaConsumerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/controller/KafkaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/controller/KafkaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/service/KafkaConsumerGroup2Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/service/KafkaConsumerGroup2Service.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/service/KafkaConsumerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/service/KafkaConsumerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShortQuestions/Hands-on homework on Kafka.md" beforeDir="false" afterPath="$PROJECT_DIR$/ShortQuestions/Hands-on homework on Kafka.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,117 +81,120 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.CLient.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Client.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ConcurrentCollection.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Daemon.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GenericClassTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GenericMethod.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GenericMultiArguments.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MethodReferenceExample.executor&quot;: &quot;Run&quot;,
-    &quot;Application.OddEvenPrinter.executor&quot;: &quot;Run&quot;,
-    &quot;Application.OptionalDemo.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Q25b.executor&quot;: &quot;Run&quot;,
-    &quot;Application.WaitNotify.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.chuwa.learn.MavenProject.Builder.Client.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.chuwa.learn.MavenProject.Observer.Client.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.chuwa.learn.MavenProject.Singleton.Client.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AdditionalMapExerciseTest.learn_ConcurrentHashMap.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AdditionalMapExerciseTest.learn_EnumMap.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AdditionalMapExerciseTest.learn_IdentityHashMap.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ArrayListExerciseTest.learn_Inserting_And_Retrieving.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ArrayListExerciseTest.learn_Iterator.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ArrayListExerciseTest.learn_Remove_Replacing_Updating.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ArrayListExerciseTest.learn_Sorting.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ArraysExerciseTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ArraysExerciseTest.learn_common_operations.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ArraysExerciseTest.learn_copy_of_array.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ArraysExerciseTest.learn_search_and_sort.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CollectionsExerciseTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CollectionsExerciseTest.learn_common_collections_operations.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CollectionsExerciseTest.learn_thread_safe_ArrayList.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CommentServiceTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.CommentServiceTest.testCreateComment.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CommentServiceTest.testDeleteComment.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CommentServiceTest.testDeleteComment_ThrowsBlogAPIException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CommentServiceTest.testUpdateComment.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CommentServiceTest.testUpdateComment_ThrowBlogAPIException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CopyOnWriteArrayListExerciseTest.learn_Inserting_And_Retrieving.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CopyOnWriteArrayListExerciseTest.learn_Iterator.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.HashMapExerciseTest.learn_Inserting_And_Retrieving.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.HashMapExerciseTest.learn_Remove_Replacing_Updating.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.HashSetExerciseTest.learn_Inserting_And_Retrieving_Removing.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LambdaLearn.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LambdaLearn.testFinal21.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LinkedHashMapExerciseTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LinkedHashMapExerciseTest.learn_Inserting_And_Retrieving.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LinkedHashMapExerciseTest.learn_Remove_Replacing_Updating.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LinkedListExerciseTest.learn_Inserting_And_Retrieving.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LinkedListExerciseTest.learn_Remove_Sort.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.OptionalMainMethodTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProductClient.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RedbookApplicationTests.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.StreamApiCreationTest.testArrays.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StreamApiIntermediateOperation.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StreamApiTest.exercise15a.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StreamExercise.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.StreamExercise.testMapAndFlatMap2.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TreeMapExerciseTest.learn_Inserting_And_Retrieving.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TreeMapExerciseTest.learn_Remove_Replacing_Updating.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TreeSetExerciseTest.learn_Inserting_And_Retrieving_Removing.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.collection [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.collection [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mongo-blog [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mongo-blog [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mongo-blog [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mongo-blog [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mongo-blog [site].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mongo-blog [validate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.redbook [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.redbook [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.redbook [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.redbook [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.redbook [site].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.redbook [validate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.springmvc-demo [clean,install...].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.DemoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.MongoBlogApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.RedbookApplication.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.InterruptTest.testInterruptSleep.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.InterruptTest.testInterruptWhileTrue.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.InterruptTest.testIsInterrupted.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.PostControllerIntegrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.PostControllerIntegrationTest.testDeletePostById.executor&quot;: &quot;Run&quot;,
-    &quot;Tomcat Server.Tomcat 9.0.91.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;hongqiang__cai/hw18&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/15063/OneDrive/Documents/Chuwa/chuwa0610/Coding/hw18/Spring-Producer-Consumer-main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CLient.executor": "Run",
+    "Application.Client.executor": "Run",
+    "Application.ConcurrentCollection.executor": "Run",
+    "Application.Daemon.executor": "Run",
+    "Application.GenericClassTest.executor": "Run",
+    "Application.GenericMethod.executor": "Run",
+    "Application.GenericMultiArguments.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MethodReferenceExample.executor": "Run",
+    "Application.OddEvenPrinter.executor": "Run",
+    "Application.OptionalDemo.executor": "Run",
+    "Application.Q25b.executor": "Run",
+    "Application.WaitNotify.executor": "Run",
+    "Application.com.chuwa.learn.MavenProject.Builder.Client.executor": "Run",
+    "Application.com.chuwa.learn.MavenProject.Observer.Client.executor": "Run",
+    "Application.com.chuwa.learn.MavenProject.Singleton.Client.executor": "Run",
+    "JUnit.AdditionalMapExerciseTest.learn_ConcurrentHashMap.executor": "Run",
+    "JUnit.AdditionalMapExerciseTest.learn_EnumMap.executor": "Run",
+    "JUnit.AdditionalMapExerciseTest.learn_IdentityHashMap.executor": "Run",
+    "JUnit.AppTest.executor": "Run",
+    "JUnit.ArrayListExerciseTest.learn_Inserting_And_Retrieving.executor": "Run",
+    "JUnit.ArrayListExerciseTest.learn_Iterator.executor": "Run",
+    "JUnit.ArrayListExerciseTest.learn_Remove_Replacing_Updating.executor": "Run",
+    "JUnit.ArrayListExerciseTest.learn_Sorting.executor": "Run",
+    "JUnit.ArraysExerciseTest.executor": "Run",
+    "JUnit.ArraysExerciseTest.learn_common_operations.executor": "Run",
+    "JUnit.ArraysExerciseTest.learn_copy_of_array.executor": "Run",
+    "JUnit.ArraysExerciseTest.learn_search_and_sort.executor": "Run",
+    "JUnit.CollectionsExerciseTest.executor": "Run",
+    "JUnit.CollectionsExerciseTest.learn_common_collections_operations.executor": "Run",
+    "JUnit.CollectionsExerciseTest.learn_thread_safe_ArrayList.executor": "Run",
+    "JUnit.CommentServiceTest.executor": "Coverage",
+    "JUnit.CommentServiceTest.testCreateComment.executor": "Run",
+    "JUnit.CommentServiceTest.testDeleteComment.executor": "Run",
+    "JUnit.CommentServiceTest.testDeleteComment_ThrowsBlogAPIException.executor": "Run",
+    "JUnit.CommentServiceTest.testUpdateComment.executor": "Run",
+    "JUnit.CommentServiceTest.testUpdateComment_ThrowBlogAPIException.executor": "Run",
+    "JUnit.CopyOnWriteArrayListExerciseTest.learn_Inserting_And_Retrieving.executor": "Run",
+    "JUnit.CopyOnWriteArrayListExerciseTest.learn_Iterator.executor": "Run",
+    "JUnit.HashMapExerciseTest.learn_Inserting_And_Retrieving.executor": "Run",
+    "JUnit.HashMapExerciseTest.learn_Remove_Replacing_Updating.executor": "Run",
+    "JUnit.HashSetExerciseTest.learn_Inserting_And_Retrieving_Removing.executor": "Run",
+    "JUnit.LambdaLearn.executor": "Run",
+    "JUnit.LambdaLearn.testFinal21.executor": "Run",
+    "JUnit.LinkedHashMapExerciseTest.executor": "Run",
+    "JUnit.LinkedHashMapExerciseTest.learn_Inserting_And_Retrieving.executor": "Run",
+    "JUnit.LinkedHashMapExerciseTest.learn_Remove_Replacing_Updating.executor": "Run",
+    "JUnit.LinkedListExerciseTest.learn_Inserting_And_Retrieving.executor": "Run",
+    "JUnit.LinkedListExerciseTest.learn_Remove_Sort.executor": "Run",
+    "JUnit.OptionalMainMethodTest.executor": "Run",
+    "JUnit.ProductClient.executor": "Run",
+    "JUnit.RedbookApplicationTests.executor": "Coverage",
+    "JUnit.StreamApiCreationTest.testArrays.executor": "Run",
+    "JUnit.StreamApiIntermediateOperation.executor": "Run",
+    "JUnit.StreamApiTest.exercise15a.executor": "Run",
+    "JUnit.StreamExercise.executor": "Run",
+    "JUnit.StreamExercise.testMapAndFlatMap2.executor": "Run",
+    "JUnit.TreeMapExerciseTest.learn_Inserting_And_Retrieving.executor": "Run",
+    "JUnit.TreeMapExerciseTest.learn_Remove_Replacing_Updating.executor": "Run",
+    "JUnit.TreeSetExerciseTest.learn_Inserting_And_Retrieving_Removing.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.collection [clean].executor": "Run",
+    "Maven.collection [test].executor": "Run",
+    "Maven.mongo-blog [clean].executor": "Run",
+    "Maven.mongo-blog [compile].executor": "Run",
+    "Maven.mongo-blog [install].executor": "Run",
+    "Maven.mongo-blog [package].executor": "Run",
+    "Maven.mongo-blog [site].executor": "Run",
+    "Maven.mongo-blog [validate].executor": "Run",
+    "Maven.redbook [clean].executor": "Run",
+    "Maven.redbook [compile].executor": "Run",
+    "Maven.redbook [install].executor": "Run",
+    "Maven.redbook [package].executor": "Run",
+    "Maven.redbook [site].executor": "Run",
+    "Maven.redbook [validate].executor": "Run",
+    "Maven.springmvc-demo [clean,install...].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.DemoApplication.executor": "Run",
+    "Spring Boot.MongoBlogApplication.executor": "Run",
+    "Spring Boot.RedbookApplication.executor": "Run",
+    "TestNG.InterruptTest.testInterruptSleep.executor": "Run",
+    "TestNG.InterruptTest.testInterruptWhileTrue.executor": "Run",
+    "TestNG.InterruptTest.testIsInterrupted.executor": "Run",
+    "TestNG.PostControllerIntegrationTest.executor": "Run",
+    "TestNG.PostControllerIntegrationTest.testDeletePostById.executor": "Run",
+    "Tomcat Server.Tomcat 9.0.91.executor": "Run",
+    "git-widget-placeholder": "hongqiang__cai/hw18",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/15063/OneDrive/Documents/Chuwa/chuwa0610/Coding/hw18/Spring-Producer-Consumer-main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.chuwa.redbook.exception" />
@@ -512,7 +521,7 @@
       <workItem from="1721982694586" duration="832000" />
       <workItem from="1721983546098" duration="10688000" />
       <workItem from="1722153092781" duration="1609000" />
-      <workItem from="1722244771411" duration="1424000" />
+      <workItem from="1722244771411" duration="6362000" />
     </task>
     <servers />
   </component>
@@ -529,6 +538,22 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/service/MessageStoreService.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/service/MessageStoreService.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/chuwa0610$RedbookApplicationTests.ic" NAME="RedbookApplicationTests Coverage Results" MODIFIED="1721643908456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

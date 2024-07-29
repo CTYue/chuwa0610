@@ -30,3 +30,12 @@ With the set up in [KafkaProducerService.java](..%2FCoding%2Fhw18%2FSpring-Produ
 - Demo different message delivery guarantees in Kafka, with necessary code or configuration changes.
 Image with 2 messages delivered to 2 consumer group that first has 5 consumers, second has 2 consumers. Both delivered, and printed out on the right conner.
 ![kf4.png](supportingImages%2Fkf4.png)
+## Step 5: Design backend REST APIs for your consumer application which satisfies following requirements:
+As a user, I am able to get messages consumed by the consumer application
+As a  user, I am able to specify which consumer group and topic that I want to get messages from
+The REST response should be optimized (e.g. paged)
+- Pose a new message
+![kf5.png](supportingImages%2Fkf5.png)
+- Get the message with api specifying different consumer group/topic
+![kf6.png](supportingImages%2Fkf6.png)
+![kf7.png](supportingImages%2Fkf7.png)
