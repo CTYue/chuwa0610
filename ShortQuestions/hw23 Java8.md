@@ -1,15 +1,15 @@
 1. What is generic in Java?  and type the following generic tutorial code by yourself.    
    Java Generics add a way to specify concrete types to general purpose classes and methods.   
-    [links](../Coding/hw4/Generic)
+    [links](../Coding/hw23/Generic)
 
 2. Read the follwoing code repo and type it one by one by yourself.   
-    [links](../Coding/hw4/features)
+    [links](../Coding/hw23/features)
 3. 
 3.  Practice following stream API exercises at least 3 times   
-    [links](../Coding/hw4/streamAPI)
+    [links](../Coding/hw23/streamAPI)
 
 4.  Practice Optional methods at least 2 times
-    [links](../Coding/hw4/Optional)    
+    [links](../Coding/hw23/Optional)    
 
 5.  Discuss best practices on nullptr exception prevention, provide code snippet for each practice that you
     mentioned.

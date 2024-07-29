@@ -52,7 +52,7 @@ public void TEST() {
   - close FileReader
 
 9.  Practice collection problems here:    
-    - [folder](../Coding/hw3)
+    - [folder](../Coding/hw21)
     
 
 10. What are the types of design patterns in Java ?   
