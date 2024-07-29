@@ -1,0 +1,31 @@
+version: "3.7"
+services:
+  api_service:
+    build: .
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - springapimysql-net
+    environment:
+      - spring.datasource.url=jdbc:mysql://mysql_redbook:3306/redbook?useSSL=false&serverTimezone=UTC
+    depends_on:
+      - mysql_redbook
+
+    volumes:
+      - .m2:/root/.m2
+
+  mysql_redbook:
+    image: "mysql:8.4.0"
+    restart: always
+    ports:
+      - 3306:3306
+    networks:
+      - springapimysql-net
+    environment:
+      MYSQL_DATABASE: redbook
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+networks:
+  springapimysql-net:
