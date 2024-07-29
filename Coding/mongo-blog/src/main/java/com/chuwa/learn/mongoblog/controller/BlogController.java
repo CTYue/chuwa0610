@@ -13,14 +13,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/v1/blogs")
 public class BlogController {
-    @Autowired
-    private BlogService blogService;
+    private final BlogService blogService;
 
-    @PostMapping
+    public BlogController(BlogService blogService) {
+        this.blogService = blogService;
+    }
+
+
+       @PostMapping
     public ResponseEntity<BlogDTO> createBlog(@RequestBody BlogDTO blogDTO){
         BlogDTO response = blogService.createBlog(blogDTO);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
-
     }
-
 }
