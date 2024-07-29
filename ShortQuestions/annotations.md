@@ -563,3 +563,23 @@ class XhsApplicationTests {
     }
 }
 ```
+
+# microservice
+1. Eureka server
+```
+@SpringBootApplication
+@EnableEurekaServer
+public class EurekaServerApplication {
+  public static void main(String[] args) {
+    SpringApplication.run(EurekaServerApplication.class, args);
+   } 
+}
+```
+2. circuit breaker
+```
+@GetMapping("/id/{id}")
+@HystrixCommand(fallbackMethod = "handleCitizenDownTime")
+public ResponseEntity<RequiredResponse> getAllDataBasedonCenterId(@PathVariable Integer
+   ...
+}
+```
