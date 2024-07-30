@@ -1,20 +1,34 @@
 package com.chuwa.demo.controller;
 
+import com.chuwa.demo.service.KafkaConsumerService;
 import com.chuwa.demo.service.KafkaProducerService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Set;
 
 @RestController
+@RequiredArgsConstructor
 public class KafkaController {
 
-    @Autowired
-    private KafkaProducerService kafkaProducerService;
+    private final KafkaProducerService kafkaProducerService;
+    private final KafkaConsumerService kafkaConsumerService;
 
     @PostMapping("/publish")
     public String publishMessage(@RequestParam("key") String key, @RequestParam("message") String message) {
         kafkaProducerService.sendMessage(key, message);
         return "Message published successfully";
     }
+    @PostMapping("/publish/{topic}")
+    public String publishMessage(@PathVariable("topic") String topic, @RequestParam("key") String key, @RequestParam("message") String message) {
+        kafkaProducerService.sendMessage(key, message, topic);
+        return "Message published successfully";
+    }
+
+    @GetMapping("/getTopics")
+    public ResponseEntity<Set<String>> getTopics() {
+        return ResponseEntity.ok(kafkaConsumerService.getTopics());
+    }
+
 }
