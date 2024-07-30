@@ -1,0 +1,5 @@
+com\chuwa\demo\controller\KafkaConsumer.class
+com\chuwa\demo\config\KafkaProducerConfig.class
+com\chuwa\demo\controller\KafkaController.class
+com\chuwa\demo\DemoApplication.class
+com\chuwa\demo\service\KafkaProducerService.class
