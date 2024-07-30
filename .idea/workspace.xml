@@ -11,13 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be80a07f-98d5-4ff8-af2d-72c96a8ddba3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Coding/redbook/src/test/java/com/chuwa/redbook/CommentServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/redbook/src/test/java/com/chuwa/redbook/PostControllerIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/Entities/ConsumedMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/controller/RestComtroller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/service/MessageStoreService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/redbook/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/redbook/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/redbook/src/main/java/com/chuwa/redbook/service/Implimentation/CommentServiceImplimentation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/redbook/src/main/java/com/chuwa/redbook/service/Implimentation/CommentServiceImplimentation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShortQuestions/annotations.md" beforeDir="false" afterPath="$PROJECT_DIR$/ShortQuestions/annotations.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShortQuestions/hw16.md" beforeDir="false" afterPath="$PROJECT_DIR$/ShortQuestions/hw16.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/controller/KafkaConsumerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/controller/KafkaConsumerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/controller/KafkaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/controller/KafkaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/service/KafkaConsumerGroup2Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/service/KafkaConsumerGroup2Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/service/KafkaConsumerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/service/KafkaConsumerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShortQuestions/Hands-on homework on Kafka.md" beforeDir="false" afterPath="$PROJECT_DIR$/ShortQuestions/Hands-on homework on Kafka.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,6 +165,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.DemoApplication.executor": "Run",
     "Spring Boot.MongoBlogApplication.executor": "Run",
     "Spring Boot.RedbookApplication.executor": "Run",
     "TestNG.InterruptTest.testInterruptSleep.executor": "Run",
@@ -169,11 +174,11 @@
     "TestNG.PostControllerIntegrationTest.executor": "Run",
     "TestNG.PostControllerIntegrationTest.testDeletePostById.executor": "Run",
     "Tomcat Server.Tomcat 9.0.91.executor": "Run",
-    "git-widget-placeholder": "hongqiang__cai/hw16",
+    "git-widget-placeholder": "hongqiang__cai/hw18",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/15063/OneDrive/Documents/Chuwa/chuwa0610/Coding/springmvc5-demo-main",
+    "last_opened_file_path": "C:/Users/15063/OneDrive/Documents/Chuwa/chuwa0610/Coding/hw18/Spring-Producer-Consumer-main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -182,10 +187,14 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.chuwa.redbook.exception" />
@@ -201,7 +210,16 @@
       <recent name="C:\Users\15063\OneDrive\Documents\Chuwa\chuwa0610\Coding\coding1" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.PostControllerIntegrationTest.testDeletePostById">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.DemoApplication">
     <configuration name="OddEvenPrinter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.waitNotify.OddEvenPrinter" />
       <module name="hw5" />
@@ -284,6 +302,13 @@
       <option name="MAIN_CLASS_NAME" value="com.chuwa.redbook.CommentServiceTest" />
       <option name="METHOD_NAME" value="testUpdateComment_ThrowBlogAPIException" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chuwa.demo.DemoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -428,9 +453,13 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.OddEvenPrinter" />
+      <item itemvalue="Application.Q25b" />
+      <item itemvalue="Application.WaitNotify" />
       <item itemvalue="JUnit.CommentServiceTest" />
       <item itemvalue="JUnit.CommentServiceTest.testDeleteComment_ThrowsBlogAPIException" />
       <item itemvalue="JUnit.CommentServiceTest.testUpdateComment_ThrowBlogAPIException" />
+      <item itemvalue="Spring Boot.DemoApplication" />
       <item itemvalue="Spring Boot.MongoBlogApplication" />
       <item itemvalue="Spring Boot.RedbookApplication" />
       <item itemvalue="TestNG.PostControllerIntegrationTest" />
@@ -488,6 +517,11 @@
       <workItem from="1719886093038" duration="55469000" />
       <workItem from="1721023553713" duration="25350000" />
       <workItem from="1721376236774" duration="21893000" />
+      <workItem from="1721810052293" duration="4916000" />
+      <workItem from="1721982694586" duration="832000" />
+      <workItem from="1721983546098" duration="10688000" />
+      <workItem from="1722153092781" duration="1609000" />
+      <workItem from="1722244771411" duration="6362000" />
     </task>
     <servers />
   </component>
@@ -504,6 +538,22 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/service/MessageStoreService.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Coding/hw18/Spring-Producer-Consumer-main/src/main/java/com/chuwa/demo/service/MessageStoreService.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/chuwa0610$RedbookApplicationTests.ic" NAME="RedbookApplicationTests Coverage Results" MODIFIED="1721643908456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
