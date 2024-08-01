@@ -1,54 +1,54 @@
-//package com.chuwa.mongoblog.dto;
-//
-///**
-// * Data Transfer Object
-// * 用于在不同层（例如Controller和Service层）之间传输数据。它通常只包含必要的字段，可能没有数据库相关的注解和约束。
-// */
-//public class PostDto {
-//    private Long id;
-//    private String title;
-//    private String content;
-//    private String description;
-//
-//    public PostDto() {
-//    }
-//
-//    public PostDto(Long id, String title, String content, String description) {
-//        this.id = id;
-//        this.title = title;
-//        this.content = content;
-//        this.description = description;
-//    }
-//
-//    public Long getId() {
-//        return id;
-//    }
-//
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
-//
-//    public String getTitle() {
-//        return title;
-//    }
-//
-//    public void setTitle(String title) {
-//        this.title = title;
-//    }
-//
-//    public String getContent() {
-//        return content;
-//    }
-//
-//    public void setContent(String content) {
-//        this.content = content;
-//    }
-//
-//    public String getDescription() {
-//        return description;
-//    }
-//
-//    public void setDescription(String description) {
-//        this.description = description;
-//    }
-//}
+package com.chuwa.mongoblog.dto;
+
+/**
+ * Data Transfer Object
+ * 用于在不同层（例如Controller和Service层）之间传输数据。它通常只包含必要的字段，可能没有数据库相关的注解和约束。
+ */
+public class PostDto {
+    private Long id;
+    private String title;
+    private String content;
+    private String description;
+
+    public PostDto() {
+    }
+
+    public PostDto(Long id, String title, String content, String description) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.description = description;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+}
