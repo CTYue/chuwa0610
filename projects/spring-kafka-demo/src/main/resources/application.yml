@@ -1,0 +1,20 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9091 # ????? Kafka ?????
+    producer:
+      retries: 3 #when fail, we can try 3 times
+      batch-size: 16384 # byte size when batch send
+      buffer-memory: 33554432
+      acks: 1 # Message confirmation level: 1 means waiting only for confirmation from the leader partition
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: TestGroup # default consume group
+      enable-auto-commit: false # we need to submit offset manually
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    listener:
+      ack-mode: manual_immediate
+server:
+  port: 8084
