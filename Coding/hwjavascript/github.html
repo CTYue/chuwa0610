@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repos Fetcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            font-size: 18px;
+            padding: 10px;
+            margin: 5px;
+        }
+        #result {
+            margin-top: 20px;
+            text-align: left;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>GitHub Repos Fetcher</h1>
+
+    <input type="text" id="githubUserId" placeholder="Enter GitHub User ID" autofocus>
+    <button id="fetchButton">Fetch Repos</button>
+
+    <div id="result"></div>
+
+    <script>
+        async function fetchRepos() {
+            const userId = document.getElementById('githubUserId').value;
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = '';
+
+            if (userId === '') {
+                alert('Please enter a GitHub User ID!');
+                return;
+            }
+
+            try {
+                const response = await fetch(`https://api.github.com/users/${userId}/repos`);
+                if (!response.ok) {
+                    throw new Error(`Error: ${response.status} - ${response.statusText}`);
+                }
+                const repos = await response.json();
+                resultDiv.textContent = JSON.stringify(repos, null, 2);
+            } catch (error) {
+                resultDiv.textContent = `Failed to fetch repositories: ${error.message}`;
+            }
+        }
+
+        document.getElementById('fetchButton').addEventListener('click', fetchRepos);
+
+        document.getElementById('githubUserId').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                fetchRepos();
+            }
+        });
+    </script>
+
+</body>
+</html>
