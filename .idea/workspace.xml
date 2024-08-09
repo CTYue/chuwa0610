@@ -11,10 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be80a07f-98d5-4ff8-af2d-72c96a8ddba3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ShortQuestions/hw19.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/hw20/luckyNumberGenerator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShortQuestions/hw20.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/redbook/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/redbook/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShortQuestions/Hands-on homework on Kafka.md" beforeDir="false" afterPath="$PROJECT_DIR$/ShortQuestions/hw18. Hands-on homework on Kafka.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +26,7 @@
         <option value="Interface" />
         <option value="Dockerfile" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -167,7 +167,7 @@
     "TestNG.PostControllerIntegrationTest.executor": "Run",
     "TestNG.PostControllerIntegrationTest.testDeletePostById.executor": "Run",
     "Tomcat Server.Tomcat 9.0.91.executor": "Run",
-    "git-widget-placeholder": "hongqiang__cai/hw19",
+    "git-widget-placeholder": "hongqiang__cai/hw20",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
@@ -181,7 +181,7 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "settings.editor.selected.configurable": "preferences.sourceCode.HTML",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -514,7 +514,8 @@
       <workItem from="1721982694586" duration="832000" />
       <workItem from="1721983546098" duration="10688000" />
       <workItem from="1722153092781" duration="1609000" />
-      <workItem from="1722244771411" duration="10658000" />
+      <workItem from="1722244771411" duration="12021000" />
+      <workItem from="1723191145360" duration="2010000" />
     </task>
     <servers />
   </component>
