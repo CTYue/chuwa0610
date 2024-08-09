@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lucky Number Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #5a67d8;
+        }
+        p {
+            font-size: 16px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #5a67d8;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #434190;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #4a5568;
+        }
+    </style>
+    <script>
+        function generateLuckyNumber() {
+            const seed = document.getElementById("seedInput").value;
+            const now = new Date();
+
+            // Generate a base number using the current time
+            const timeBasedNumber = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
+
+            // Calculate the lucky number by adding the seed and time-based number, then modulo 10000 for a number between 0-9999
+            const luckyNumber = (parseInt(seed) + timeBasedNumber) % 10000;
+
+            document.getElementById("result").innerText = "Your lucky number is: " + luckyNumber;
+        }
+
+        // Allow pressing enter to also generate the lucky number
+        document.addEventListener("DOMContentLoaded", () => {
+            const input = document.getElementById("seedInput");
+            input.addEventListener("keypress", function(event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    generateLuckyNumber();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>Lucky Number Generator</h1>
+<p>Enter a number and press enter or click the button to generate your lucky number.</p>
+<input type="text" id="seedInput" placeholder="Enter your seed number">
+<button onclick="generateLuckyNumber()">Get Lucky Number</button>
+<p id="result"></p>
+</body>
+</html>
