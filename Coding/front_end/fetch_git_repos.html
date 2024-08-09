@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repos Fetcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<h1>GitHub Repos Fetcher</h1>
+<p>Enter a GitHub User ID to fetch their repositories:</p>
+
+<input type="text" id="userId" placeholder="Enter GitHub User ID">
+<button onclick="fetchReposAsync()">Fetch Repos (Async/Await)</button>
+<button onclick="fetchReposThen()">Fetch Repos (Fetch with .then())</button>
+
+<div id="result"></div>
+
+<script>
+    // Method 1: Using async/await
+    async function fetchReposAsync() {
+        const userId = document.getElementById('userId').value;
+        const resultDiv = document.getElementById('result');
+        resultDiv.textContent = ''; // Clear previous results
+
+        if (!userId) {
+            resultDiv.textContent = 'Please enter a GitHub User ID.';
+            return;
+        }
+
+        try {
+            const response = await fetch(`https://api.github.com/users/${userId}/repos`);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            displayRepos(data);
+        } catch (error) {
+            resultDiv.textContent = `Failed to fetch repos: ${error.message}`;
+        }
+    }
+
+    // Method 2: Using fetch with .then() chaining
+    function fetchReposThen() {
+        const userId = document.getElementById('userId').value;
+        const resultDiv = document.getElementById('result');
+        resultDiv.textContent = ''; // Clear previous results
+
+        if (!userId) {
+            resultDiv.textContent = 'Please enter a GitHub User ID.';
+            return;
+        }
+
+        fetch(`https://api.github.com/users/${userId}/repos`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => displayRepos(data))
+            .catch(error => {
+                resultDiv.textContent = `Failed to fetch repos: ${error.message}`;
+            });
+    }
+
+    // Function to display repos in the result div
+    function displayRepos(repos) {
+        const resultDiv = document.getElementById('result');
+        if (repos.length === 0) {
+            resultDiv.textContent = 'No repositories found.';
+            return;
+        }
+
+        const repoList = repos.map(repo => `<li>${repo.name} - <a href="${repo.html_url}" target="_blank">${repo.html_url}</a></li>`).join('');
+        resultDiv.innerHTML = `<ul>${repoList}</ul>`;
+    }
+</script>
+
+</body>
+</html>
