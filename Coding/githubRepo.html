@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repos Fetcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        pre {
+            text-align: left;
+            max-height: 400px;
+            overflow-y: auto;
+            background-color: #eaeaea;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        #errorMessage {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GitHub Repos Fetcher</h1>
+        <p>Enter a GitHub user ID to get their repositories:</p>
+        <input type="text" id="userIdInput" placeholder="GitHub User ID" />
+        <br/>
+        <button onclick="fetchRepos()">Fetch Repos</button>
+        <p id="errorMessage"></p>
+        <pre id="reposOutput"></pre>
+    </div>
+
+    <script>
+        // Function to fetch GitHub repos using async/await
+        async function fetchRepos() {
+            const userId = document.getElementById('userIdInput').value.trim();
+            const reposOutput = document.getElementById('reposOutput');
+            const errorMessage = document.getElementById('errorMessage');
+
+            reposOutput.textContent = '';
+            errorMessage.textContent = '';
+
+            if (userId === "") {
+                errorMessage.textContent = "Please enter a GitHub user ID!";
+                return;
+            }
+
+            try {
+                const response = await fetch(`https://api.github.com/users/${userId}/repos`);
+                if (!response.ok) {
+                    throw new Error(`Error: ${response.status} - ${response.statusText}`);
+                }
+                const repos = await response.json();
+                reposOutput.textContent = JSON.stringify(repos, null, 2);
+            } catch (error) {
+                errorMessage.textContent = `Failed to fetch repos: ${error.message}`;
+            }
+        }
+    </script>
+</body>
+</html>
