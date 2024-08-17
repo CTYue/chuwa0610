@@ -1,29 +1,29 @@
 //package com.chuwa.mongoblog.entity;
 //
-//import jakarta.persistence.Id;
-//import org.bson.types.ObjectId;
-//import org.springframework.data.mongodb.core.mapping.Document;
+//import jakarta.persistence.*;
 //
 ///**
-// * @Create 07/2024
+// * @Create 08/2024
 // * @Author xiao
-// * @Description  for mongoDB connection
+// * @Description
 // */
 //
-//@Document(collection = "Users")
+//@Entity
+//@Table(name = "Users")
 //public class User {
-//	@Id
-//    private ObjectId id;
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private Long id;
 //    private String name;
 //    private String address;
 //
 //
 //
-//    public ObjectId getId() {
+//    public Long getId() {
 //        return id;
 //    }
 //
-//    public void setId(ObjectId id) {
+//    public void setId(Long id) {
 //        this.id = id;
 //    }
 //
@@ -43,3 +43,4 @@
 //        this.address = address;
 //    }
 //}
+//

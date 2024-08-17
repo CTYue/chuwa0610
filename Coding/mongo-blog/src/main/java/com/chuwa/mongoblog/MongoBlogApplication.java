@@ -8,10 +8,10 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 // https://juejin.cn/post/7050518723806887944
 
 //@EnableAutoConfiguration(exclude= {DataSourceAutoConfiguration.class })
-@SpringBootApplication
 //        (scanBasePackages = {"com.chuwa.mongoblog"})
 //@EnableJpaRepositories(basePackages = "com.chuwa.mongoblog.repository.mongoDB")
 //@EnableMongoRepositories(basePackages = "com.chuwa.mongoblog.repository")
+@SpringBootApplication
 public class MongoBlogApplication {
 
     public static void main(String[] args) {

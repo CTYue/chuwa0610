@@ -1,5 +1,3 @@
-
-
 ## HW45 - Spring Security / HW13
 
 ### 2. Explain TLS, PKI, certificate, public key, private key, and signature.
