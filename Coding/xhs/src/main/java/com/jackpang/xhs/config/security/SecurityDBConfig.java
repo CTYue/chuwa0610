@@ -52,7 +52,7 @@ public class SecurityDBConfig {
         return http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorize ->
                         authorize
-                                .requestMatchers(HttpMethod.GET, "/api/**").permitAll()
+                                .requestMatchers( "/api/**").permitAll()
                                 .requestMatchers(HttpMethod.POST, "/api/v1/auth/**").permitAll()
                                 .requestMatchers(HttpMethod.GET, "/v3/**").permitAll()
                                 .requestMatchers(HttpMethod.GET, "/swagger-ui/**").permitAll()
@@ -61,7 +61,7 @@ public class SecurityDBConfig {
                 .exceptionHandling(ex->ex.authenticationEntryPoint(authenticationEntryPoint))
                 .sessionManagement(session-> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
 //                .httpBasic(withDefaults())
-                .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
+//                .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
 
