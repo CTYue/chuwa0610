@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Number Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        #luckyNumber {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #ff6600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lucky Number Generator</h1>
+        <p>Enter your name to get your lucky number:</p>
+        <input type="text" id="nameInput" placeholder="Enter your name" />
+        <br/>
+        <button onclick="generateLuckyNumber()">Get Lucky Number</button>
+        <p id="luckyNumber"></p>
+    </div>
+
+    <script>
+        function generateLuckyNumber() {
+            const name = document.getElementById('nameInput').value.trim();
+            if (name === "") {
+                document.getElementById('luckyNumber').innerText = "Please enter your name!";
+                return;
+            }
+
+            const date = new Date();
+            const dateTimeString = date.getTime().toString();
+            const nameValue = name.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+
+            const combinedValue = parseInt(dateTimeString) + nameValue;
+            const luckyNumber = combinedValue % 100;
+
+            document.getElementById('luckyNumber').innerText = `Your lucky number is: ${luckyNumber}`;
+        }
+
+        // Trigger the lucky number generation when the Enter key is pressed
+        document.getElementById('nameInput').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                generateLuckyNumber();
+            }
+        });
+    </script>
+</body>
+</html>
