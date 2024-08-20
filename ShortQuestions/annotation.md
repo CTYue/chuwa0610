@@ -152,7 +152,8 @@ public class ApplicationContext {
 }
 
 @Service
-class UserService {
+class UserSer
+        vice {
 
     // Ask the container to get the bean and 'put' it here (inject)
     @Resource(name = "userFile")
@@ -531,7 +532,7 @@ public class EurekaServerApplication {
 } }
 ```
 ### @HystrixCommand
-- The `@HystrixCommand` annotation is part of the Hystrix library, which was as part of their Spring Cloud suite for handling latency and fault tolerance in distributed systems. When one service calls another, but the another service has a problem, Hystrix can catch all problems of underlying services and process a fallback plan
+- (circuit breaker) The `@HystrixCommand` annotation is part of the Hystrix library, which was as part of their Spring Cloud suite for handling latency and fault tolerance in distributed systems. When one service calls another, but the another service has a problem, Hystrix can catch all problems of underlying services and process a fallback plan
 ```java
 @Service
 public class ReliableService {
