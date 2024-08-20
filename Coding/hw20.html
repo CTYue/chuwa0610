@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW20</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<h1>Lucky Number</h1>
+<p>Get your lucky number :</p>
+<input type="text" id="userInput" placeholder="Lucky number input">
+<button onclick="getLuckNum()">Get your Lucky number</button>
+<div id="luckyResult"></div>
+
+<h1>Fetch GitHub Repo</h1>
+<p>Enter a GitHub user ID to fetch their repositories:</p>
+<input type="text" id="userId" placeholder="Enter GitHub user ID">
+<button onclick="fetchRepos()">Fetch Repos</button>
+<div id="githubResult"></div>
+
+<script>
+    function getLuckNum(){
+        const resultDiv = document.getElementById('luckyResult');
+        const userInput = document.getElementById('userInput').value;
+        resultDiv.innerHTML = '';
+        const date = new Date();
+        const seed = userInput.length + date.getFullYear() + date.getMonth() + date.getDate() +
+            date.getHours() + date.getMinutes() + date.getSeconds() + date.getMilliseconds();
+        const luckyNumber = Math.abs(seed) % 100 + 1;
+
+        resultDiv.innerHTML = `Your lucky number is: <strong>${luckyNumber}</strong>`;
+    }
+
+    async function fetchRepos() {
+        const userId = document.getElementById('userId').value;
+        const resultDiv = document.getElementById('githubResult');
+        resultDiv.innerHTML = '';
+
+        try {
+            const response = await axios.get(`https://api.github.com/users/${userId}/repos`);
+            const repos = response.data;
+            displayRepos(repos, resultDiv);
+        } catch (error) {
+            if (error.response) {
+                displayError(`Error: ${error.response.status} - ${error.response.statusText}`, resultDiv);
+            } else if (error.request) {
+                displayError('Error: No response received from the server', resultDiv);
+            } else {
+                displayError(`Error: ${error.message}`, resultDiv);
+            }
+        }
+    }
+
+    function displayRepos(repos, resultDiv) {
+        if (repos.length === 0) {
+            resultDiv.innerHTML = '<p>No repositories found.</p>';
+        } else {
+            repos.forEach(repo => {
+                const repoDiv = document.createElement('div');
+                repoDiv.className = 'repo';
+                repoDiv.innerHTML = `<strong>${repo.name}</strong>: ${repo.description || 'No description'}`;
+                resultDiv.appendChild(repoDiv);
+            });
+        }
+    }
+
+    function displayError(errorMessage, resultDiv) {
+        resultDiv.innerHTML = `<p class="error">${errorMessage}</p>`;
+    }
+</script>
+</body>
+</html>
