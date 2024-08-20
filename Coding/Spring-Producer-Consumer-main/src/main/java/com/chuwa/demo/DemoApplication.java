@@ -1,13 +1,13 @@
-package com.chuwa.redbook;
+package com.chuwa.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RedbookApplication {
+public class DemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RedbookApplication.class, args);
+		SpringApplication.run(DemoApplication.class, args);
 	}
 
 }

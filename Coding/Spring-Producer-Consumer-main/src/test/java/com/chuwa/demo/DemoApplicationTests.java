@@ -1,10 +1,13 @@
-package com.chuwa.redbook;
+package com.chuwa.demo;
 
-import graphql.Assert;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RedbookApplicationTests {
+class DemoApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
 
 }
