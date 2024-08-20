@@ -32,16 +32,17 @@ public class UserServiceImpl implements UserService {
 	@Override
 	 public UserDto createUser(UserDto userDto) {
 		 User user = new User();
-//		 user.setId(userDto.getId());
+//		 user.setId(new ObjectId(userDto.getId()));
+		 user.setId(userDto.getId());
 		 user.setName(userDto.getName());
 		 user.setAddress(userDto.getAddress());
 
 		 User savedUser = userRepository.save(user);
 		 UserDto response = new UserDto();
-//		 response.setId(savedUser.getId());
+		 response.setId(savedUser.getId().toString());
 		 response.setName(savedUser.getName());
 		 response.setAddress(savedUser.getAddress());
-		 
+
 		 return response;
 	 }
 
@@ -64,7 +65,7 @@ public class UserServiceImpl implements UserService {
 			return Optional.empty();
 		}
 		UserDto response = new UserDto();
-//		response.setId(user.getId());
+		response.setId(userOptional.get().getId().toString());
 		response.setName(userOptional.get().getName());
 		response.setAddress(userOptional.get().getAddress());
 		return Optional.of(response);

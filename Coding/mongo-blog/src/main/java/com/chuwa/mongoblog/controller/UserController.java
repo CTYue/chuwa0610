@@ -1,11 +1,10 @@
 package com.chuwa.mongoblog.controller;
 
 //import com.chuwa.mongoblog.dto.PostDto;
-import com.chuwa.mongoblog.dto.UserDto;
 //import com.chuwa.mongoblog.entity.User;
 //import com.chuwa.mongoblog.servicevice.PostService;
+import com.chuwa.mongoblog.dto.UserDto;
 import com.chuwa.mongoblog.service.UserService;
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.http.HttpStatus;
@@ -27,11 +26,10 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-
     @Autowired
     MongoTemplate mongoTemplate;
 
-	@PostMapping(value = "create")
+	@PostMapping
 	public ResponseEntity<UserDto> createUser(@RequestBody UserDto userDto) {
 	    UserDto response = userService.createUser(userDto);
 	    return new ResponseEntity<>(response, HttpStatus.CREATED);
@@ -65,6 +63,7 @@ public class UserController {
 		if (userOptional.isPresent()) {
 			UserDto user = userOptional.get();
 			UserDto userDto = new UserDto();
+			userDto.setId(user.getId());
 			userDto.setName(user.getName());
 			userDto.setAddress(user.getAddress());
 			return ResponseEntity.ok(userDto);

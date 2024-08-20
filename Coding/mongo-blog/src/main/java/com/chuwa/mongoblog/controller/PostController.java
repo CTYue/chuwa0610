@@ -4,10 +4,11 @@
 //import com.chuwa.mongoblog.dto.PostDto;
 //import com.chuwa.mongoblog.service.PostService;
 //import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.data.mongodb.core.MongoTemplate;
 //import org.springframework.http.HttpStatus;
 //import org.springframework.http.ResponseEntity;
 //import org.springframework.web.bind.annotation.*;
+//
+//import java.util.List;
 //
 //@RestController
 //@RequestMapping("api/v1/posts")
@@ -17,11 +18,18 @@
 ////    @Qualifier("")
 //    private PostService postService;
 //
-//    @PostMapping(value = "create")
+//    @PostMapping
 //    public ResponseEntity<PostDto> createPost(@RequestBody PostDto postDto) {
 //        PostDto response = postService.createPost(postDto);
 //        return new ResponseEntity<>(response, HttpStatus.CREATED);
 //    }
+//
+//    @GetMapping
+//    public List<PostDto> getAllPosts() {
+//        return postService.getAllPost();
+//    }
+//
+//
 //
 ////    @PostMapping(value = "create")
 ////    public PostDto createPost(@RequestParam(value = "id", required = true) Long id,
@@ -45,7 +53,7 @@
 //     */
 //
 ////    @GetMapping(value = "")
-//    @GetMapping
+//    @GetMapping("/{id}")
 //    public ResponseEntity<PostDto> getPostById(@PathVariable(name = "id") Long id) {
 //        PostDto response = postService.getPostById(id);
 //        return ResponseEntity.ok(response);
