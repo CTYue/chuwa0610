@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lucky Number Generator</title>
+</head>
+
+<body>
+
+   <h1>Lucky Number Generator</h1>
+   <p>Enter something and click the button or press Enter to get your lucky number!</p>
+
+   <input type="text" id="userInput" placeholder="Input">
+   <button onclick="generateLuckyNumber()">Generate</button>
+
+   <p id="result"></p>
+
+   <script>
+      function generateLuckyNumber() {
+         const userInput = document.getElementById('userInput').value.trim();
+         if (userInput === '') {
+            alert('Please enter your name.');
+            return;
+         }
+
+         const now = new Date();
+         const inputSum = [...userInput].reduce((acc, char) => acc + char.charCodeAt(0), 0);
+         const luckyNumber = (now.getTime() + inputSum) % 100 + 1;
+
+         document.getElementById('result').textContent = `Your lucky number is: ${luckyNumber}`;
+      }
+
+      document.getElementById('userInput').addEventListener('keypress', function (event) {
+         if (event.key === 'Enter') {
+            generateLuckyNumber();
+         }
+      });
+   </script>
+
+</body>
+
+</html>

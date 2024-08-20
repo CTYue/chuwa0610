@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>GitHub Repo Fetcher</title>
+</head>
+
+<body>
+
+   <h1>GitHub Repo Fetcher</h1>
+   <p>Enter a GitHub User ID:</p>
+
+   <input type="text" id="userIdInput" placeholder="GitHub User ID">
+   <button onclick="fetchGitHubRepos()">Fetch Repos</button>
+
+   <pre id="output"></pre>
+
+   <script>
+      async function fetchGitHubRepos() {
+         const userId = document.getElementById('userIdInput').value.trim();
+         const outputDiv = document.getElementById('output');
+         outputDiv.textContent = '';
+
+         if (userId === '') {
+            outputDiv.textContent = 'Please enter a GitHub User ID.';
+            return;
+         }
+
+         const apiUrl = `https://api.github.com/users/${userId}/repos`;
+
+         try {
+            const response = await fetch(apiUrl);
+
+            if (!response.ok) {
+               throw new Error(`Error: ${response.status} ${response.statusText}`);
+            }
+
+            const data = await response.json();
+            outputDiv.textContent = JSON.stringify(data, null, 2);
+         } catch (error) {
+            outputDiv.textContent = `Failed to fetch repos: ${error.message}`;
+         }
+      }
+
+      document.getElementById('userIdInput').addEventListener('keypress', function (event) {
+         if (event.key === 'Enter') {
+            fetchGitHubRepos();
+         }
+      });
+   </script>
+
+</body>
+
+</html>
