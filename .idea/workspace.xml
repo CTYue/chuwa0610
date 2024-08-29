@@ -5,33 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17a02662-d9b5-43c1-9390-b515dbe4e4db" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/default_interface_method/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/default_interface_method/DIMImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/default_interface_method/DIML.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/lambda/Foo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/lambda/LambdaLearn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/method_reference/MethodReferenceExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/optional/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/optional/EmployeeData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/optional/OptionalDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/optional/OptionalMainMethodTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/optional/OptionalTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/stream_api/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/stream_api/ProductClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/stream_api/StreamApiCreationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/stream_api/StreamApiEndOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/stream_api/StreamApiIntermediateOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/Java8NewFeature/src/main/java/com/chuwa/learn/stream_api/StreamExercise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/generic/genericExercise/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/generic/genericExercise/src/main/java/com/chuwa/learn/GenericClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/generic/genericExercise/src/main/java/com/chuwa/learn/GenericClassTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/generic/genericExercise/src/main/java/com/chuwa/learn/GenericMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/generic/genericExercise/src/main/java/com/chuwa/learn/GenericMultiArguments.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/generic/genericExercise/src/main/java/com/chuwa/learn/NonGeneric.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/controller/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/dao/CommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/entity/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/payload/CommentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShortQuestions/hw4.md" beforeDir="false" afterPath="$PROJECT_DIR$/ShortQuestions/hw4.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/dto/BlogDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/payload/BlogDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/dto/BlogResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/payload/BlogResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/entity/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/entity/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/service/BlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/service/impl/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/service/impl/BlogServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,52 +50,91 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MethodReferenceExample.executor": "Run",
-    "Application.OptionalDemo.executor": "Run",
-    "JUnit.LambdaLearn.testFinal.executor": "Run",
-    "JUnit.OptionalMainMethodTest.executor": "Run",
-    "JUnit.OptionalMainMethodTest.testOrElse.executor": "Run",
-    "JUnit.OptionalTest.testOf.executor": "Run",
-    "JUnit.ProductClient.findAny.executor": "Run",
-    "JUnit.ProductClient.groupingBy.executor": "Run",
-    "JUnit.ProductClient.joining.executor": "Run",
-    "JUnit.ProductClient.summingInt.executor": "Run",
-    "JUnit.ProductClient.toList.executor": "Run",
-    "JUnit.ProductClient.toSet.executor": "Run",
-    "JUnit.StreamApiCreationTest.testCollection.executor": "Run",
-    "JUnit.StreamApiCreationTest.testOf.executor": "Run",
-    "JUnit.StreamApiIntermediateOperation.testDistinct.executor": "Run",
-    "JUnit.StreamApiIntermediateOperation.testFilter.executor": "Run",
-    "JUnit.StreamApiIntermediateOperation.testFlatMap.executor": "Run",
-    "JUnit.StreamApiIntermediateOperation.testIntermediateOperationChain.executor": "Run",
-    "JUnit.StreamApiIntermediateOperation.testLimit.executor": "Run",
-    "JUnit.StreamApiIntermediateOperation.testMap.executor": "Run",
-    "JUnit.StreamApiIntermediateOperation.testSkip.executor": "Run",
-    "JUnit.StreamApiIntermediateOperation.testSorted.executor": "Run",
-    "JUnit.StreamExercise.testMapAndFlatMap.executor": "Run",
-    "JUnit.StreamExercise.testMapAndFlatMap2.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/jingyiwang/Documents/Java-basic/chuwa0610",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.14424779",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.BatchPayment.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BatchPaymentCompletableFuture.executor&quot;: &quot;Run&quot;,
+    &quot;Application.BatchPaymentFuture.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CallableTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ConcurrentCollection.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ConditionLearn.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Daemon.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DeadLock.executor&quot;: &quot;Run&quot;,
+    &quot;Application.JoinTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MethodReferenceExample.executor&quot;: &quot;Run&quot;,
+    &quot;Application.OddEventPrinter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.OptionalDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ReadWriteLock.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ReadWriteLockLearn.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ReentrantLockLearn.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StampedLockLearn.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SynchronizedThreads.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SynchronizedThreadsFailed.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ThreadLocalLearn.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ThreadPool.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WaitNotify.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CompletableFutureApiLearn.demo01.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CompletableFutureApiLearn.demo02.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CompletableFutureApiLearn.demo03.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CompletableFutureApiLearn.demo04.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ForkJoinLearn.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InterruptTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InterruptTest.testInterruptSleep.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InterruptTest.testInterruptWhileTrue.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InterruptTest.testIsInterrupted.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LambdaLearn.lambdaFoo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LambdaLearn.testFinal.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OptionalMainMethodTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OptionalMainMethodTest.testOrElse.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OptionalTest.testOf.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductClient.findAny.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductClient.findFirst.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductClient.groupingBy.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductClient.joining.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductClient.match.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductClient.partitioningBy.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductClient.summingInt.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductClient.toList.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductClient.toSet.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StreamApiCreationTest.testCollection.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StreamApiCreationTest.testOf.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StreamApiIntermediateOperation.testDistinct.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StreamApiIntermediateOperation.testFilter.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StreamApiIntermediateOperation.testFlatMap.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StreamApiIntermediateOperation.testIntermediateOperationChain.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StreamApiIntermediateOperation.testLimit.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StreamApiIntermediateOperation.testMap.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StreamApiIntermediateOperation.testSkip.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StreamApiIntermediateOperation.testSorted.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StreamExercise.testMapAndFlatMap.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.StreamExercise.testMapAndFlatMap2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ThreadPoolExample.cachedThreadPoolExample.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ThreadPoolExample.customThreadPoolExample.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ThreadPoolExample.fixedThreadPool (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ThreadPoolExample.fixedThreadPool.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ThreadPoolExample.singleThreadExecutorExample.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jingyiwang/Documents/Java-basic/chuwa0610&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.14424779&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.StreamExercise.testMapAndFlatMap2">
-    <configuration name="StreamApiIntermediateOperation.testFlatMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductClient.findAny" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Java8NewFeature" />
       <extension name="coverage">
         <pattern>
@@ -115,14 +143,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.chuwa.learn.stream_api" />
-      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.stream_api.StreamApiIntermediateOperation" />
-      <option name="METHOD_NAME" value="testFlatMap" />
+      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.stream_api.ProductClient" />
+      <option name="METHOD_NAME" value="findAny" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StreamApiIntermediateOperation.testIntermediateOperationChain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductClient.findFirst" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Java8NewFeature" />
       <extension name="coverage">
         <pattern>
@@ -131,14 +159,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.chuwa.learn.stream_api" />
-      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.stream_api.StreamApiIntermediateOperation" />
-      <option name="METHOD_NAME" value="testIntermediateOperationChain" />
+      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.stream_api.ProductClient" />
+      <option name="METHOD_NAME" value="findFirst" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StreamApiIntermediateOperation.testSorted" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductClient.match" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Java8NewFeature" />
       <extension name="coverage">
         <pattern>
@@ -147,8 +175,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.chuwa.learn.stream_api" />
-      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.stream_api.StreamApiIntermediateOperation" />
-      <option name="METHOD_NAME" value="testSorted" />
+      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.stream_api.ProductClient" />
+      <option name="METHOD_NAME" value="match" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -186,26 +214,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="chuwa0610" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="chuwa0610" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.StreamExercise.testMapAndFlatMap2" />
         <item itemvalue="JUnit.StreamExercise.testMapAndFlatMap" />
-        <item itemvalue="JUnit.StreamApiIntermediateOperation.testSorted" />
-        <item itemvalue="JUnit.StreamApiIntermediateOperation.testIntermediateOperationChain" />
-        <item itemvalue="JUnit.StreamApiIntermediateOperation.testFlatMap" />
+        <item itemvalue="JUnit.ProductClient.findAny" />
+        <item itemvalue="JUnit.ProductClient.findFirst" />
+        <item itemvalue="JUnit.ProductClient.match" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +242,13 @@
       <updated>1718649026771</updated>
       <workItem from="1718649027839" duration="13970000" />
       <workItem from="1719001101868" duration="17438000" />
-      <workItem from="1719080769487" duration="21181000" />
+      <workItem from="1719080769487" duration="21878000" />
+      <workItem from="1719427446178" duration="33868000" />
+      <workItem from="1719877900221" duration="115088000" />
+      <workItem from="1722092715233" duration="12121000" />
+      <workItem from="1722194544518" duration="3454000" />
+      <workItem from="1723130396254" duration="749000" />
+      <workItem from="1723739179936" duration="616000" />
     </task>
     <servers />
   </component>
