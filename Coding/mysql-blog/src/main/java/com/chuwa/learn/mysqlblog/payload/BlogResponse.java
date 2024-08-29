@@ -1,5 +1,4 @@
-package com.chuwa.learn.mysqlblog.dto;
-import com.chuwa.learn.mysqlblog.dao.BlogRepository;
+package com.chuwa.learn.mysqlblog.payload;
 
 import java.util.List;
 
