@@ -6,7 +6,9 @@ import com.chuwa.learn.mysqlblog.entity.Comment;
 import com.chuwa.learn.mysqlblog.exception.ResourceNotFoundException;
 import com.chuwa.learn.mysqlblog.payload.CommentDTO;
 import com.chuwa.learn.mysqlblog.service.CommentService;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CommentServiceImpl implements CommentService {
     private CommentRepository commentRepository;
     private BlogRepository blogRepository;
