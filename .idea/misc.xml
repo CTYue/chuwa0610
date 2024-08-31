@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/Coding/generic/genericExercise/pom.xml" />
         <option value="$PROJECT_DIR$/Coding/Java8NewFeature/pom.xml" />
+        <option value="$PROJECT_DIR$/Coding/multithreading/pom.xml" />
       </list>
     </option>
   </component>
