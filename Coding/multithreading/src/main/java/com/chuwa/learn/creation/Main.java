@@ -6,16 +6,16 @@ import java.util.concurrent.*;
 
 public class Main {
     public static void main(String[] args) {
-//        MyRunnable b = new MyRunnable();
-//        new Thread(b){
-//            @Override
-//            public void run(){
-//                System.out.println("print cc");
-//            }
-//        }.start();
-//        MyRunnable runnable = new MyRunnable();
-//        Thread t1 = new Thread(runnable);
-//        t1.start();
+        MyRunnable b = new MyRunnable();
+        new Thread(b){
+            @Override
+            public void run(){
+                System.out.println("print cc");
+            }
+        }.start();
+        MyRunnable runnable = new MyRunnable();
+        Thread t1 = new Thread(runnable);
+        t1.start();
 //
 //        Thread.currentThread().setName("主线程");
 //
