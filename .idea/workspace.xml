@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17a02662-d9b5-43c1-9390-b515dbe4e4db" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Coding/JavascriptHTML/ajax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/JavascriptHTML/ajaxExercise.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coding/Kakfa/kafka_hw/Spring-Producer-Consumer/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/Kakfa/kafka_hw/Spring-Producer-Consumer/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/multithreading/src/main/java/com/chuwa/learn/creation/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/multithreading/src/main/java/com/chuwa/learn/creation/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/multithreading/target/classes/com/chuwa/learn/creation/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/multithreading/target/classes/com/chuwa/learn/creation/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/multithreading/target/classes/com/chuwa/learn/future/payment/BatchPaymentCompletableFuture.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/multithreading/target/classes/com/chuwa/learn/future/payment/BatchPaymentCompletableFuture.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +233,7 @@
       <workItem from="1723739179936" duration="616000" />
       <workItem from="1724908414055" duration="1483000" />
       <workItem from="1725504586785" duration="2936000" />
-      <workItem from="1726369531948" duration="749000" />
+      <workItem from="1726369531948" duration="1349000" />
     </task>
     <servers />
   </component>
