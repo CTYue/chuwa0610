@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17a02662-d9b5-43c1-9390-b515dbe4e4db" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/controller/CommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/dao/CommentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/entity/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/payload/CommentDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/service/CommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/service/impl/CommentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/JavascriptHTML/ajax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coding/JavascriptHTML/ajaxExercise.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/controller/BlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/dto/BlogDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/payload/BlogDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/dto/BlogResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/payload/BlogResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/entity/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/entity/Blog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/service/BlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/service/impl/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/mysql-blog/src/main/java/com/chuwa/learn/mysqlblog/service/impl/BlogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/Kakfa/kafka_hw/Spring-Producer-Consumer/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/Kakfa/kafka_hw/Spring-Producer-Consumer/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/multithreading/src/main/java/com/chuwa/learn/creation/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/multithreading/src/main/java/com/chuwa/learn/creation/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/multithreading/target/classes/com/chuwa/learn/creation/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/multithreading/target/classes/com/chuwa/learn/creation/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coding/multithreading/target/classes/com/chuwa/learn/future/payment/BatchPaymentCompletableFuture.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coding/multithreading/target/classes/com/chuwa/learn/future/payment/BatchPaymentCompletableFuture.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +125,20 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.StreamExercise.testMapAndFlatMap2">
+  <component name="RunManager" selected="Application.OddEventPrinter">
+    <configuration name="OddEventPrinter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.waitNotify.OddEventPrinter" />
+      <module name="multithreading" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chuwa.learn.waitNotify.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductClient.findAny" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Java8NewFeature" />
       <extension name="coverage">
@@ -161,22 +166,6 @@
       <option name="PACKAGE_NAME" value="com.chuwa.learn.stream_api" />
       <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.stream_api.ProductClient" />
       <option name="METHOD_NAME" value="findFirst" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductClient.match" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Java8NewFeature" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.chuwa.learn.stream_api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.chuwa.learn.stream_api" />
-      <option name="MAIN_CLASS_NAME" value="com.chuwa.learn.stream_api.ProductClient" />
-      <option name="METHOD_NAME" value="match" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -216,11 +205,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.OddEventPrinter" />
         <item itemvalue="JUnit.StreamExercise.testMapAndFlatMap2" />
         <item itemvalue="JUnit.StreamExercise.testMapAndFlatMap" />
         <item itemvalue="JUnit.ProductClient.findAny" />
         <item itemvalue="JUnit.ProductClient.findFirst" />
-        <item itemvalue="JUnit.ProductClient.match" />
       </list>
     </recent_temporary>
   </component>
@@ -249,6 +238,9 @@
       <workItem from="1722194544518" duration="3454000" />
       <workItem from="1723130396254" duration="749000" />
       <workItem from="1723739179936" duration="616000" />
+      <workItem from="1724908414055" duration="1483000" />
+      <workItem from="1725504586785" duration="2936000" />
+      <workItem from="1726369531948" duration="749000" />
     </task>
     <servers />
   </component>
