@@ -1,4 +1,4 @@
-package com.chuwa.learn.mysqlblog.dto;
+package com.chuwa.learn.mysqlblog.payload;
 
 import lombok.Getter;
 import lombok.Setter;
